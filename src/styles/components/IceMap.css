@@ -1,0 +1,676 @@
+.ice-map {
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.map-stage {
+  position: relative;
+  min-height: 1600px;
+  margin-top: 14px;
+  overflow: visible;
+  isolation: isolate;
+}
+
+.map-stage::before {
+  content: "";
+  position: absolute;
+  inset: 2.5% 1.5% 4%;
+  border-radius: 44px;
+  background:
+    radial-gradient(circle at 60% 18%, rgba(255, 255, 255, 0.86), transparent 20%),
+    radial-gradient(circle at 50% 50%, rgba(198, 242, 255, 0.48), transparent 25%),
+    radial-gradient(circle at 39% 82%, rgba(255, 255, 255, 0.82), transparent 20%);
+  opacity: 0.78;
+  z-index: -1;
+}
+
+.ice-routes {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+  z-index: 1;
+}
+
+.ice-routes * {
+  vector-effect: non-scaling-stroke;
+}
+
+.ice-segment-shadow,
+.ice-segment-outer,
+.ice-segment-surface,
+.ice-segment-shine,
+.ice-segment-cut {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.ice-segment-shadow {
+  stroke: rgba(80, 190, 224, 0.14);
+  stroke-width: 62;
+}
+.ice-segment-outer {
+  stroke: rgba(105, 206, 232, 0.42);
+  stroke-width: 46;
+}
+.ice-segment-surface {
+  stroke: rgba(247, 253, 255, 0.96);
+  stroke-width: 34;
+}
+.ice-segment-shine {
+  stroke: rgba(255, 255, 255, 0.9);
+  stroke-width: 18;
+}
+.ice-segment-cut {
+  stroke-width: 2;
+  stroke-dasharray: 18 30;
+  animation: skateDash 28s linear infinite;
+}
+.ice-segment-cut-a {
+  stroke: rgba(42, 157, 208, 0.42);
+  stroke-dashoffset: 8;
+}
+.ice-segment-cut-b {
+  stroke: rgba(255, 255, 255, 0.94);
+  stroke-width: 1.8;
+  stroke-dashoffset: 34;
+}
+
+@keyframes skateDash {
+  to {
+    stroke-dashoffset: -620;
+  }
+}
+
+.program-card {
+  position: absolute;
+  z-index: 4;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 110px;
+  gap: 14px;
+  width: min(360px, 90%);
+  min-height: 220px;
+  padding: 18px;
+  border-radius: 24px;
+  overflow: hidden;
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+.program-card::after {
+  content: "❄";
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  opacity: 0.4;
+  font-size: 34px;
+}
+
+.program-card.teal {
+  background: linear-gradient(135deg, #22b9b8, #76d8d7);
+}
+.program-card.orange {
+  background: linear-gradient(135deg, #ffae39, #ffd38e);
+  color: #7a3b00;
+}
+.program-card.blue {
+  background: linear-gradient(135deg, #3484f5, #74b8ff);
+}
+
+.program-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.program-top {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.program-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.25);
+  font-weight: 1000;
+  font-size: 1.3rem;
+}
+
+.program-card h3 {
+  font-size: 1.55rem;
+  line-height: 1.05;
+  margin: 10px 0 6px;
+}
+
+.program-card p {
+  font-weight: 900;
+  font-size: 1rem;
+  line-height: 1.35;
+  margin: 0 0 8px;
+}
+
+.program-card small {
+  display: none;
+  line-height: 1.55;
+  opacity: 0.93;
+  font-size: 0.92rem;
+}
+
+.program-card a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 10px;
+  font-weight: 1000;
+  font-size: 0.96rem;
+}
+
+.program-image {
+  border-radius: 18px;
+  align-self: stretch;
+  min-height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+}
+
+.skater-one {
+  background-image: url("/images/generated/program-korisuli.jpg");
+}
+.tsmt {
+  background-image: url("/images/generated/program-tsmt.jpg");
+}
+.hockey {
+  background-image: url("/images/generated/program-hokisuli.jpg");
+}
+
+.path-penguin {
+  position: absolute;
+  z-index: 5;
+  width: 62px;
+  height: auto;
+  pointer-events: none;
+  filter: drop-shadow(0 14px 16px rgba(13, 72, 112, 0.16));
+}
+
+.map-flake {
+  position: absolute;
+  z-index: 2;
+  color: rgba(79, 181, 222, 0.35);
+  pointer-events: none;
+  line-height: 1;
+}
+
+.map-flake-1 {
+  left: 0%;
+  top: 3%;
+  font-size: 50px;
+  transform: rotate(-12deg);
+}
+.map-flake-2 {
+  left: 77%;
+  top: 18%;
+  font-size: 38px;
+  transform: rotate(10deg);
+}
+.map-flake-3 {
+  right: -3%;
+  top: 43%;
+  font-size: 54px;
+  transform: rotate(18deg);
+}
+.map-flake-4 {
+  left: 46%;
+  bottom: 18%;
+  font-size: 58px;
+  transform: rotate(-8deg);
+}
+.map-flake-5 {
+  right: 4%;
+  bottom: 4%;
+  font-size: 39px;
+  transform: rotate(14deg);
+}
+.map-flake-6 {
+  left: 10%;
+  bottom: 30%;
+  font-size: 36px;
+  transform: rotate(-16deg);
+}
+.map-flake-7 {
+  right: 7%;
+  bottom: 28%;
+  font-size: 46px;
+  transform: rotate(20deg);
+}
+.map-flake-8 {
+  left: 4%;
+  top: 62%;
+  font-size: 42px;
+  transform: rotate(-11deg);
+}
+.map-flake-9 {
+  right: 27%;
+  top: 36%;
+  font-size: 32px;
+  transform: rotate(16deg);
+}
+.map-flake-10 {
+  left: 56%;
+  bottom: 21%;
+  font-size: 44px;
+  transform: rotate(-19deg);
+}
+.map-flake-11 {
+  right: -1%;
+  bottom: 3%;
+  font-size: 54px;
+  transform: rotate(12deg);
+}
+
+.route-mobile {
+  min-height: 1540px;
+}
+
+.route-mobile .program-card {
+  left: 50%;
+  right: auto;
+  width: min(100%, 440px);
+  min-height: 240px;
+  transform: translateX(-50%);
+  grid-template-columns: minmax(0, 1fr) 110px;
+  padding: 20px;
+}
+
+.route-mobile .card-1 {
+  top: 50px;
+}
+.route-mobile .card-2 {
+  top: 560px;
+}
+.route-mobile .card-3 {
+  top: 1080px;
+}
+.route-mobile .program-card h3 {
+  font-size: 1.6rem;
+}
+.route-mobile .program-card p {
+  font-size: 1rem;
+}
+.route-mobile .program-card small {
+  display: block;
+  font-size: 0.9rem;
+}
+.route-mobile .program-image {
+  min-height: 160px;
+}
+.route-mobile .path-penguin {
+  width: 68px;
+}
+.route-mobile .path-penguin-one {
+  left: 58%;
+  top: 405px;
+  transform: rotate(15deg);
+}
+.route-mobile .path-penguin-two {
+  left: 27%;
+  top: 910px;
+  transform: scaleX(-1) rotate(-13deg);
+}
+
+.route-tablet {
+  min-height: 1900px;
+}
+
+.route-tablet .ice-segment-shadow {
+  stroke-width: 72;
+}
+.route-tablet .ice-segment-outer {
+  stroke-width: 52;
+}
+.route-tablet .ice-segment-surface {
+  stroke-width: 38;
+}
+.route-tablet .ice-segment-shine {
+  stroke-width: 19;
+}
+.route-tablet .ice-segment-cut {
+  stroke-width: 2.1;
+  stroke-dasharray: 22 36;
+}
+
+.route-tablet .program-card {
+  width: min(460px, 49%);
+  min-height: 330px;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  padding: 28px;
+  border-radius: 26px;
+}
+
+.route-tablet .program-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  font-size: 1.5rem;
+}
+.route-tablet .program-card h3 {
+  font-size: 2rem;
+  margin: 14px 0 8px;
+}
+.route-tablet .program-card p {
+  font-size: 1.06rem;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+.route-tablet .program-card small {
+  display: block;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.route-tablet .program-card a {
+  font-size: 1rem;
+  margin-top: 12px;
+}
+.route-tablet .program-image {
+  min-height: 140px;
+}
+.route-tablet .card-1 {
+  left: 0;
+  top: 80px;
+}
+.route-tablet .card-2 {
+  right: 0;
+  top: 800px;
+}
+.route-tablet .card-3 {
+  left: 0;
+  top: 1450px;
+}
+.route-tablet .path-penguin {
+  width: 82px;
+}
+.route-tablet .path-penguin-one {
+  left: 59%;
+  top: 475px;
+  transform: rotate(15deg);
+}
+.route-tablet .path-penguin-two {
+  left: 27%;
+  top: 1180px;
+  transform: scaleX(-1) rotate(-13deg);
+}
+
+.route-smallDesktop {
+  min-height: 1740px;
+}
+
+.route-smallDesktop .ice-segment-shadow {
+  stroke-width: 84;
+}
+.route-smallDesktop .ice-segment-outer {
+  stroke-width: 60;
+}
+.route-smallDesktop .ice-segment-surface {
+  stroke-width: 44;
+}
+.route-smallDesktop .ice-segment-shine {
+  stroke-width: 20;
+}
+.route-smallDesktop .ice-segment-cut {
+  stroke-width: 2.2;
+  stroke-dasharray: 25 40;
+}
+
+.route-smallDesktop .program-card {
+  width: min(540px, 54%);
+  height: 300px;
+  min-height: 0;
+  grid-template-columns: minmax(0, 1fr) 145px;
+  gap: 18px;
+  padding: 26px;
+  border-radius: 26px;
+}
+
+.route-smallDesktop .program-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 17px;
+  font-size: 1.55rem;
+}
+.route-smallDesktop .program-card h3 {
+  font-size: 2rem;
+  margin: 13px 0 8px;
+}
+.route-smallDesktop .program-card p {
+  font-size: 1.04rem;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+.route-smallDesktop .program-card small {
+  display: block;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  max-width: 285px;
+}
+.route-smallDesktop .program-card a {
+  font-size: 0.98rem;
+  margin-top: 10px;
+}
+.route-smallDesktop .program-image {
+  min-height: auto;
+  border-radius: 20px;
+}
+.route-smallDesktop .card-1 {
+  left: 0;
+  top: 70px;
+}
+.route-smallDesktop .card-2 {
+  right: 0;
+  top: 560px;
+}
+.route-smallDesktop .card-3 {
+  left: 0;
+  top: 1260px;
+}
+.route-smallDesktop .path-penguin {
+  width: 90px;
+}
+.route-smallDesktop .path-penguin-one {
+  left: 56%;
+  top: 405px;
+  transform: rotate(14deg);
+}
+.route-smallDesktop .path-penguin-two {
+  left: 31%;
+  top: 1010px;
+  transform: scaleX(-1) rotate(-14deg);
+}
+
+.route-desktop {
+  min-height: 1760px;
+}
+
+.route-desktop .ice-segment-shadow {
+  stroke-width: 88;
+}
+.route-desktop .ice-segment-outer {
+  stroke-width: 62;
+}
+.route-desktop .ice-segment-surface {
+  stroke-width: 46;
+}
+.route-desktop .ice-segment-shine {
+  stroke-width: 21;
+}
+.route-desktop .ice-segment-cut {
+  stroke-width: 2.25;
+  stroke-dasharray: 26 42;
+}
+
+.route-desktop .program-card {
+  width: 700px;
+  height: 350px;
+  min-height: 0;
+  grid-template-columns: minmax(0, 1fr) 150px;
+  gap: 20px;
+  padding: 28px;
+  border-radius: 27px;
+}
+
+.route-desktop .program-card::after {
+  top: 18px;
+  right: 22px;
+  font-size: 40px;
+}
+.route-desktop .program-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 17px;
+  font-size: 1.55rem;
+}
+.route-desktop .program-card h3 {
+  font-size: 2.1rem;
+  margin: 14px 0 7px;
+}
+.route-desktop .program-card p {
+  font-size: 1.08rem;
+  line-height: 1.34;
+  margin-bottom: 8px;
+}
+.route-desktop .program-card small {
+  display: block;
+  font-size: 0.96rem;
+  line-height: 1.5;
+  max-width: 340px;
+}
+.route-desktop .program-card a {
+  font-size: 1rem;
+  margin-top: 11px;
+}
+.route-desktop .card-1 {
+  left: 0;
+  top: 90px;
+}
+.route-desktop .card-2 {
+  right: 0;
+  top: 610px;
+}
+.route-desktop .card-3 {
+  left: 0;
+  top: 1310px;
+}
+.route-desktop .path-penguin {
+  width: 98px;
+}
+.route-desktop .path-penguin-one {
+  left: 56%;
+  top: 430px;
+  transform: rotate(14deg);
+}
+.route-desktop .path-penguin-two {
+  left: 34%;
+  top: 1045px;
+  transform: scaleX(-1) rotate(-14deg);
+}
+
+.route-wideDesktop {
+  min-height: 1880px;
+}
+
+.route-wideDesktop .ice-segment-shadow {
+  stroke-width: 92;
+}
+.route-wideDesktop .ice-segment-outer {
+  stroke-width: 66;
+}
+.route-wideDesktop .ice-segment-surface {
+  stroke-width: 48;
+}
+.route-wideDesktop .ice-segment-shine {
+  stroke-width: 22;
+}
+.route-wideDesktop .ice-segment-cut {
+  stroke-width: 2.4;
+  stroke-dasharray: 28 44;
+}
+
+.route-wideDesktop .program-card {
+  width: 800px;
+  height: 400px;
+  min-height: 0;
+  grid-template-columns: minmax(0, 1fr) 200px;
+  gap: 24px;
+  padding: 36px;
+  border-radius: 28px;
+}
+
+.route-wideDesktop .program-card::after {
+  top: 22px;
+  right: 26px;
+  font-size: 50px;
+}
+.route-wideDesktop .program-icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 18px;
+  font-size: 1.8rem;
+}
+.route-wideDesktop .program-card h3 {
+  font-size: 2.5rem;
+  line-height: 1.02;
+  margin: 20px 0 10px;
+}
+.route-wideDesktop .program-card p {
+  font-size: 1.22rem;
+  line-height: 1.35;
+  margin-bottom: 12px;
+}
+.route-wideDesktop .program-card small {
+  display: block;
+  font-size: 1.04rem;
+  line-height: 1.6;
+  max-width: 420px;
+}
+.route-wideDesktop .program-card a {
+  font-size: 1.08rem;
+  margin-top: 18px;
+}
+.route-wideDesktop .program-image {
+  border-radius: 22px;
+}
+.route-wideDesktop .card-1 {
+  left: 0;
+  top: 90px;
+}
+.route-wideDesktop .card-2 {
+  right: 0;
+  top: 620px;
+}
+.route-wideDesktop .card-3 {
+  left: 0;
+  top: 1280px;
+}
+.route-wideDesktop .path-penguin {
+  width: 118px;
+}
+.route-wideDesktop .path-penguin-one {
+  left: 56%;
+  top: 445px;
+  transform: rotate(14deg);
+}
+.route-wideDesktop .path-penguin-two {
+  left: 33%;
+  top: 1050px;
+  transform: scaleX(-1) rotate(-14deg);
+}

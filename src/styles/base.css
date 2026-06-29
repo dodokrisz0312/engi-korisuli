@@ -1,0 +1,136 @@
+:root {
+  --navy: #062b73;
+  --blue: #2f7df1;
+  --teal: #28bdbe;
+  --teal-dark: #159da1;
+  --orange: #ffb347;
+  --coral: #ff5757;
+  --ice: #effaff;
+  --text: #0b2b66;
+  --muted: #48658e;
+  --card: rgba(255, 255, 255, 0.88);
+  --shadow: 0 22px 60px rgba(30, 93, 156, 0.14);
+  --radius: 28px;
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 12% 12%, rgba(73, 207, 219, 0.18), transparent 25%),
+    radial-gradient(circle at 88% 5%, rgba(255, 179, 71, 0.14), transparent 21%),
+    linear-gradient(180deg, #f5fcff 0%, #ffffff 52%, #effaff 100%);
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+main {
+  overflow: hidden;
+  position: relative;
+}
+main > section,
+main > header,
+main > footer {
+  position: relative;
+  z-index: 1;
+}
+
+.section-shell {
+  width: calc(100% - 64px);
+  margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+  .section-shell {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 899px) {
+  .section-shell {
+    width: calc(100% - 44px);
+  }
+}
+
+@media (max-width: 640px) {
+  .section-shell {
+    width: min(100% - 28px, 520px);
+  }
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 940px;
+  margin: 48px auto 34px;
+}
+.section-heading span {
+  color: var(--teal-dark);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: clamp(0.9rem, 1vw, 1rem);
+}
+.section-heading p {
+  color: var(--muted);
+  line-height: 1.72;
+  font-size: clamp(1rem, 1.2vw, 1.18rem);
+}
+
+h1 {
+  font-size: clamp(2.5rem, 4.6vw, 4.9rem);
+  line-height: 0.96;
+  margin: 0;
+  color: var(--navy);
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  color: var(--navy);
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 1.08;
+  margin: 10px 0 12px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 16px;
+  padding: 15px 20px;
+  font-weight: 900;
+  font-size: clamp(0.95rem, 1vw, 1.02rem);
+}
+.btn.primary {
+  background: var(--coral);
+  color: white;
+}
+.btn.ghost {
+  background: var(--teal);
+  color: white;
+}
+
+@media (max-width: 640px) {
+  .section-heading {
+    text-align: left;
+    margin: 34px auto 24px;
+  }
+  h2 {
+    font-size: clamp(1.75rem, 8vw, 2.2rem);
+  }
+}
