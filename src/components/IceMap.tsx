@@ -45,20 +45,20 @@ const routeVariants: Record<RouteVariant, { viewBox: string; segments: RouteSegm
     segments: [
       {
         id: "full-tablet-journey",
-        d: "M500 200 C600 220 700 250 800 320 C1100 640 -700 950 560 1450 C950 1600 1000 1700 500 1800",
+        d: "M550 200 C600 220 700 250 800 320 C1100 640 -700 950 560 1450 C950 1600 1000 1700 550 1800",
       },
     ],
   },
   mobile: {
-    viewBox: "0 0 520 1600",
+    viewBox: "0 0 520 1700",
     segments: [
       {
         id: "mobile-korisuli-to-tsmt",
-        d: "M100 340 C1000 430 -400 500 300 680",
+        d: "M200 340 C1000 430 -400 500 300 650",
       },
       {
         id: "mobile-tsmt-to-hokisuli",
-        d: "M400 950 C-400 1040 850 1190 180 1340",
+        d: "M350 1020 C-400 1200 850 1250 180 1380",
       },
     ],
   },

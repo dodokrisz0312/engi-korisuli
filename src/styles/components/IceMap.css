@@ -279,7 +279,7 @@
 }
 
 .route-mobile {
-  min-height: 1540px;
+  min-height: 1700px;
 }
 
 .route-mobile .program-card {
@@ -293,13 +293,13 @@
 }
 
 .route-mobile .card-1 {
-  top: 50px;
+  top: 30px;
 }
 .route-mobile .card-2 {
-  top: 560px;
+  top: 700px;
 }
 .route-mobile .card-3 {
-  top: 1080px;
+  top: 1430px;
 }
 .route-mobile .program-card h3 {
   font-size: 1.6rem;
@@ -319,12 +319,12 @@
 }
 .route-mobile .path-penguin-one {
   left: 58%;
-  top: 405px;
-  transform: rotate(15deg);
+  top: 390px;
+  transform: rotate(0deg);
 }
 .route-mobile .path-penguin-two {
-  left: 27%;
-  top: 910px;
+  left: 35%;
+  top: 1130px;
   transform: scaleX(-1) rotate(-13deg);
 }
 
@@ -402,11 +402,11 @@
 }
 .route-tablet .path-penguin-one {
   left: 59%;
-  top: 475px;
-  transform: rotate(15deg);
+  top: 530px;
+  transform: rotate(0deg);
 }
 .route-tablet .path-penguin-two {
-  left: 27%;
+  left: 18%;
   top: 1180px;
   transform: scaleX(-1) rotate(-13deg);
 }
@@ -488,12 +488,12 @@
 }
 .route-smallDesktop .path-penguin-one {
   left: 56%;
-  top: 405px;
-  transform: rotate(14deg);
+  top: 370px;
+  transform: rotate(0deg);
 }
 .route-smallDesktop .path-penguin-two {
-  left: 31%;
-  top: 1010px;
+  left: 40%;
+  top: 860px;
   transform: scaleX(-1) rotate(-14deg);
 }
 
@@ -575,12 +575,12 @@
 }
 .route-desktop .path-penguin-one {
   left: 56%;
-  top: 430px;
-  transform: rotate(14deg);
+  top: 420px;
+  transform: rotate(0deg);
 }
 .route-desktop .path-penguin-two {
-  left: 34%;
-  top: 1045px;
+  left: 40%;
+  top: 870px;
   transform: scaleX(-1) rotate(-14deg);
 }
 
@@ -666,11 +666,11 @@
 }
 .route-wideDesktop .path-penguin-one {
   left: 56%;
-  top: 445px;
-  transform: rotate(14deg);
+  top: 460px;
+  transform: rotate(0deg);
 }
 .route-wideDesktop .path-penguin-two {
   left: 33%;
-  top: 1050px;
+  top: 830px;
   transform: scaleX(-1) rotate(-14deg);
 }
