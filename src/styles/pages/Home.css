@@ -1,3 +1,4 @@
 .home-page {
-  overflow: hidden;
+  overflow-x: clip;
+  overflow-y: visible;
 }

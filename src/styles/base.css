@@ -40,7 +40,8 @@ a {
   text-decoration: none;
 }
 main {
-  overflow: hidden;
+  overflow-x: clip;
+  overflow-y: visible;
   position: relative;
 }
 main > section,

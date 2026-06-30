@@ -1,9 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { CalendarDays, Menu, Snowflake, X } from "lucide-react";
+import { CalendarDays, Menu, X } from "lucide-react";
 import { useState } from "react";
+import logoImage from "@/assets/logo.png";
 import { navItems } from "@/data/site";
 
 function isActiveLink(pathname: string, href: string) {
@@ -19,11 +21,7 @@ export function Header() {
   return (
     <header className="site-header">
       <Link href="/" className="logo" aria-label="Engi Korisuli kezdőlap">
-        <span className="logo-mark">
-          <Snowflake size={18} />
-          <span>⛸</span>
-        </span>
-        <span className="logo-text">Engi Korisuli</span>
+        <Image className="logo-image" src={logoImage} alt="Engi Korisuli" priority />
       </Link>
 
       <nav className="desktop-nav" aria-label="Főmenü">
