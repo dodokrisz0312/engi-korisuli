@@ -171,6 +171,7 @@
   width: 56%;
   flex-direction: column;
   justify-content: center;
+  gap: 24px;
 }
 
 .route-mobile .program-content {
