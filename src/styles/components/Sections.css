@@ -145,6 +145,26 @@
   line-height: 1.2;
 }
 
+@media (max-width: 1600px) {
+  .gallery-grid {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+  }
+
+  .gallery-tile:nth-child(n + 8) {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .gallery-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .gallery-tile:nth-child(n + 7) {
+    display: none;
+  }
+}
+
 .teacher-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

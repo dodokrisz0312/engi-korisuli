@@ -1,15 +1,26 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Instagram, Mail, Phone } from "lucide-react";
 import penguinFooterImage from "@/assets/penguin-footer.png";
 import { galleryItems, stats, teachers } from "@/data/site";
+
+function FacebookIcon() {
+  return (
+    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+      <path
+        fill="currentColor"
+        d="M14.2 8.3V6.8c0-.7.5-.9.9-.9h2.2V2.2L14.2 2c-3.4 0-4.6 2-4.6 4.5v1.8H6.7v4.1h2.9V22h4.3v-9.6h2.9l.5-4.1h-3.1Z"
+      />
+    </svg>
+  );
+}
 
 export function Stats() {
   return (
     <section className="intro-stats section-shell" aria-label="Bemutatkozás és tapasztalat">
       <article className="intro-card">
         <span>Bemutatkozás</span>
-        <h2>10+ év tapasztalat, játékos fejlődés és sok mosoly a jégen</h2>
+        <h2>30 év tapasztalat, játékos fejlődés és sok mosoly a jégen</h2>
         <p>
           Az Engi Korisuli célja, hogy a korcsolyázás örömét minden gyermekhez eljuttassa. Játékos,
           biztonságos és szeretetteljes környezetben dolgozunk, ahol a mozgás, a fejlődés és a
@@ -93,36 +104,55 @@ export function Teachers() {
 }
 
 export function CTA() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="site-footer">
       <div className="footer-inner section-shell">
-        <div className="footer-copy">
-          <h2>Csatlakozz hozzánk, és élvezzétek együtt a jég örömét!</h2>
-          <p>Próbáld ki bármelyik programunkat - szeretettel várunk!</p>
+        <div className="footer-brand">
+          <strong>Jégiskola · TSMT · Hokisuli</strong>
+          <span>Játék, mozgás, közösség.</span>
         </div>
 
-        <Link className="btn primary footer-cta" href="/jelentkezes">
-          Próbára jelentkezés
-        </Link>
+        <div className="footer-contact" aria-label="Elérhetőségek">
+          <h3>Elérhetőségek</h3>
+          <a href="tel:+36301234567">
+            <Phone size={14} aria-hidden="true" />
+            +36 30 123 4567
+          </a>
+          <a href="mailto:info@engikorisuli.hu">
+            <Mail size={14} aria-hidden="true" />
+            info@engikorisuli.hu
+          </a>
+        </div>
 
-        <nav className="social-links" aria-label="Közösségi média linkek">
-          <a href="#" aria-label="Facebook">
-            f
-          </a>
-          <a href="#" aria-label="Instagram">
-            ◎
-          </a>
-          <a href="#" aria-label="YouTube">
-            ▶
-          </a>
-        </nav>
+        <div className="footer-follow">
+          <h3>Kövess minket!</h3>
+          <div className="social-links">
+            <a
+              href="https://facebook.com/engikorisuli"
+              aria-label="Facebook"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FacebookIcon />
+            </a>
+            <a href="#" aria-label="Instagram">
+              <Instagram size={18} aria-hidden="true" />
+            </a>
+          </div>
+        </div>
 
-        <Image
-          className="footer-penguin"
-          src={penguinFooterImage}
-          alt=""
-          aria-hidden="true"
-        />
+        <Image className="footer-penguin" src={penguinFooterImage} alt="" aria-hidden="true" />
+
+        <div className="footer-bottom">
+          <p>© {currentYear} Engi Korisuli. Minden jog fenntartva.</p>
+          <div className="footer-legal">
+            <Link href="/adatvedelmi-tajekoztato">Adatvédelmi tájékoztató</Link>
+            <span aria-hidden="true">•</span>
+            <Link href="/aszf">Általános szerződési feltételek</Link>
+          </div>
+        </div>
       </div>
     </footer>
   );

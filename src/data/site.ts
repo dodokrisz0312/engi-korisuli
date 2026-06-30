@@ -66,10 +66,10 @@ export const programs = [
 ];
 
 export const stats = [
-  { value: "10+", label: "év tapasztalat", icon: CalendarDays },
-  { value: "300+", label: "boldog gyermek", icon: UsersRound },
-  { value: "2", label: "helyszín", icon: MapPin },
-  { value: "95%", label: "visszatérő család", icon: Heart },
+  { value: "30", label: "év tapasztalat", icon: CalendarDays },
+  { value: "1000+", label: "boldog gyermek", icon: UsersRound },
+  { value: "3", label: "helyszín", icon: MapPin },
+  { value: "100%", label: "Elégedettség", icon: Heart },
 ];
 
 export const galleryItems: GalleryItem[] = [
