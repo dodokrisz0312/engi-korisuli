@@ -1,5 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ChevronRight } from "lucide-react";
+import penguinFooterImage from "@/assets/penguin-footer.png";
 import { galleryItems, stats, teachers } from "@/data/site";
 
 export function Stats() {
@@ -110,9 +112,9 @@ export function CTA() {
           </a>
         </nav>
 
-        <img
+        <Image
           className="footer-penguin"
-          src="/images/penguin-footer.png"
+          src={penguinFooterImage}
           alt=""
           aria-hidden="true"
         />

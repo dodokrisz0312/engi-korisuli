@@ -1,8 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
+import penguinSkateImage from "@/assets/penguin-skate.png";
 import { programs } from "@/data/site";
 
 type RouteVariant =
@@ -187,15 +189,15 @@ export function IceMap() {
           </article>
         ))}
 
-        <img
+        <Image
           className="path-penguin path-penguin-one"
-          src="/images/penguin-skate.png"
+          src={penguinSkateImage}
           alt=""
           aria-hidden="true"
         />
-        <img
+        <Image
           className="path-penguin path-penguin-two"
-          src="/images/penguin-skate.png"
+          src={penguinSkateImage}
           alt=""
           aria-hidden="true"
         />
