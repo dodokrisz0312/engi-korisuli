@@ -16,12 +16,14 @@ import {
   Trophy,
   Users,
 } from "lucide-react";
+import { Header } from "@/components/Header";
 import { CTA } from "@/components/Sections";
+import penguinWaveImage from "@/assets/penguin-wave.png";
+import { galleryItems } from "@/data/site";
 
 const founders = [
   {
     name: "Engi Klári és Tóth Attila",
-    image: "/images/korisuli/founders-engi-toth.jpg",
     points: [
       "Nyolcszoros jégtánc magyar bajnokok",
       "Európa- és Világbajnokság IV. helyezés",
@@ -30,7 +32,6 @@ const founders = [
   },
   {
     name: "Száraz András",
-    image: "/images/korisuli/founder-andras.jpg",
     points: [
       "Többszörös magyar bajnok",
       "Mesteredző",
@@ -129,6 +130,8 @@ export default function KorisuliPage() {
   return (
     <>
       <main className="korisuli-page">
+        <Header />
+
         <section className="korisuli-hero section-shell">
           <div className="korisuli-hero-copy">
             <p className="korisuli-eyebrow">Jégiskolánk</p>
@@ -139,9 +142,7 @@ export default function KorisuliPage() {
 
             <Image
               className="korisuli-hero-penguin"
-              src="/images/penguin-wave.png"
-              width={180}
-              height={180}
+              src={penguinWaveImage}
               alt=""
               aria-hidden="true"
             />
@@ -149,7 +150,7 @@ export default function KorisuliPage() {
 
           <div className="korisuli-hero-visual">
             <Image
-              src="/images/korisuli/hero-kids.jpg"
+              src={galleryItems[0].image}
               alt="Mosolygó gyerekek korcsolyázás közben"
               fill
               priority
@@ -175,14 +176,6 @@ export default function KorisuliPage() {
           <div className="founders-grid">
             {founders.map((founder) => (
               <article className="founder-card" key={founder.name}>
-                <Image
-                  src={founder.image}
-                  width={150}
-                  height={150}
-                  alt={founder.name}
-                  className="founder-image"
-                />
-
                 <div>
                   <h3>{founder.name}</h3>
                   <ul>
@@ -258,7 +251,7 @@ export default function KorisuliPage() {
         <section className="korisuli-join section-shell">
           <div className="join-image-wrap">
             <Image
-              src="/images/korisuli/join-kid.jpg"
+              src={galleryItems[3].image}
               width={420}
               height={260}
               alt="Mosolygó gyermek a jégpályán"

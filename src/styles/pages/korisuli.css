@@ -5,7 +5,7 @@
 .korisuli-page {
   position: relative;
   overflow: hidden;
-  padding-top: 34px;
+  padding-top: 0;
 }
 
 .korisuli-page::before,
@@ -84,9 +84,9 @@
 
 .korisuli-hero-penguin {
   position: absolute;
-  left: 64px;
-  bottom: 12px;
-  width: clamp(120px, 14vw, 190px);
+  right: 12px;
+  bottom: 0;
+  width: clamp(96px, 11vw, 150px);
   height: auto;
   filter: drop-shadow(0 16px 20px rgba(14, 91, 126, 0.12));
 }
@@ -205,18 +205,9 @@
 
 .founder-card {
   display: grid;
-  grid-template-columns: minmax(112px, 150px) minmax(0, 1fr);
-  gap: 22px;
+  gap: 16px;
   align-items: center;
   padding: 24px;
-}
-
-.founder-image {
-  width: 150px;
-  height: 150px;
-  border-radius: 999px;
-  object-fit: cover;
-  background: #eaf7fb;
 }
 
 .founder-card h3 {
@@ -278,8 +269,9 @@
 
 .timeline-grid {
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 28px;
 }
 
@@ -289,6 +281,8 @@
 
 .timeline-card {
   position: relative;
+  flex: 1 1 260px;
+  max-width: 360px;
   z-index: 1;
   display: grid;
   justify-items: center;
@@ -451,8 +445,7 @@
   gap: 28px;
   align-items: center;
   margin-top: 42px;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding: 24px;
   border: 1px solid #d9eef5;
   border-radius: 34px;
   background: rgba(255, 255, 255, 0.78);
@@ -522,6 +515,7 @@
     right: 28px;
     left: auto;
     bottom: 0;
+    width: 128px;
   }
 
   .korisuli-stat-card {
@@ -543,7 +537,7 @@
 
 @media (max-width: 900px) {
   .korisuli-page {
-    padding-top: 22px;
+    padding-top: 0;
   }
 
   .korisuli-hero h1 {
@@ -551,25 +545,30 @@
   }
 
   .korisuli-hero-visual {
-    min-height: 360px;
+    min-height: 420px;
+    overflow: hidden;
   }
 
   .korisuli-stat-card {
-    position: relative;
-    right: auto;
+    right: 18px;
     top: auto;
-    width: 100%;
+    bottom: 18px;
+    width: min(320px, calc(100% - 36px));
     min-width: 0;
-    margin-top: 18px;
+    padding: 18px 20px;
     transform: none;
+  }
+
+  .korisuli-stat-card p {
+    display: none;
   }
 
   .founders-grid {
     grid-template-columns: 1fr;
   }
 
-  .timeline-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .timeline-card {
+    flex-basis: min(330px, 100%);
   }
 
   .korisuli-join {
@@ -591,15 +590,16 @@
 
 @media (max-width: 640px) {
   .korisuli-hero-copy {
-    min-height: 420px;
+    min-height: 360px;
   }
 
   .korisuli-hero-penguin {
-    width: 128px;
+    right: 8px;
+    width: 104px;
   }
 
   .korisuli-hero-visual {
-    min-height: 300px;
+    min-height: 360px;
     border-radius: 30px;
   }
 
@@ -615,10 +615,6 @@
 
   .founder-card li {
     justify-content: center;
-  }
-
-  .timeline-grid {
-    grid-template-columns: 1fr;
   }
 
   .korisuli-panel {
