@@ -1,4 +1,29 @@
 import { CalendarDays, Heart, MapPin, Medal, Snowflake, UsersRound } from "lucide-react";
+import type { StaticImageData } from "next/image";
+import galleryImage1 from "@/assets/gallery/korisuli/Polusjeg.jpg";
+import galleryImage2 from "@/assets/gallery/korisuli/Polusjeg-4.jpg";
+import galleryImage3 from "@/assets/gallery/korisuli/Polusjeg-7.jpg";
+import galleryImage4 from "@/assets/gallery/korisuli/Polusjeg-10.jpg";
+import galleryImage5 from "@/assets/gallery/korisuli/Polusjeg-14.jpg";
+import galleryImage6 from "@/assets/gallery/korisuli/Polusjeg-20.jpg";
+import galleryImage7 from "@/assets/gallery/korisuli/oktatasaink_1.jpg";
+import galleryImage8 from "@/assets/gallery/korisuli/oktatasaink_6.jpg";
+import teacherViktorImage from "@/assets/teachers/devenyi_viktor.jpg";
+import teacherKlariImage from "@/assets/teachers/engi_klari_1.jpg";
+import teacherDominikaImage from "@/assets/teachers/toth_dominika.jpg";
+
+export type GalleryItem = {
+  label: string;
+  image: StaticImageData;
+  className: string;
+};
+
+export type Teacher = {
+  name: string;
+  role: string;
+  text: string;
+  image: StaticImageData;
+};
 
 export const navItems = [
   { label: "Kezdőlap", href: "/" },
@@ -47,43 +72,35 @@ export const stats = [
   { value: "95%", label: "visszatérő család", icon: Heart },
 ];
 
-export const galleryItems = [
-  {
-    label: "Első lépések a jégen",
-    imageSrc: "/images/generated/gallery-1.jpg",
-    className: "tile-1",
-  },
-  {
-    label: "Kis csapat a pályán",
-    imageSrc: "/images/generated/gallery-2.jpg",
-    className: "tile-2",
-  },
-  {
-    label: "Ügyességi feladatok",
-    imageSrc: "/images/generated/gallery-3.jpg",
-    className: "tile-3",
-  },
-  { label: "Játék és fejlődés", imageSrc: "/images/generated/gallery-4.jpg", className: "tile-4" },
+export const galleryItems: GalleryItem[] = [
+  { label: "Első lépések a jégen", image: galleryImage1, className: "tile-1" },
+  { label: "Kis csapat a pályán", image: galleryImage2, className: "tile-2" },
+  { label: "Ügyességi feladatok", image: galleryImage3, className: "tile-3" },
+  { label: "Játék és fejlődés", image: galleryImage4, className: "tile-4" },
+  { label: "Korisuli pillanat", image: galleryImage5, className: "tile-5" },
+  { label: "Gyakorlás a jégen", image: galleryImage6, className: "tile-6" },
+  { label: "Oktatás közben", image: galleryImage7, className: "tile-7" },
+  { label: "Vidám jégóra", image: galleryImage8, className: "tile-8" },
 ];
 
-export const teachers = [
+export const teachers: Teacher[] = [
   {
-    name: "Enci",
-    role: "Korcsolyaoktató",
-    text: "Több mint 15 éve foglalkozom gyerekekkel a jégen, a játékos fejlődés híve vagyok.",
-    imageSrc: "/images/generated/teacher-1.jpg",
+    name: "Klári",
+    role: "Vezetőedző, alapító tag",
+    text: "Jégiskola vezetője, minden korosztállyal foglalkozik, de legtöbbet a kezdőkkel.",
+    image: teacherKlariImage,
   },
   {
-    name: "Gábor",
-    role: "TSMT terapeuta",
-    text: "Mozgásfejlesztés szakértő, aki a helyes mozgásminták kialakítását támogatja.",
-    imageSrc: "/images/generated/teacher-2.jpg",
+    name: "Viktor",
+    role: "Edző",
+    text: "Egyetlen férfi kollégánk, aki hosszú évek óta támogatja munkánkat Középső és nagy csoportokkal foglalkozik.",
+    image: teacherViktorImage,
   },
   {
-    name: "Lilla",
-    role: "Hoki edző",
-    text: "Jégkorong játékos múlt, lelkes edző és csapatépítő szemlélet minden órán.",
-    imageSrc: "/images/generated/teacher-3.jpg",
+    name: "Dominika",
+    role: "Adminisztrátor, segédedző",
+    text: "Gyerekkora óta velünk van, eleinte résztvevőként, ma már oktatóként és adminisztrátorként is segít.",
+    image: teacherDominikaImage,
   },
 ];
 

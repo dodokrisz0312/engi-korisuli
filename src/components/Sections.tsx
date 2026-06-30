@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import penguinFooterImage from "@/assets/penguin-footer.png";
 import { galleryItems, stats, teachers } from "@/data/site";
@@ -46,9 +46,9 @@ export function Gallery() {
         </Link>
       </div>
       <div className="gallery-grid">
-        {galleryItems.map((item, i) => (
+        {galleryItems.map((item) => (
           <article className={`gallery-tile ${item.className}`} key={item.label}>
-            <img src={item.imageSrc} alt={item.label} />
+            <Image src={item.image} alt={item.label} sizes="180px" />
             <div className="gallery-overlay">
               <span>{item.label}</span>
             </div>
@@ -71,7 +71,12 @@ export function Teachers() {
       <div className="teacher-grid">
         {teachers.map((teacher, i) => (
           <article className="teacher-card" key={teacher.name}>
-            <img className={`avatar avatar-${i + 1}`} src={teacher.imageSrc} alt={teacher.name} />
+            <Image
+              className={`avatar avatar-${i + 1}`}
+              src={teacher.image}
+              alt={teacher.name}
+              sizes="124px"
+            />
             <div>
               <h3>{teacher.name}</h3>
               <strong>{teacher.role}</strong>
@@ -93,7 +98,7 @@ export function CTA() {
       <div className="footer-inner section-shell">
         <div className="footer-copy">
           <h2>Csatlakozz hozzánk, és élvezzétek együtt a jég örömét!</h2>
-          <p>Próbáld ki bármelyik programunkat – szeretettel várunk!</p>
+          <p>Próbáld ki bármelyik programunkat - szeretettel várunk!</p>
         </div>
 
         <Link className="btn primary footer-cta" href="/jelentkezes">
