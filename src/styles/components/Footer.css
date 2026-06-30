@@ -10,7 +10,7 @@
 .footer-inner {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(240px, 1fr) minmax(210px, auto) minmax(140px, auto) 76px;
+  grid-template-columns: minmax(0, 1fr) minmax(190px, auto) minmax(130px, auto) 70px;
   align-items: start;
   gap: 24px;
   padding: 16px 0 10px;
@@ -111,7 +111,7 @@
 .footer-penguin {
   display: block;
   justify-self: end;
-  width: 74px;
+  width: 70px;
   height: auto;
   pointer-events: none;
   filter: drop-shadow(0 10px 14px rgba(16, 96, 122, 0.13));

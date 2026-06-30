@@ -40,7 +40,7 @@
 .korisuli-hero {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(300px, 0.85fr) minmax(420px, 1.4fr);
+  grid-template-columns: minmax(260px, 0.85fr) minmax(0, 1.4fr);
   gap: clamp(28px, 4vw, 62px);
   align-items: center;
   min-height: 520px;
@@ -106,7 +106,7 @@
 
 .korisuli-stat-card {
   position: absolute;
-  right: -34px;
+  right: 24px;
   top: 50%;
   display: grid;
   gap: 12px;
@@ -186,8 +186,12 @@
 
 .founders-grid {
   display: grid;
-  grid-template-columns: 1.25fr 1.25fr 0.95fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
+}
+
+.founder-note {
+  grid-column: 1 / -1;
 }
 
 .founder-card,
@@ -201,7 +205,7 @@
 
 .founder-card {
   display: grid;
-  grid-template-columns: 150px 1fr;
+  grid-template-columns: minmax(112px, 150px) minmax(0, 1fr);
   gap: 22px;
   align-items: center;
   padding: 24px;
@@ -252,7 +256,7 @@
   justify-items: center;
   gap: 22px;
   padding: 34px;
-  text-align: left;
+  text-align: center;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.85), rgba(235, 249, 253, 0.86));
 }
 
@@ -275,23 +279,12 @@
 .timeline-grid {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 28px;
 }
 
 .timeline-grid::before {
-  content: "";
-  position: absolute;
-  left: 9%;
-  right: 9%;
-  top: 58px;
-  height: 2px;
-  background: linear-gradient(
-    90deg,
-    rgba(39, 185, 189, 0.15),
-    rgba(39, 185, 189, 0.8),
-    rgba(255, 87, 87, 0.22)
-  );
+  display: none;
 }
 
 .timeline-card {
@@ -454,7 +447,7 @@
 
 .korisuli-join {
   display: grid;
-  grid-template-columns: 340px minmax(0, 1fr) auto;
+  grid-template-columns: minmax(240px, 300px) minmax(0, 1fr);
   gap: 28px;
   align-items: center;
   margin-top: 42px;
@@ -497,9 +490,10 @@
 }
 
 .join-actions {
+  grid-column: 1 / -1;
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
-  min-width: 250px;
 }
 
 .join-actions .btn {
@@ -534,34 +528,12 @@
     right: 24px;
   }
 
-  .founders-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .founder-note {
-    grid-column: 1 / -1;
-    min-height: 190px;
-  }
-
-  .timeline-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .timeline-grid::before {
-    display: none;
-  }
-
   .korisuli-info-grid {
     grid-template-columns: 1fr;
   }
 
   .korisuli-join {
-    grid-template-columns: 280px 1fr;
-  }
-
-  .join-actions {
-    grid-column: 1 / -1;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
   }
 }
 
