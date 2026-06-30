@@ -1,3 +1,7 @@
+/* ==========================================================================
+   ICE MAP SECTION
+   ========================================================================== */
+
 .ice-map {
   position: relative;
   margin-bottom: 80px;
@@ -5,7 +9,7 @@
 
 .map-stage {
   position: relative;
-  min-height: 1600px;
+  min-height: 1700px;
   margin-top: 14px;
   overflow: visible;
   isolation: isolate;
@@ -15,24 +19,28 @@
   content: "";
   position: absolute;
   inset: 2.5% 1.5% 4%;
+  z-index: -1;
   border-radius: 44px;
   background:
     radial-gradient(circle at 60% 18%, rgba(255, 255, 255, 0.86), transparent 20%),
     radial-gradient(circle at 50% 50%, rgba(198, 242, 255, 0.48), transparent 25%),
     radial-gradient(circle at 39% 82%, rgba(255, 255, 255, 0.82), transparent 20%);
   opacity: 0.78;
-  z-index: -1;
 }
+
+/* ==========================================================================
+   ICE ROUTE SVG
+   ========================================================================== */
 
 .ice-routes {
   position: absolute;
   inset: 0;
+  z-index: 1;
   display: block;
   width: 100%;
   height: 100%;
-  pointer-events: none;
   overflow: visible;
-  z-index: 1;
+  pointer-events: none;
 }
 
 .ice-routes * {
@@ -53,27 +61,33 @@
   stroke: rgba(80, 190, 224, 0.14);
   stroke-width: 62;
 }
+
 .ice-segment-outer {
   stroke: rgba(105, 206, 232, 0.42);
   stroke-width: 46;
 }
+
 .ice-segment-surface {
   stroke: rgba(247, 253, 255, 0.96);
   stroke-width: 34;
 }
+
 .ice-segment-shine {
   stroke: rgba(255, 255, 255, 0.9);
   stroke-width: 18;
 }
+
 .ice-segment-cut {
   stroke-width: 2;
   stroke-dasharray: 18 30;
   animation: skateDash 28s linear infinite;
 }
+
 .ice-segment-cut-a {
   stroke: rgba(42, 157, 208, 0.42);
   stroke-dashoffset: 8;
 }
+
 .ice-segment-cut-b {
   stroke: rgba(255, 255, 255, 0.94);
   stroke-width: 1.8;
@@ -86,21 +100,27 @@
   }
 }
 
+/* ==========================================================================
+   PROGRAM CARD - BASE / MOBILE
+   ========================================================================== */
+
 .program-card {
   position: absolute;
+  left: 50%;
+  right: auto;
   z-index: 4;
   display: block;
-  width: min(360px, 90%);
-  min-height: 220px;
-  padding: 22px;
-  border-radius: 28px;
+  width: min(100%, 440px);
+  min-height: 240px;
+  padding: 20px;
   overflow: hidden;
   color: white;
+  border-radius: 28px;
   box-shadow: 0 22px 55px rgba(24, 104, 151, 0.18);
   isolation: isolate;
+  transform: translateX(-50%);
 }
 
-/* színes overlay balról jobbra */
 .program-card::before {
   content: "";
   position: absolute;
@@ -110,7 +130,6 @@
   pointer-events: none;
 }
 
-/* kis hópehely */
 .program-card::after {
   content: "❄";
   position: absolute;
@@ -122,13 +141,77 @@
   pointer-events: none;
 }
 
+.card-1 {
+  top: 30px;
+}
+
+.card-2 {
+  top: 700px;
+}
+
+.card-3 {
+  top: 1430px;
+}
+
+.program-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: 62%;
+  min-height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+}
+
+.program-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.program-card h3 {
+  margin: 10px 0 6px;
+  font-size: 1.6rem;
+  line-height: 1.05;
+}
+
+.program-card p {
+  margin: 0 0 8px;
+  font-weight: 900;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.program-card small {
+  display: block;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  opacity: 0.93;
+}
+
+.program-card a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 10px;
+  font-weight: 1000;
+  font-size: 0.96rem;
+}
+
+/* ==========================================================================
+   PROGRAM CARD - COLORS
+   ========================================================================== */
+
 .program-card.teal {
   background: linear-gradient(135deg, #22b9b8, #76d8d7);
 }
+
 .program-card.orange {
-  background: linear-gradient(135deg, #ffae39, #ffd38e);
   color: #7a3b00;
+  background: linear-gradient(135deg, #ffae39, #ffd38e);
 }
+
 .program-card.blue {
   background: linear-gradient(135deg, #3484f5, #74b8ff);
 }
@@ -142,6 +225,7 @@
     rgba(31, 185, 186, 0.05) 100%
   );
 }
+
 .program-card.orange::before {
   background: linear-gradient(
     90deg,
@@ -162,82 +246,21 @@
   );
 }
 
-/* szöveg a kép fölött */
-.program-content {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  min-height: 100%;
-  width: 56%;
-  flex-direction: column;
-  justify-content: center;
-  gap: 24px;
-}
+/* ==========================================================================
+   PROGRAM CARD - BACKGROUND IMAGES
+   ========================================================================== */
 
-.route-mobile .program-content {
-  width: 62%;
-}
-
-.route-tablet .program-content {
-  width: 58%;
-}
-
-.route-smallDesktop .program-content,
-.route-desktop .program-content {
-  width: 54%;
-}
-
-.route-wideDesktop .program-content {
-  width: 52%;
-}
-
-.program-top {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
-
-.program-card h3 {
-  font-size: 1.55rem;
-  line-height: 1.05;
-  margin: 10px 0 6px;
-}
-
-.program-card p {
-  font-weight: 900;
-  font-size: 1rem;
-  line-height: 1.35;
-  margin: 0 0 8px;
-}
-
-.program-card small {
-  display: none;
-  line-height: 1.55;
-  opacity: 0.93;
-  font-size: 0.92rem;
-}
-
-.program-card a {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  margin-top: 10px;
-  font-weight: 1000;
-  font-size: 0.96rem;
-}
-
-/* háttérkép */
 .program-image {
   position: absolute;
   inset: 0;
   z-index: 0;
-  min-height: 100%;
+  min-height: 160px;
   border-radius: inherit;
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
-  transform: scale(1.02);
   opacity: 1;
+  transform: scale(1.02);
 }
 
 .skater-one {
@@ -254,21 +277,42 @@
   background-image: url("../../assets/hokisuli.png");
   background-position: center right;
 }
+
+/* ==========================================================================
+   PATH PENGUINS - BASE / MOBILE
+   ========================================================================== */
+
 .path-penguin {
   position: absolute;
   z-index: 5;
-  width: 62px;
+  width: 68px;
   height: auto;
   pointer-events: none;
   filter: drop-shadow(0 14px 16px rgba(13, 72, 112, 0.16));
 }
 
+.path-penguin-one {
+  left: 58%;
+  top: 390px;
+  transform: rotate(0deg);
+}
+
+.path-penguin-two {
+  left: 35%;
+  top: 1130px;
+  transform: scaleX(-1) rotate(-13deg);
+}
+
+/* ==========================================================================
+   MAP SNOWFLAKES
+   ========================================================================== */
+
 .map-flake {
   position: absolute;
   z-index: 2;
   color: rgba(79, 181, 222, 0.35);
-  pointer-events: none;
   line-height: 1;
+  pointer-events: none;
 }
 
 .map-flake-1 {
@@ -277,60 +321,70 @@
   font-size: 50px;
   transform: rotate(-12deg);
 }
+
 .map-flake-2 {
   left: 77%;
   top: 18%;
   font-size: 38px;
   transform: rotate(10deg);
 }
+
 .map-flake-3 {
   right: -3%;
   top: 43%;
   font-size: 54px;
   transform: rotate(18deg);
 }
+
 .map-flake-4 {
   left: 46%;
   bottom: 18%;
   font-size: 58px;
   transform: rotate(-8deg);
 }
+
 .map-flake-5 {
   right: 4%;
   bottom: 4%;
   font-size: 39px;
   transform: rotate(14deg);
 }
+
 .map-flake-6 {
   left: 10%;
   bottom: 30%;
   font-size: 36px;
   transform: rotate(-16deg);
 }
+
 .map-flake-7 {
   right: 7%;
   bottom: 28%;
   font-size: 46px;
   transform: rotate(20deg);
 }
+
 .map-flake-8 {
   left: 4%;
   top: 62%;
   font-size: 42px;
   transform: rotate(-11deg);
 }
+
 .map-flake-9 {
   right: 27%;
   top: 36%;
   font-size: 32px;
   transform: rotate(16deg);
 }
+
 .map-flake-10 {
   left: 56%;
   bottom: 21%;
   font-size: 44px;
   transform: rotate(-19deg);
 }
+
 .map-flake-11 {
   right: -1%;
   bottom: 3%;
@@ -338,377 +392,413 @@
   transform: rotate(12deg);
 }
 
-.route-mobile {
-  min-height: 1700px;
+/* ==========================================================================
+   TABLET: 600px+
+   ========================================================================== */
+
+@media (min-width: 600px) {
+  .map-stage {
+    min-height: 1900px;
+  }
+
+  .ice-segment-shadow {
+    stroke-width: 72;
+  }
+
+  .ice-segment-outer {
+    stroke-width: 52;
+  }
+
+  .ice-segment-surface {
+    stroke-width: 38;
+  }
+
+  .ice-segment-shine {
+    stroke-width: 19;
+  }
+
+  .ice-segment-cut {
+    stroke-width: 2.1;
+    stroke-dasharray: 22 36;
+  }
+
+  .program-card {
+    width: min(460px, 49%);
+    min-height: 330px;
+    padding: 28px;
+    border-radius: 26px;
+    transform: none;
+  }
+
+  .program-content {
+    width: 58%;
+  }
+
+  .card-1 {
+    left: 0;
+    top: 80px;
+  }
+
+  .card-2 {
+    right: 0;
+    left: auto;
+    top: 800px;
+  }
+
+  .card-3 {
+    left: 0;
+    right: auto;
+    top: 1450px;
+  }
+
+  .program-card h3 {
+    margin: 14px 0 8px;
+    font-size: 2rem;
+  }
+
+  .program-card p {
+    margin-bottom: 8px;
+    font-size: 1.06rem;
+    line-height: 1.35;
+  }
+
+  .program-card small {
+    display: block;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .program-card a {
+    margin-top: 12px;
+    font-size: 1rem;
+  }
+
+  .program-image {
+    min-height: 140px;
+  }
+
+  .path-penguin {
+    width: 82px;
+  }
+
+  .path-penguin-one {
+    left: 59%;
+    top: 530px;
+    transform: rotate(0deg);
+  }
+
+  .path-penguin-two {
+    left: 18%;
+    top: 1180px;
+    transform: scaleX(-1) rotate(-13deg);
+  }
 }
 
-.route-mobile .program-card {
-  display: block;
-  left: 50%;
-  right: auto;
-  width: min(100%, 440px);
-  min-height: 240px;
-  transform: translateX(-50%);
-  padding: 20px;
+/* ==========================================================================
+   SMALL DESKTOP: 900px+
+   ========================================================================== */
+
+@media (min-width: 900px) {
+  .map-stage {
+    min-height: 1740px;
+  }
+
+  .ice-segment-shadow {
+    stroke-width: 84;
+  }
+
+  .ice-segment-outer {
+    stroke-width: 60;
+  }
+
+  .ice-segment-surface {
+    stroke-width: 44;
+  }
+
+  .ice-segment-shine {
+    stroke-width: 20;
+  }
+
+  .ice-segment-cut {
+    stroke-width: 2.2;
+    stroke-dasharray: 25 40;
+  }
+
+  .program-card {
+    width: min(540px, 54%);
+    height: 300px;
+    min-height: 0;
+    padding: 26px;
+    border-radius: 26px;
+  }
+
+  .program-content {
+    width: 54%;
+  }
+
+  .card-1 {
+    left: 0;
+    top: 70px;
+  }
+
+  .card-2 {
+    right: 0;
+    top: 560px;
+  }
+
+  .card-3 {
+    left: 0;
+    top: 1260px;
+  }
+
+  .program-card h3 {
+    margin: 13px 0 8px;
+    font-size: 2rem;
+  }
+
+  .program-card p {
+    margin-bottom: 8px;
+    font-size: 1.04rem;
+    line-height: 1.35;
+  }
+
+  .program-card small {
+    display: block;
+    max-width: 285px;
+    font-size: 0.92rem;
+    line-height: 1.5;
+  }
+
+  .program-card a {
+    margin-top: 10px;
+    font-size: 0.98rem;
+  }
+
+  .program-image {
+    min-height: auto;
+    border-radius: 20px;
+  }
+
+  .path-penguin {
+    width: 90px;
+  }
+
+  .path-penguin-one {
+    left: 56%;
+    top: 370px;
+    transform: rotate(0deg);
+  }
+
+  .path-penguin-two {
+    left: 40%;
+    top: 860px;
+    transform: scaleX(-1) rotate(-14deg);
+  }
 }
 
-.route-mobile .card-1 {
-  top: 30px;
-}
-.route-mobile .card-2 {
-  top: 700px;
-}
-.route-mobile .card-3 {
-  top: 1430px;
-}
-.route-mobile .program-card h3 {
-  font-size: 1.6rem;
-}
-.route-mobile .program-card p {
-  font-size: 1rem;
-}
-.route-mobile .program-card small {
-  display: block;
-  font-size: 0.9rem;
-}
-.route-mobile .program-image {
-  min-height: 160px;
-}
-.route-mobile .path-penguin {
-  width: 68px;
-}
-.route-mobile .path-penguin-one {
-  left: 58%;
-  top: 390px;
-  transform: rotate(0deg);
-}
-.route-mobile .path-penguin-two {
-  left: 35%;
-  top: 1130px;
-  transform: scaleX(-1) rotate(-13deg);
+/* ==========================================================================
+   DESKTOP: 1200px+
+   ========================================================================== */
+
+@media (min-width: 1200px) {
+  .map-stage {
+    min-height: 1760px;
+  }
+
+  .ice-segment-shadow {
+    stroke-width: 88;
+  }
+
+  .ice-segment-outer {
+    stroke-width: 62;
+  }
+
+  .ice-segment-surface {
+    stroke-width: 46;
+  }
+
+  .ice-segment-shine {
+    stroke-width: 21;
+  }
+
+  .ice-segment-cut {
+    stroke-width: 2.25;
+    stroke-dasharray: 26 42;
+  }
+
+  .program-card {
+    width: 700px;
+    height: 350px;
+    min-height: 0;
+    padding: 28px;
+    border-radius: 27px;
+  }
+
+  .program-card::after {
+    top: 18px;
+    right: 22px;
+    font-size: 40px;
+  }
+
+  .card-1 {
+    left: 0;
+    top: 90px;
+  }
+
+  .card-2 {
+    right: 0;
+    top: 610px;
+  }
+
+  .card-3 {
+    left: 0;
+    top: 1310px;
+  }
+
+  .program-card h3 {
+    margin: 14px 0 7px;
+    font-size: 2.1rem;
+  }
+
+  .program-card p {
+    margin-bottom: 8px;
+    font-size: 1.08rem;
+    line-height: 1.34;
+  }
+
+  .program-card small {
+    display: block;
+    max-width: 340px;
+    font-size: 0.96rem;
+    line-height: 1.5;
+  }
+
+  .program-card a {
+    margin-top: 11px;
+    font-size: 1rem;
+  }
+
+  .path-penguin {
+    width: 98px;
+  }
+
+  .path-penguin-one {
+    left: 56%;
+    top: 420px;
+    transform: rotate(0deg);
+  }
+
+  .path-penguin-two {
+    left: 40%;
+    top: 870px;
+    transform: scaleX(-1) rotate(-14deg);
+  }
 }
 
-.route-tablet {
-  min-height: 1900px;
-}
+/* ==========================================================================
+   WIDE DESKTOP: 1600px+
+   ========================================================================== */
 
-.route-tablet .ice-segment-shadow {
-  stroke-width: 72;
-}
-.route-tablet .ice-segment-outer {
-  stroke-width: 52;
-}
-.route-tablet .ice-segment-surface {
-  stroke-width: 38;
-}
-.route-tablet .ice-segment-shine {
-  stroke-width: 19;
-}
-.route-tablet .ice-segment-cut {
-  stroke-width: 2.1;
-  stroke-dasharray: 22 36;
-}
+@media (min-width: 1600px) {
+  .map-stage {
+    min-height: 1880px;
+  }
 
-.route-tablet .program-card {
-  display: block;
-  width: min(460px, 49%);
-  min-height: 330px;
-  gap: 28px;
-  padding: 28px;
-  border-radius: 26px;
-}
+  .ice-segment-shadow {
+    stroke-width: 92;
+  }
 
-.route-tablet .program-card h3 {
-  font-size: 2rem;
-  margin: 14px 0 8px;
-}
-.route-tablet .program-card p {
-  font-size: 1.06rem;
-  line-height: 1.35;
-  margin-bottom: 8px;
-}
-.route-tablet .program-card small {
-  display: block;
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-.route-tablet .program-card a {
-  font-size: 1rem;
-  margin-top: 12px;
-}
-.route-tablet .program-image {
-  min-height: 140px;
-}
-.route-tablet .card-1 {
-  left: 0;
-  top: 80px;
-}
-.route-tablet .card-2 {
-  right: 0;
-  top: 800px;
-}
-.route-tablet .card-3 {
-  left: 0;
-  top: 1450px;
-}
-.route-tablet .path-penguin {
-  width: 82px;
-}
-.route-tablet .path-penguin-one {
-  left: 59%;
-  top: 530px;
-  transform: rotate(0deg);
-}
-.route-tablet .path-penguin-two {
-  left: 18%;
-  top: 1180px;
-  transform: scaleX(-1) rotate(-13deg);
-}
+  .ice-segment-outer {
+    stroke-width: 66;
+  }
 
-.route-smallDesktop {
-  min-height: 1740px;
-}
+  .ice-segment-surface {
+    stroke-width: 48;
+  }
 
-.route-smallDesktop .ice-segment-shadow {
-  stroke-width: 84;
-}
-.route-smallDesktop .ice-segment-outer {
-  stroke-width: 60;
-}
-.route-smallDesktop .ice-segment-surface {
-  stroke-width: 44;
-}
-.route-smallDesktop .ice-segment-shine {
-  stroke-width: 20;
-}
-.route-smallDesktop .ice-segment-cut {
-  stroke-width: 2.2;
-  stroke-dasharray: 25 40;
-}
+  .ice-segment-shine {
+    stroke-width: 22;
+  }
 
-.route-smallDesktop .program-card {
-  display: block;
-  width: min(540px, 54%);
-  height: 300px;
-  min-height: 0;
-  gap: 18px;
-  padding: 26px;
-  border-radius: 26px;
-}
+  .ice-segment-cut {
+    stroke-width: 2.4;
+    stroke-dasharray: 28 44;
+  }
 
-.route-smallDesktop .program-card h3 {
-  font-size: 2rem;
-  margin: 13px 0 8px;
-}
-.route-smallDesktop .program-card p {
-  font-size: 1.04rem;
-  line-height: 1.35;
-  margin-bottom: 8px;
-}
-.route-smallDesktop .program-card small {
-  display: block;
-  font-size: 0.92rem;
-  line-height: 1.5;
-  max-width: 285px;
-}
-.route-smallDesktop .program-card a {
-  font-size: 0.98rem;
-  margin-top: 10px;
-}
-.route-smallDesktop .program-image {
-  min-height: auto;
-  border-radius: 20px;
-}
-.route-smallDesktop .card-1 {
-  left: 0;
-  top: 70px;
-}
-.route-smallDesktop .card-2 {
-  right: 0;
-  top: 560px;
-}
-.route-smallDesktop .card-3 {
-  left: 0;
-  top: 1260px;
-}
-.route-smallDesktop .path-penguin {
-  width: 90px;
-}
-.route-smallDesktop .path-penguin-one {
-  left: 56%;
-  top: 370px;
-  transform: rotate(0deg);
-}
-.route-smallDesktop .path-penguin-two {
-  left: 40%;
-  top: 860px;
-  transform: scaleX(-1) rotate(-14deg);
-}
+  .program-card {
+    width: 800px;
+    height: 400px;
+    min-height: 0;
+    padding: 36px;
+    border-radius: 28px;
+  }
 
-.route-desktop {
-  min-height: 1760px;
-}
+  .program-content {
+    width: 52%;
+  }
 
-.route-desktop .ice-segment-shadow {
-  stroke-width: 88;
-}
-.route-desktop .ice-segment-outer {
-  stroke-width: 62;
-}
-.route-desktop .ice-segment-surface {
-  stroke-width: 46;
-}
-.route-desktop .ice-segment-shine {
-  stroke-width: 21;
-}
-.route-desktop .ice-segment-cut {
-  stroke-width: 2.25;
-  stroke-dasharray: 26 42;
-}
+  .program-card::after {
+    top: 22px;
+    right: 26px;
+    font-size: 50px;
+  }
 
-.route-desktop .program-card {
-  display: block;
-  width: 700px;
-  height: 350px;
-  min-height: 0;
-  gap: 20px;
-  padding: 28px;
-  border-radius: 27px;
-}
+  .card-1 {
+    left: 0;
+    top: 90px;
+  }
 
-.route-desktop .program-card::after {
-  top: 18px;
-  right: 22px;
-  font-size: 40px;
-}
+  .card-2 {
+    right: 0;
+    top: 620px;
+  }
 
-.route-desktop .program-card h3 {
-  font-size: 2.1rem;
-  margin: 14px 0 7px;
-}
-.route-desktop .program-card p {
-  font-size: 1.08rem;
-  line-height: 1.34;
-  margin-bottom: 8px;
-}
-.route-desktop .program-card small {
-  display: block;
-  font-size: 0.96rem;
-  line-height: 1.5;
-  max-width: 340px;
-}
-.route-desktop .program-card a {
-  font-size: 1rem;
-  margin-top: 11px;
-}
-.route-desktop .card-1 {
-  left: 0;
-  top: 90px;
-}
-.route-desktop .card-2 {
-  right: 0;
-  top: 610px;
-}
-.route-desktop .card-3 {
-  left: 0;
-  top: 1310px;
-}
-.route-desktop .path-penguin {
-  width: 98px;
-}
-.route-desktop .path-penguin-one {
-  left: 56%;
-  top: 420px;
-  transform: rotate(0deg);
-}
-.route-desktop .path-penguin-two {
-  left: 40%;
-  top: 870px;
-  transform: scaleX(-1) rotate(-14deg);
-}
+  .card-3 {
+    left: 0;
+    top: 1280px;
+  }
 
-.route-wideDesktop {
-  min-height: 1880px;
-}
+  .program-card h3 {
+    margin: 20px 0 10px;
+    font-size: 2.5rem;
+    line-height: 1.02;
+  }
 
-.route-wideDesktop .ice-segment-shadow {
-  stroke-width: 92;
-}
-.route-wideDesktop .ice-segment-outer {
-  stroke-width: 66;
-}
-.route-wideDesktop .ice-segment-surface {
-  stroke-width: 48;
-}
-.route-wideDesktop .ice-segment-shine {
-  stroke-width: 22;
-}
-.route-wideDesktop .ice-segment-cut {
-  stroke-width: 2.4;
-  stroke-dasharray: 28 44;
-}
+  .program-card p {
+    margin-bottom: 12px;
+    font-size: 1.22rem;
+    line-height: 1.35;
+  }
 
-.route-wideDesktop .program-card {
-  display: block;
-  width: 800px;
-  height: 400px;
-  min-height: 0;
-  gap: 24px;
-  padding: 36px;
-  border-radius: 28px;
-}
+  .program-card small {
+    display: block;
+    max-width: 420px;
+    font-size: 1.04rem;
+    line-height: 1.6;
+  }
 
-.route-wideDesktop .program-card::after {
-  top: 22px;
-  right: 26px;
-  font-size: 50px;
-}
+  .program-card a {
+    margin-top: 18px;
+    font-size: 1.08rem;
+  }
 
-.route-wideDesktop .program-card h3 {
-  font-size: 2.5rem;
-  line-height: 1.02;
-  margin: 20px 0 10px;
-}
-.route-wideDesktop .program-card p {
-  font-size: 1.22rem;
-  line-height: 1.35;
-  margin-bottom: 12px;
-}
-.route-wideDesktop .program-card small {
-  display: block;
-  font-size: 1.04rem;
-  line-height: 1.6;
-  max-width: 420px;
-}
-.route-wideDesktop .program-card a {
-  font-size: 1.08rem;
-  margin-top: 18px;
-}
-.route-wideDesktop .program-image {
-  border-radius: 22px;
-}
-.route-wideDesktop .card-1 {
-  left: 0;
-  top: 90px;
-}
-.route-wideDesktop .card-2 {
-  right: 0;
-  top: 620px;
-}
-.route-wideDesktop .card-3 {
-  left: 0;
-  top: 1280px;
-}
-.route-wideDesktop .path-penguin {
-  width: 118px;
-}
-.route-wideDesktop .path-penguin-one {
-  left: 56%;
-  top: 460px;
-  transform: rotate(0deg);
-}
-.route-wideDesktop .path-penguin-two {
-  left: 33%;
-  top: 830px;
-  transform: scaleX(-1) rotate(-14deg);
+  .program-image {
+    border-radius: 22px;
+  }
+
+  .path-penguin {
+    width: 118px;
+  }
+
+  .path-penguin-one {
+    left: 56%;
+    top: 460px;
+    transform: rotate(0deg);
+  }
+
+  .path-penguin-two {
+    left: 33%;
+    top: 830px;
+    transform: scaleX(-1) rotate(-14deg);
+  }
 }
