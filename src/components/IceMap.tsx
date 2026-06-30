@@ -5,7 +5,8 @@ import { ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import { programs } from "@/data/site";
 
-type RouteVariant = "wideDesktop" | "desktop" | "smallDesktop" | "tablet" | "mobile";
+type RouteVariant =
+  "wideDesktop" | "desktop" | "smallDesktop" | "tablet" | "mobile" | "smallMobile";
 
 type RouteSegmentConfig = {
   id: string;
@@ -66,6 +67,19 @@ const routeVariants: Record<RouteVariant, { viewBox: string; segments: RouteSegm
       },
     ],
   },
+  smallMobile: {
+    viewBox: "0 0 520 1700",
+    segments: [
+      {
+        id: "small-mobile-korisuli-to-tsmt",
+        d: "M200 390 C1000 430 -400 500 300 650",
+      },
+      {
+        id: "small-mobile-tsmt-to-hokisuli",
+        d: "M350 1080 C-400 1200 850 1250 180 1380",
+      },
+    ],
+  },
 };
 
 function getRouteVariant(width: number): RouteVariant {
@@ -73,7 +87,8 @@ function getRouteVariant(width: number): RouteVariant {
   if (width > 1200) return "desktop";
   if (width > 900) return "smallDesktop";
   if (width > 600) return "tablet";
-  return "mobile";
+  if (width > 385) return "mobile";
+  return "smallMobile";
 }
 
 function useRouteVariant() {

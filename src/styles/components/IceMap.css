@@ -727,6 +727,7 @@
 @media (max-width: 600px) {
   .map-stage {
     min-height: 1700px;
+    margin-bottom: 120px;
   }
 
   .ice-segment-shadow {
@@ -798,11 +799,11 @@
   }
 
   .card-1 {
-    top: 10px;
+    top: 0;
   }
 
   .card-2 {
-    top: 700px;
+    top: 690px;
   }
 
   .card-3 {
@@ -823,5 +824,21 @@
     left: 35%;
     top: 1140px;
     transform: scaleX(-1) rotate(-13deg);
+  }
+}
+
+/* ==========================================================================
+   SMALL MOBILE: 385px-
+   ========================================================================== */
+
+@media (max-width: 385px) {
+  .path-penguin-one {
+    left: 36%;
+    top: 420px;
+    transform: rotate(-10deg);
+  }
+
+  .path-penguin-two {
+    top: 1160px;
   }
 }
