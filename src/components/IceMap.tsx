@@ -44,8 +44,12 @@ const routeVariants: Record<RouteVariant, { viewBox: string; segments: RouteSegm
     viewBox: "0 0 1000 1900",
     segments: [
       {
-        id: "full-tablet-journey",
-        d: "M550 200 C600 220 700 250 800 320 C1100 640 -700 950 560 1450 C950 1600 1000 1700 550 1800",
+        id: "tablet-korisuli-to-tsmt",
+        d: "M385 380 C1923 481 -769 559 577 726",
+      },
+      {
+        id: "tablet-tsmt-to-hokisuli",
+        d: "M673 1140 C-769 1341 1635 1397 346 1542",
       },
     ],
   },
@@ -65,10 +69,10 @@ const routeVariants: Record<RouteVariant, { viewBox: string; segments: RouteSegm
 };
 
 function getRouteVariant(width: number): RouteVariant {
-  if (width >= 1600) return "wideDesktop";
-  if (width >= 1200) return "desktop";
-  if (width >= 900) return "smallDesktop";
-  if (width >= 600) return "tablet";
+  if (width > 1600) return "wideDesktop";
+  if (width > 1200) return "desktop";
+  if (width > 900) return "smallDesktop";
+  if (width > 600) return "tablet";
   return "mobile";
 }
 

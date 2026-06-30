@@ -649,11 +649,14 @@
   }
 
   .program-card {
-    width: clamp(500px, 42vw, 700px);
+    left: 50%;
+    right: auto;
+    width: clamp(500px, calc(66.667vw + 100px), 700px);
     height: auto;
     min-height: 330px;
     padding: 28px;
     border-radius: 26px;
+    transform: translateX(-50%);
   }
 
   .program-content {
@@ -689,20 +692,15 @@
   }
 
   .card-1 {
-    left: 0;
-    top: 80px;
+    top: 0;
   }
 
   .card-2 {
-    right: 0;
-    left: auto;
-    top: 800px;
+    top: 765px;
   }
 
   .card-3 {
-    left: 0;
-    right: auto;
-    top: 1450px;
+    top: 1590px;
   }
 
   .path-penguin {
@@ -711,13 +709,13 @@
 
   .path-penguin-one {
     left: 59%;
-    top: 530px;
+    top: 430px;
     transform: rotate(0deg);
   }
 
   .path-penguin-two {
-    left: 18%;
-    top: 1180px;
+    left: 32%;
+    top: 1260px;
     transform: scaleX(-1) rotate(-13deg);
   }
 }
@@ -755,9 +753,9 @@
   .program-card {
     left: 50%;
     right: auto;
-    width: 500px;
+    width: min(clamp(340px, calc(66.667vw + 100px), 500px), calc(100% - 24px));
     height: auto;
-    min-height: 240px;
+    min-height: 280px;
     padding: 20px;
     border-radius: 28px;
     transform: translateX(-50%);
@@ -800,7 +798,7 @@
   }
 
   .card-1 {
-    top: 30px;
+    top: 10px;
   }
 
   .card-2 {
@@ -823,7 +821,7 @@
 
   .path-penguin-two {
     left: 35%;
-    top: 1130px;
+    top: 1140px;
     transform: scaleX(-1) rotate(-13deg);
   }
 }
