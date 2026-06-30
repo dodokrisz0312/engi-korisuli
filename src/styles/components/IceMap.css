@@ -89,25 +89,37 @@
 .program-card {
   position: absolute;
   z-index: 4;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 110px;
-  gap: 14px;
+  display: block;
   width: min(360px, 90%);
   min-height: 220px;
-  padding: 18px;
-  border-radius: 24px;
+  padding: 22px;
+  border-radius: 28px;
   overflow: hidden;
   color: white;
-  box-shadow: var(--shadow);
+  box-shadow: 0 22px 55px rgba(24, 104, 151, 0.18);
+  isolation: isolate;
 }
 
+/* színes overlay balról jobbra */
+.program-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* kis hópehely */
 .program-card::after {
   content: "❄";
   position: absolute;
-  top: 16px;
   right: 18px;
-  opacity: 0.4;
-  font-size: 34px;
+  bottom: 24px;
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 32px;
+  pointer-events: none;
 }
 
 .program-card.teal {
@@ -121,28 +133,67 @@
   background: linear-gradient(135deg, #3484f5, #74b8ff);
 }
 
+.program-card.teal::before {
+  background: linear-gradient(
+    90deg,
+    rgba(31, 185, 186, 1) 0%,
+    rgba(31, 185, 186, 1) 55%,
+    rgba(31, 185, 186, 0.25) 68%,
+    rgba(31, 185, 186, 0.05) 100%
+  );
+}
+.program-card.orange::before {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 174, 57, 1) 0%,
+    rgba(255, 174, 57, 1) 55%,
+    rgba(255, 174, 57, 0.34) 68%,
+    rgba(255, 174, 57, 0.08) 100%
+  );
+}
+
+.program-card.blue::before {
+  background: linear-gradient(
+    90deg,
+    rgba(52, 132, 245, 1) 0%,
+    rgba(52, 132, 245, 1) 55%,
+    rgba(52, 132, 245, 0.34) 68%,
+    rgba(52, 132, 245, 0.08) 100%
+  );
+}
+
+/* szöveg a kép fölött */
 .program-content {
+  position: relative;
+  z-index: 2;
   display: flex;
+  min-height: 100%;
+  width: 56%;
   flex-direction: column;
   justify-content: center;
-  min-width: 0;
+}
+
+.route-mobile .program-content {
+  width: 62%;
+}
+
+.route-tablet .program-content {
+  width: 58%;
+}
+
+.route-smallDesktop .program-content,
+.route-desktop .program-content {
+  width: 54%;
+}
+
+.route-wideDesktop .program-content {
+  width: 52%;
 }
 
 .program-top {
   display: flex;
   gap: 12px;
   align-items: center;
-}
-
-.program-icon {
-  display: inline-grid;
-  place-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 13px;
-  background: rgba(255, 255, 255, 0.25);
-  font-weight: 1000;
-  font-size: 1.3rem;
 }
 
 .program-card h3 {
@@ -174,26 +225,34 @@
   font-size: 0.96rem;
 }
 
+/* háttérkép */
 .program-image {
-  border-radius: 18px;
-  align-self: stretch;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
   min-height: 100%;
+  border-radius: inherit;
   background-size: cover;
-  background-position: center;
+  background-position: center right;
   background-repeat: no-repeat;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+  transform: scale(1.02);
+  opacity: 1;
 }
 
 .skater-one {
-  background-image: url("/images/generated/program-korisuli.jpg");
-}
-.tsmt {
-  background-image: url("/images/generated/program-tsmt.jpg");
-}
-.hockey {
-  background-image: url("/images/generated/program-hokisuli.jpg");
+  background-image: url("../../assets/korisuli.jpg");
+  background-position: center right;
 }
 
+.tsmt {
+  background-image: url("../../assets/tsmt.png");
+  background-position: center right;
+}
+
+.hockey {
+  background-image: url("../../assets/hokisuli.png");
+  background-position: center right;
+}
 .path-penguin {
   position: absolute;
   z-index: 5;
@@ -283,12 +342,12 @@
 }
 
 .route-mobile .program-card {
+  display: block;
   left: 50%;
   right: auto;
   width: min(100%, 440px);
   min-height: 240px;
   transform: translateX(-50%);
-  grid-template-columns: minmax(0, 1fr) 110px;
   padding: 20px;
 }
 
@@ -350,20 +409,14 @@
 }
 
 .route-tablet .program-card {
+  display: block;
   width: min(460px, 49%);
   min-height: 330px;
-  grid-template-columns: 1fr;
   gap: 28px;
   padding: 28px;
   border-radius: 26px;
 }
 
-.route-tablet .program-icon {
-  width: 54px;
-  height: 54px;
-  border-radius: 16px;
-  font-size: 1.5rem;
-}
 .route-tablet .program-card h3 {
   font-size: 2rem;
   margin: 14px 0 8px;
@@ -433,21 +486,15 @@
 }
 
 .route-smallDesktop .program-card {
+  display: block;
   width: min(540px, 54%);
   height: 300px;
   min-height: 0;
-  grid-template-columns: minmax(0, 1fr) 145px;
   gap: 18px;
   padding: 26px;
   border-radius: 26px;
 }
 
-.route-smallDesktop .program-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 17px;
-  font-size: 1.55rem;
-}
 .route-smallDesktop .program-card h3 {
   font-size: 2rem;
   margin: 13px 0 8px;
@@ -519,10 +566,10 @@
 }
 
 .route-desktop .program-card {
+  display: block;
   width: 700px;
   height: 350px;
   min-height: 0;
-  grid-template-columns: minmax(0, 1fr) 150px;
   gap: 20px;
   padding: 28px;
   border-radius: 27px;
@@ -533,12 +580,7 @@
   right: 22px;
   font-size: 40px;
 }
-.route-desktop .program-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 17px;
-  font-size: 1.55rem;
-}
+
 .route-desktop .program-card h3 {
   font-size: 2.1rem;
   margin: 14px 0 7px;
@@ -606,10 +648,10 @@
 }
 
 .route-wideDesktop .program-card {
+  display: block;
   width: 800px;
   height: 400px;
   min-height: 0;
-  grid-template-columns: minmax(0, 1fr) 200px;
   gap: 24px;
   padding: 36px;
   border-radius: 28px;
@@ -620,12 +662,7 @@
   right: 26px;
   font-size: 50px;
 }
-.route-wideDesktop .program-icon {
-  width: 68px;
-  height: 68px;
-  border-radius: 18px;
-  font-size: 1.8rem;
-}
+
 .route-wideDesktop .program-card h3 {
   font-size: 2.5rem;
   line-height: 1.02;

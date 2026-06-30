@@ -95,6 +95,20 @@
   display: none;
 }
 
+.hero-visual {
+  position: relative;
+  overflow: hidden;
+  border-radius: 36px;
+  min-height: clamp(430px, 34vw, 560px);
+  box-shadow: var(--shadow);
+  border: 1px solid #d8f0f8;
+  background: #eaf7fb;
+}
+
+.hero-image {
+  object-fit: cover;
+}
+
 @media (min-width: 900px) {
   .site-header {
     width: 80vw;

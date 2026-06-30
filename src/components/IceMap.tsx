@@ -157,11 +157,6 @@ export function IceMap() {
         {programs.map((program, index) => (
           <article key={program.title} className={`program-card card-${index + 1} ${program.tone}`}>
             <div className="program-content">
-              <div className="program-top">
-                <span className="program-icon" aria-hidden="true">
-                  {program.icon}
-                </span>
-              </div>
               <h3>{program.title}</h3>
               <p>{program.description}</p>
               <small>{program.detail}</small>

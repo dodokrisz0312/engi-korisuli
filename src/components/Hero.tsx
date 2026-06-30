@@ -1,5 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 import { CalendarDays, ChevronRight } from "lucide-react";
+import heroImage from "@/assets/hero.jpg";
+import heroPenguin from "@/assets/penguin-wave.png";
 
 export function Hero() {
   return (
@@ -19,12 +22,16 @@ export function Hero() {
             Órarend megtekintése <ChevronRight size={16} />
           </Link>
         </div>
-        <img className="hero-penguin" src="/images/penguin-wave.png" alt="" aria-hidden="true" />
+        <Image className="hero-penguin" src={heroPenguin} alt="" aria-hidden="true" />
       </div>
-      <div className="hero-visual" aria-label="Gyerekek korcsolyáznak a jégpályán">
-        <div className="rink-glow" />
-        <div className="kid kid-left">⛸️</div>
-        <div className="kid kid-right">🏒</div>
+      <div className="hero-visual">
+        <Image
+          src={heroImage}
+          alt="Gyerekek korcsolyáznak a jégpályán"
+          fill
+          className="hero-image"
+          priority
+        />
       </div>
     </section>
   );
