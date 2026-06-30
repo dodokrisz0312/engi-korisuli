@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight, Instagram, Mail, Phone } from "lucide-react";
+import { GalleryLightbox } from "@/components/GalleryLightbox";
 import penguinFooterImage from "@/assets/penguin-footer.png";
 import { galleryItems, stats, teachers } from "@/data/site";
 
@@ -56,16 +57,7 @@ export function Gallery() {
           Több kép a galériában <ChevronRight size={16} />
         </Link>
       </div>
-      <div className="gallery-grid">
-        {galleryItems.map((item) => (
-          <article className={`gallery-tile ${item.className}`} key={item.label}>
-            <Image src={item.image} alt={item.label} sizes="180px" />
-            <div className="gallery-overlay">
-              <span>{item.label}</span>
-            </div>
-          </article>
-        ))}
-      </div>
+      <GalleryLightbox items={galleryItems} />
     </section>
   );
 }
