@@ -1,3 +1,7 @@
+/* ==========================================================================
+   HERO SECTION - LAYOUT
+   ========================================================================== */
+
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -11,66 +15,80 @@
   min-height: clamp(430px, 34vw, 760px);
 }
 
+/* ==========================================================================
+   HERO COPY CARD
+   ========================================================================== */
+
 .hero-copy {
   position: relative;
-  overflow: hidden;
-  background: var(--card);
-  border-radius: var(--radius);
-  padding: clamp(28px, 4vw, 58px);
-  padding-right: clamp(34px, 11vw, 210px);
-  box-shadow: var(--shadow);
-  border: 1px solid #ddf3fa;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden;
+  padding: clamp(28px, 4vw, 58px);
+  padding-right: clamp(34px, 11vw, 210px);
+  border: 1px solid #ddf3fa;
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--shadow);
 }
+
 .hero-copy > :not(.hero-penguin) {
   position: relative;
   z-index: 2;
 }
 
-.hero-penguin {
-  position: absolute;
-  right: 8px;
-  bottom: 0px;
-  width: clamp(120px, 15vw, 200px);
-  height: auto;
-  pointer-events: none;
-  filter: drop-shadow(0 18px 24px rgba(17, 69, 104, 0.16));
-  z-index: 1;
-}
-
 .eyebrow {
+  margin: 0 0 12px;
   color: var(--teal-dark);
   font-weight: 900;
-  margin: 0 0 12px;
   font-size: clamp(0.92rem, 1vw, 1rem);
 }
 
 .hero-copy p:not(.eyebrow) {
+  max-width: 620px;
   color: var(--muted);
   font-size: clamp(1.05rem, 1.25vw, 1.2rem);
   line-height: 1.72;
-  max-width: 620px;
 }
 
 .hero-actions {
   display: flex;
-  gap: 14px;
   flex-wrap: wrap;
+  gap: 14px;
   margin-top: 28px;
 }
 
+/* ==========================================================================
+   HERO PENGUIN
+   ========================================================================== */
+
+.hero-penguin {
+  position: absolute;
+  right: 8px;
+  bottom: 0px;
+  z-index: 1;
+  width: clamp(120px, 15vw, 200px);
+  height: auto;
+  pointer-events: none;
+  filter: drop-shadow(0 18px 24px rgba(17, 69, 104, 0.16));
+}
+
+/* ==========================================================================
+   HERO VISUAL CARD
+   ========================================================================== */
+
 .hero-visual {
-  border-radius: 36px;
   position: relative;
   overflow: hidden;
+  border: 1px solid #d8f0f8;
+  border-radius: 36px;
   background:
     linear-gradient(115deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9)),
     linear-gradient(180deg, #dff5ff, #ffffff 48%, #e8f6fb);
-  border: 1px solid #d8f0f8;
   box-shadow: var(--shadow);
 }
+
 .hero-visual:before {
   content: "";
   position: absolute;
@@ -81,6 +99,7 @@
     rgba(91, 160, 210, 0.08) 56px 58px
   );
 }
+
 .rink-glow {
   position: absolute;
   inset: 20% -20% -15%;
@@ -91,25 +110,40 @@
     transparent 65%
   );
 }
+
+/* ==========================================================================
+   HERO VISUAL KIDS / ICONS
+   ========================================================================== */
+
 .kid {
   position: absolute;
-  filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.12));
   font-size: clamp(6.4rem, 12vw, 9.8rem);
+  filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.12));
 }
+
 .kid-left {
   left: 20%;
   top: 20%;
 }
+
 .kid-right {
   right: 17%;
   top: 17%;
 }
+
+/* ==========================================================================
+   RESPONSIVE: 1180px-
+   ========================================================================== */
 
 @media (max-width: 1180px) {
   .hero-copy {
     padding-right: clamp(28px, 10vw, 150px);
   }
 }
+
+/* ==========================================================================
+   RESPONSIVE: 900px-
+   ========================================================================== */
 
 @media (max-width: 900px) {
   .hero {
@@ -118,41 +152,54 @@
     grid-template-columns: 1fr;
     padding-top: 24px;
   }
+
   .hero-copy,
   .hero-visual {
     min-height: 340px;
   }
+
   .hero-copy {
     padding-right: 160px;
   }
+
   .hero-penguin {
     width: 150px;
   }
 }
+
+/* ==========================================================================
+   RESPONSIVE: 640px-
+   ========================================================================== */
 
 @media (max-width: 640px) {
   .hero-copy {
     min-height: 360px;
     padding: 24px 20px 126px;
   }
+
   .hero-visual {
     min-height: 300px;
   }
+
   .hero-penguin {
-    width: 116px;
     right: 12px;
     bottom: -8px;
+    width: 116px;
   }
+
   .hero-actions {
     flex-direction: column;
   }
+
   .kid {
     font-size: 5.2rem;
   }
+
   .kid-left {
     left: 22%;
     top: 24%;
   }
+
   .kid-right {
     right: 12%;
     top: 23%;
