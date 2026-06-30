@@ -16,10 +16,10 @@ export function Hero() {
         </p>
         <div className="hero-actions">
           <Link className="btn primary" href="/jelentkezes">
-            <CalendarDays size={18} /> Próbára jelentkezés
+            Próbára jelentkezés
           </Link>
           <Link className="btn ghost" href="/orarend">
-            Órarend megtekintése <ChevronRight size={16} />
+            <CalendarDays size={18} /> Órarend megtekintése
           </Link>
         </div>
         <Image className="hero-penguin" src={heroPenguin} alt="" aria-hidden="true" />
