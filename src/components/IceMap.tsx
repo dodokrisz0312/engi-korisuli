@@ -36,7 +36,7 @@ const routeVariants: Record<RouteVariant, { viewBox: string; segments: RouteSegm
     segments: [
       {
         id: "small-desktop-journey",
-        d: "M860 200 C980 190 1250 280 1250 360 C1300 540 -700 650 560 1000 C1600 1300 1000 1300 860 1550",
+        d: "M1230 200 C1400 250 1700 350 1450 400 C1300 440 -700 650 560 1050 C1600 1400 1700 1300 1230 1550",
       },
     ],
   },

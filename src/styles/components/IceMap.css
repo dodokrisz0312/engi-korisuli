@@ -108,7 +108,7 @@
   position: absolute;
   z-index: 4;
   display: block;
-  width: 800px;
+  width: 600px;
   height: 400px;
   min-height: 0;
   padding: 36px;
@@ -395,6 +395,20 @@
 }
 
 /* ==========================================================================
+   DESKTOP: 1800px-
+   ========================================================================== */
+
+@media (max-width: 1800px) {
+  .program-card {
+    width: clamp(500px, calc(50vw - 300px), 600px);
+  }
+
+  .program-content {
+    gap: 16px;
+  }
+}
+
+/* ==========================================================================
    DESKTOP: 1600px-
    ========================================================================== */
 
@@ -425,7 +439,7 @@
   }
 
   .program-card {
-    width: 700px;
+    width: clamp(450px, 37.5vw, 600px);
     height: 350px;
     min-height: 0;
     padding: 28px;
@@ -491,7 +505,7 @@
 
   .path-penguin-one {
     left: 56%;
-    top: 420px;
+    top: 400px;
     transform: rotate(0deg);
   }
 
@@ -533,7 +547,7 @@
   }
 
   .program-card {
-    width: min(540px, 54%);
+    width: clamp(500px, calc(33.333vw + 200px), 600px);
     height: 300px;
     min-height: 0;
     padding: 26px;
@@ -574,12 +588,12 @@
 
   .card-1 {
     left: 0;
-    top: 70px;
+    top: 30px;
   }
 
   .card-2 {
     right: 0;
-    top: 560px;
+    top: 590px;
   }
 
   .card-3 {
@@ -592,14 +606,14 @@
   }
 
   .path-penguin-one {
-    left: 56%;
+    left: 48%;
     top: 370px;
     transform: rotate(0deg);
   }
 
   .path-penguin-two {
     left: 40%;
-    top: 860px;
+    top: 920px;
     transform: scaleX(-1) rotate(-14deg);
   }
 }
@@ -635,7 +649,7 @@
   }
 
   .program-card {
-    width: min(460px, 49%);
+    width: clamp(500px, 42vw, 700px);
     height: auto;
     min-height: 330px;
     padding: 28px;
@@ -741,7 +755,7 @@
   .program-card {
     left: 50%;
     right: auto;
-    width: min(100%, 440px);
+    width: 500px;
     height: auto;
     min-height: 240px;
     padding: 20px;
