@@ -9,7 +9,7 @@
 
 .map-stage {
   position: relative;
-  min-height: 1700px;
+  min-height: 1880px;
   margin-top: 14px;
   overflow: visible;
   isolation: isolate;
@@ -59,27 +59,27 @@
 
 .ice-segment-shadow {
   stroke: rgba(80, 190, 224, 0.14);
-  stroke-width: 62;
+  stroke-width: 92;
 }
 
 .ice-segment-outer {
   stroke: rgba(105, 206, 232, 0.42);
-  stroke-width: 46;
+  stroke-width: 66;
 }
 
 .ice-segment-surface {
   stroke: rgba(247, 253, 255, 0.96);
-  stroke-width: 34;
+  stroke-width: 48;
 }
 
 .ice-segment-shine {
   stroke: rgba(255, 255, 255, 0.9);
-  stroke-width: 18;
+  stroke-width: 22;
 }
 
 .ice-segment-cut {
-  stroke-width: 2;
-  stroke-dasharray: 18 30;
+  stroke-width: 2.4;
+  stroke-dasharray: 28 44;
   animation: skateDash 28s linear infinite;
 }
 
@@ -101,24 +101,22 @@
 }
 
 /* ==========================================================================
-   PROGRAM CARD - BASE / MOBILE
+   PROGRAM CARD - BASE / WIDE DESKTOP
    ========================================================================== */
 
 .program-card {
   position: absolute;
-  left: 50%;
-  right: auto;
   z-index: 4;
   display: block;
-  width: min(100%, 440px);
-  min-height: 240px;
-  padding: 20px;
+  width: 800px;
+  height: 400px;
+  min-height: 0;
+  padding: 36px;
   overflow: hidden;
   color: white;
   border-radius: 28px;
   box-shadow: 0 22px 55px rgba(24, 104, 151, 0.18);
   isolation: isolate;
-  transform: translateX(-50%);
 }
 
 .program-card::before {
@@ -133,31 +131,19 @@
 .program-card::after {
   content: "❄";
   position: absolute;
-  right: 18px;
-  bottom: 24px;
+  top: 22px;
+  right: 26px;
   z-index: 2;
   color: rgba(255, 255, 255, 0.45);
-  font-size: 32px;
+  font-size: 50px;
   pointer-events: none;
-}
-
-.card-1 {
-  top: 30px;
-}
-
-.card-2 {
-  top: 700px;
-}
-
-.card-3 {
-  top: 1430px;
 }
 
 .program-content {
   position: relative;
   z-index: 2;
   display: flex;
-  width: 62%;
+  width: 52%;
   min-height: 100%;
   flex-direction: column;
   justify-content: center;
@@ -171,22 +157,23 @@
 }
 
 .program-card h3 {
-  margin: 10px 0 6px;
-  font-size: 1.6rem;
-  line-height: 1.05;
+  margin: 20px 0 10px;
+  font-size: 2.5rem;
+  line-height: 1.02;
 }
 
 .program-card p {
-  margin: 0 0 8px;
+  margin: 0 0 12px;
   font-weight: 900;
-  font-size: 1rem;
+  font-size: 1.22rem;
   line-height: 1.35;
 }
 
 .program-card small {
   display: block;
-  font-size: 0.9rem;
-  line-height: 1.55;
+  max-width: 420px;
+  font-size: 1.04rem;
+  line-height: 1.6;
   opacity: 0.93;
 }
 
@@ -194,9 +181,24 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  margin-top: 10px;
+  margin-top: 18px;
   font-weight: 1000;
-  font-size: 0.96rem;
+  font-size: 1.08rem;
+}
+
+.card-1 {
+  left: 0;
+  top: 90px;
+}
+
+.card-2 {
+  right: 0;
+  top: 620px;
+}
+
+.card-3 {
+  left: 0;
+  top: 1280px;
 }
 
 /* ==========================================================================
@@ -254,8 +256,8 @@
   position: absolute;
   inset: 0;
   z-index: 0;
-  min-height: 160px;
-  border-radius: inherit;
+  min-height: 100%;
+  border-radius: 22px;
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
@@ -279,28 +281,28 @@
 }
 
 /* ==========================================================================
-   PATH PENGUINS - BASE / MOBILE
+   PATH PENGUINS - BASE / WIDE DESKTOP
    ========================================================================== */
 
 .path-penguin {
   position: absolute;
   z-index: 5;
-  width: 68px;
+  width: 118px;
   height: auto;
   pointer-events: none;
   filter: drop-shadow(0 14px 16px rgba(13, 72, 112, 0.16));
 }
 
 .path-penguin-one {
-  left: 58%;
-  top: 390px;
+  left: 56%;
+  top: 460px;
   transform: rotate(0deg);
 }
 
 .path-penguin-two {
-  left: 35%;
-  top: 1130px;
-  transform: scaleX(-1) rotate(-13deg);
+  left: 33%;
+  top: 830px;
+  transform: scaleX(-1) rotate(-14deg);
 }
 
 /* ==========================================================================
@@ -393,112 +395,118 @@
 }
 
 /* ==========================================================================
-   TABLET: 600px+
+   DESKTOP: 1599px-
    ========================================================================== */
 
-@media (min-width: 600px) {
+@media (max-width: 1599px) {
   .map-stage {
-    min-height: 1900px;
+    min-height: 1760px;
   }
 
   .ice-segment-shadow {
-    stroke-width: 72;
+    stroke-width: 88;
   }
 
   .ice-segment-outer {
-    stroke-width: 52;
+    stroke-width: 62;
   }
 
   .ice-segment-surface {
-    stroke-width: 38;
+    stroke-width: 46;
   }
 
   .ice-segment-shine {
-    stroke-width: 19;
+    stroke-width: 21;
   }
 
   .ice-segment-cut {
-    stroke-width: 2.1;
-    stroke-dasharray: 22 36;
+    stroke-width: 2.25;
+    stroke-dasharray: 26 42;
   }
 
   .program-card {
-    width: min(460px, 49%);
-    min-height: 330px;
+    width: 700px;
+    height: 350px;
+    min-height: 0;
     padding: 28px;
-    border-radius: 26px;
-    transform: none;
+    border-radius: 27px;
   }
 
   .program-content {
-    width: 58%;
+    width: 54%;
   }
 
-  .card-1 {
-    left: 0;
-    top: 80px;
-  }
-
-  .card-2 {
-    right: 0;
-    left: auto;
-    top: 800px;
-  }
-
-  .card-3 {
-    left: 0;
-    right: auto;
-    top: 1450px;
+  .program-card::after {
+    top: 18px;
+    right: 22px;
+    bottom: auto;
+    font-size: 40px;
   }
 
   .program-card h3 {
-    margin: 14px 0 8px;
-    font-size: 2rem;
+    margin: 14px 0 7px;
+    font-size: 2.1rem;
   }
 
   .program-card p {
     margin-bottom: 8px;
-    font-size: 1.06rem;
-    line-height: 1.35;
+    font-size: 1.08rem;
+    line-height: 1.34;
   }
 
   .program-card small {
     display: block;
-    font-size: 0.95rem;
+    max-width: 340px;
+    font-size: 0.96rem;
     line-height: 1.5;
   }
 
   .program-card a {
-    margin-top: 12px;
+    margin-top: 11px;
     font-size: 1rem;
   }
 
   .program-image {
-    min-height: 140px;
+    border-radius: inherit;
+  }
+
+  .card-1 {
+    left: 0;
+    top: 90px;
+  }
+
+  .card-2 {
+    right: 0;
+    top: 610px;
+  }
+
+  .card-3 {
+    left: 0;
+    top: 1310px;
   }
 
   .path-penguin {
-    width: 82px;
+    width: 98px;
   }
 
   .path-penguin-one {
-    left: 59%;
-    top: 530px;
+    left: 56%;
+    top: 420px;
     transform: rotate(0deg);
   }
 
   .path-penguin-two {
-    left: 18%;
-    top: 1180px;
-    transform: scaleX(-1) rotate(-13deg);
+    left: 40%;
+    top: 870px;
+    transform: scaleX(-1) rotate(-14deg);
   }
 }
 
 /* ==========================================================================
-   SMALL DESKTOP: 900px+
+   SMALL DESKTOP: 1199px-
    ========================================================================== */
 
-@media (min-width: 900px) {
+@media (max-width: 1199px) {
   .map-stage {
     min-height: 1740px;
   }
@@ -536,21 +544,6 @@
     width: 54%;
   }
 
-  .card-1 {
-    left: 0;
-    top: 70px;
-  }
-
-  .card-2 {
-    right: 0;
-    top: 560px;
-  }
-
-  .card-3 {
-    left: 0;
-    top: 1260px;
-  }
-
   .program-card h3 {
     margin: 13px 0 8px;
     font-size: 2rem;
@@ -579,6 +572,21 @@
     border-radius: 20px;
   }
 
+  .card-1 {
+    left: 0;
+    top: 70px;
+  }
+
+  .card-2 {
+    right: 0;
+    top: 560px;
+  }
+
+  .card-3 {
+    left: 0;
+    top: 1260px;
+  }
+
   .path-penguin {
     width: 90px;
   }
@@ -597,208 +605,211 @@
 }
 
 /* ==========================================================================
-   DESKTOP: 1200px+
+   TABLET: 899px-
    ========================================================================== */
 
-@media (min-width: 1200px) {
+@media (max-width: 899px) {
   .map-stage {
-    min-height: 1760px;
+    min-height: 1900px;
   }
 
   .ice-segment-shadow {
-    stroke-width: 88;
+    stroke-width: 72;
   }
 
   .ice-segment-outer {
-    stroke-width: 62;
+    stroke-width: 52;
   }
 
   .ice-segment-surface {
-    stroke-width: 46;
+    stroke-width: 38;
   }
 
   .ice-segment-shine {
-    stroke-width: 21;
+    stroke-width: 19;
   }
 
   .ice-segment-cut {
-    stroke-width: 2.25;
-    stroke-dasharray: 26 42;
+    stroke-width: 2.1;
+    stroke-dasharray: 22 36;
   }
 
   .program-card {
-    width: 700px;
-    height: 350px;
-    min-height: 0;
+    width: min(460px, 49%);
+    height: auto;
+    min-height: 330px;
     padding: 28px;
-    border-radius: 27px;
+    border-radius: 26px;
   }
 
-  .program-card::after {
-    top: 18px;
-    right: 22px;
-    font-size: 40px;
-  }
-
-  .card-1 {
-    left: 0;
-    top: 90px;
-  }
-
-  .card-2 {
-    right: 0;
-    top: 610px;
-  }
-
-  .card-3 {
-    left: 0;
-    top: 1310px;
+  .program-content {
+    width: 58%;
   }
 
   .program-card h3 {
-    margin: 14px 0 7px;
-    font-size: 2.1rem;
+    margin: 14px 0 8px;
+    font-size: 2rem;
   }
 
   .program-card p {
     margin-bottom: 8px;
-    font-size: 1.08rem;
-    line-height: 1.34;
-  }
-
-  .program-card small {
-    display: block;
-    max-width: 340px;
-    font-size: 0.96rem;
-    line-height: 1.5;
-  }
-
-  .program-card a {
-    margin-top: 11px;
-    font-size: 1rem;
-  }
-
-  .path-penguin {
-    width: 98px;
-  }
-
-  .path-penguin-one {
-    left: 56%;
-    top: 420px;
-    transform: rotate(0deg);
-  }
-
-  .path-penguin-two {
-    left: 40%;
-    top: 870px;
-    transform: scaleX(-1) rotate(-14deg);
-  }
-}
-
-/* ==========================================================================
-   WIDE DESKTOP: 1600px+
-   ========================================================================== */
-
-@media (min-width: 1600px) {
-  .map-stage {
-    min-height: 1880px;
-  }
-
-  .ice-segment-shadow {
-    stroke-width: 92;
-  }
-
-  .ice-segment-outer {
-    stroke-width: 66;
-  }
-
-  .ice-segment-surface {
-    stroke-width: 48;
-  }
-
-  .ice-segment-shine {
-    stroke-width: 22;
-  }
-
-  .ice-segment-cut {
-    stroke-width: 2.4;
-    stroke-dasharray: 28 44;
-  }
-
-  .program-card {
-    width: 800px;
-    height: 400px;
-    min-height: 0;
-    padding: 36px;
-    border-radius: 28px;
-  }
-
-  .program-content {
-    width: 52%;
-  }
-
-  .program-card::after {
-    top: 22px;
-    right: 26px;
-    font-size: 50px;
-  }
-
-  .card-1 {
-    left: 0;
-    top: 90px;
-  }
-
-  .card-2 {
-    right: 0;
-    top: 620px;
-  }
-
-  .card-3 {
-    left: 0;
-    top: 1280px;
-  }
-
-  .program-card h3 {
-    margin: 20px 0 10px;
-    font-size: 2.5rem;
-    line-height: 1.02;
-  }
-
-  .program-card p {
-    margin-bottom: 12px;
-    font-size: 1.22rem;
+    font-size: 1.06rem;
     line-height: 1.35;
   }
 
   .program-card small {
     display: block;
-    max-width: 420px;
-    font-size: 1.04rem;
-    line-height: 1.6;
+    max-width: none;
+    font-size: 0.95rem;
+    line-height: 1.5;
   }
 
   .program-card a {
-    margin-top: 18px;
-    font-size: 1.08rem;
+    margin-top: 12px;
+    font-size: 1rem;
   }
 
   .program-image {
-    border-radius: 22px;
+    min-height: 140px;
+    border-radius: inherit;
+  }
+
+  .card-1 {
+    left: 0;
+    top: 80px;
+  }
+
+  .card-2 {
+    right: 0;
+    left: auto;
+    top: 800px;
+  }
+
+  .card-3 {
+    left: 0;
+    right: auto;
+    top: 1450px;
   }
 
   .path-penguin {
-    width: 118px;
+    width: 82px;
   }
 
   .path-penguin-one {
-    left: 56%;
-    top: 460px;
+    left: 59%;
+    top: 530px;
     transform: rotate(0deg);
   }
 
   .path-penguin-two {
-    left: 33%;
-    top: 830px;
-    transform: scaleX(-1) rotate(-14deg);
+    left: 18%;
+    top: 1180px;
+    transform: scaleX(-1) rotate(-13deg);
+  }
+}
+
+/* ==========================================================================
+   MOBILE: 599px-
+   ========================================================================== */
+
+@media (max-width: 599px) {
+  .map-stage {
+    min-height: 1700px;
+  }
+
+  .ice-segment-shadow {
+    stroke-width: 62;
+  }
+
+  .ice-segment-outer {
+    stroke-width: 46;
+  }
+
+  .ice-segment-surface {
+    stroke-width: 34;
+  }
+
+  .ice-segment-shine {
+    stroke-width: 18;
+  }
+
+  .ice-segment-cut {
+    stroke-width: 2;
+    stroke-dasharray: 18 30;
+  }
+
+  .program-card {
+    left: 50%;
+    right: auto;
+    width: min(100%, 440px);
+    height: auto;
+    min-height: 240px;
+    padding: 20px;
+    border-radius: 28px;
+    transform: translateX(-50%);
+  }
+
+  .program-content {
+    width: 62%;
+  }
+
+  .program-card::after {
+    top: auto;
+    right: 18px;
+    bottom: 24px;
+    font-size: 32px;
+  }
+
+  .program-card h3 {
+    margin: 10px 0 6px;
+    font-size: 1.6rem;
+  }
+
+  .program-card p {
+    margin-bottom: 8px;
+    font-size: 1rem;
+  }
+
+  .program-card small {
+    display: block;
+    font-size: 0.9rem;
+  }
+
+  .program-card a {
+    margin-top: 10px;
+    font-size: 0.96rem;
+  }
+
+  .program-image {
+    min-height: 160px;
+    border-radius: inherit;
+  }
+
+  .card-1 {
+    top: 30px;
+  }
+
+  .card-2 {
+    top: 700px;
+  }
+
+  .card-3 {
+    top: 1430px;
+  }
+
+  .path-penguin {
+    width: 68px;
+  }
+
+  .path-penguin-one {
+    left: 58%;
+    top: 390px;
+    transform: rotate(0deg);
+  }
+
+  .path-penguin-two {
+    left: 35%;
+    top: 1130px;
+    transform: scaleX(-1) rotate(-13deg);
   }
 }
