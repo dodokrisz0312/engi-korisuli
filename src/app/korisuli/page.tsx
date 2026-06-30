@@ -16,7 +16,6 @@ import {
   Trophy,
   Users,
 } from "lucide-react";
-import "../../styles/pages/korisuli.css";
 import { CTA } from "@/components/Sections";
 
 const founders = [
