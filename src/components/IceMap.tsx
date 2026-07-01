@@ -5,7 +5,7 @@ import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import penguinSkateImage from "@/assets/penguin-skate.png";
-import { programs } from "@/data/site";
+import { programs } from "@/data/constants";
 
 type RouteVariant =
   "wideDesktop" | "desktop" | "smallDesktop" | "tablet" | "mobile" | "smallMobile";

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ChevronRight, Instagram, Mail, Phone } from "lucide-react";
 import { GalleryLightbox } from "@/components/GalleryLightbox";
 import penguinFooterImage from "@/assets/penguin-footer.png";
-import { galleryItems, stats, teachers } from "@/data/site";
+import { galleryItems, stats, teachers } from "@/data/constants";
 
 function FacebookIcon() {
   return (

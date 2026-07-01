@@ -1,0 +1,754 @@
+/* ==========================================================================
+   TSMT PAGE - BASE
+   ========================================================================== */
+
+.tsmt-page {
+  position: relative;
+  overflow: hidden;
+  padding-top: 24px;
+}
+
+.tsmt-page::before,
+.tsmt-page::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 748px;
+  pointer-events: none;
+}
+
+.tsmt-page::before {
+  left: -136px;
+  top: 180px;
+  width: 256px;
+  height: 256px;
+  background: rgba(211, 244, 250, 0.58);
+}
+
+.tsmt-page::after {
+  right: -136px;
+  top: 316px;
+  width: 272px;
+  height: 272px;
+  background: rgba(255, 241, 221, 0.68);
+}
+
+/* ==========================================================================
+   HERO
+   ========================================================================== */
+
+.tsmt-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(224px, 0.9fr) minmax(316px, 1.35fr);
+  gap: clamp(20px, 4vw, 48px);
+  align-items: center;
+  min-height: 392px;
+}
+
+.tsmt-hero-copy {
+  position: relative;
+  padding: clamp(16px, 3vw, 36px) 0;
+}
+
+.tsmt-eyebrow {
+  margin: 0 0 8px;
+  color: var(--teal-dark);
+  font-weight: 1000;
+  font-size: 12px;
+}
+
+.tsmt-hero h1 {
+  max-width: 420px;
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(40px, 5.8vw, 76px);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.tsmt-hero h1 span {
+  display: block;
+  color: var(--coral);
+}
+
+.tsmt-hero-copy > p:not(.tsmt-eyebrow) {
+  max-width: 420px;
+  margin: 16px 0 0;
+  color: var(--navy);
+  font-weight: 900;
+  font-size: clamp(12px, 1.5vw, 16px);
+  line-height: 1.5;
+}
+
+.tsmt-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.tsmt-hero-visual {
+  position: relative;
+  min-height: clamp(292px, 34vw, 404px);
+  overflow: visible;
+  border-radius: 36px;
+}
+
+.tsmt-hero-image {
+  border-radius: 36px;
+  object-fit: cover;
+  box-shadow: 0 20px 44px rgba(33, 94, 140, 0.14);
+}
+
+.tsmt-floating-card {
+  position: absolute;
+  right: -24px;
+  top: 50%;
+  display: grid;
+  gap: 8px;
+  width: min(204px, 35%);
+  min-width: 172px;
+  padding: 24px 20px;
+  color: var(--navy);
+  border: calc(4px / 4) solid #d9eef5;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 16px 36px rgba(33, 94, 140, 0.14);
+  transform: translateY(-50%);
+}
+
+.tsmt-floating-card svg {
+  color: var(--teal-dark);
+}
+
+.tsmt-floating-card strong {
+  color: var(--teal-dark);
+  font-size: 24px;
+  line-height: 1;
+}
+
+.tsmt-floating-card span {
+  max-width: 128px;
+  color: var(--teal-dark);
+  font-weight: 1000;
+  line-height: 1.25;
+}
+
+.tsmt-floating-card p {
+  margin: 8px 0 0;
+  color: var(--navy);
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   SECTION TITLES
+   ========================================================================== */
+
+.tsmt-section {
+  margin-top: 36px;
+}
+
+.tsmt-section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.tsmt-section-title h2 {
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(20px, 2.5vw, 32px);
+  line-height: 1.1;
+}
+
+.tsmt-section-title span {
+  width: 40px;
+  height: 8px;
+  background:
+    radial-gradient(circle at 8px 4px, var(--teal-dark) 4px, transparent 4px),
+    radial-gradient(circle at 20px 4px, var(--teal-dark) 4px, transparent 4px),
+    radial-gradient(circle at 32px 4px, var(--teal-dark) 4px, transparent 4px);
+  opacity: 0.85;
+}
+
+/* ==========================================================================
+   WHY IMPORTANT
+   ========================================================================== */
+
+.why-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 0.9fr;
+  gap: 20px;
+}
+
+.why-card {
+  min-height: 224px;
+  padding: clamp(20px, 3vw, 32px);
+  border: calc(4px / 4) solid #d9eef5;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow: 0 12px 32px rgba(33, 94, 140, 0.08);
+}
+
+.why-card-main {
+  background:
+    radial-gradient(circle at 85% 15%, rgba(39, 185, 189, 0.12), transparent 30%),
+    rgba(255, 255, 255, 0.82);
+}
+
+.why-card-soft {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 16px;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.82), rgba(235, 249, 253, 0.9));
+}
+
+.why-card-soft svg {
+  color: var(--teal-dark);
+}
+
+.why-card h3 {
+  margin: 0 0 12px;
+  color: var(--navy);
+  font-size: clamp(16px, 2vw, 24px);
+  line-height: 1.14;
+}
+
+.why-card p {
+  margin: 0;
+  color: var(--navy);
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+/* ==========================================================================
+   CLASSES
+   ========================================================================== */
+
+.classes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.class-card {
+  min-height: 224px;
+  padding: 20px 20px;
+  text-align: center;
+  border: calc(4px / 4) solid #d9eef5;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 12px 32px rgba(33, 94, 140, 0.07);
+}
+
+.class-card:nth-child(2) {
+  border-color: rgba(255, 174, 57, 0.32);
+  background: rgba(255, 249, 238, 0.9);
+}
+
+.class-card:nth-child(3) {
+  border-color: rgba(155, 109, 255, 0.24);
+  background: rgba(250, 247, 255, 0.9);
+}
+
+.class-card:nth-child(4) {
+  border-color: rgba(255, 87, 87, 0.22);
+  background: rgba(255, 247, 247, 0.9);
+}
+
+.class-icon {
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 16px;
+  color: var(--teal-dark);
+  border-radius: 748px;
+  background: #dff7fb;
+}
+
+.class-card h3 {
+  margin: 0 0 12px;
+  color: var(--teal-dark);
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.class-card p {
+  margin: 0;
+  color: var(--navy);
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   BENEFITS + TEAM
+   ========================================================================== */
+
+.tsmt-info-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(272px, 0.85fr);
+  gap: 20px;
+  margin-top: 32px;
+}
+
+.tsmt-panel {
+  min-height: 420px;
+  padding: clamp(20px, 3vw, 32px);
+  border: calc(4px / 4) solid #d9eef5;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow: 0 12px 32px rgba(33, 94, 140, 0.08);
+}
+
+.tsmt-panel h2 {
+  margin: 0 0 24px;
+  color: var(--navy);
+  font-size: clamp(24px, 2.8vw, 36px);
+  line-height: 1.08;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 20px;
+}
+
+.benefit-item {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.benefit-icon {
+  display: grid;
+  place-items: center;
+  color: var(--teal-dark);
+}
+
+.benefit-item:nth-child(odd) .benefit-icon {
+  color: var(--coral);
+}
+
+.benefit-item h3 {
+  margin: 0 0 8px;
+  color: var(--navy);
+  font-size: 12px;
+  line-height: 1.25;
+}
+
+.benefit-item p {
+  margin: 0;
+  color: var(--navy);
+  font-weight: 780;
+  font-size: 12px;
+  line-height: 1.48;
+}
+
+.team-panel {
+  display: grid;
+  align-content: start;
+}
+
+.team-image-wrap {
+  position: relative;
+  min-height: 172px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  background: #eaf7fb;
+}
+
+.team-image {
+  object-fit: cover;
+}
+
+.team-list {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.team-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--navy);
+  font-weight: 850;
+  line-height: 1.45;
+}
+
+.team-list svg {
+  flex-shrink: 0;
+  color: var(--teal-dark);
+}
+
+/* ==========================================================================
+   TARGET CARD
+   ========================================================================== */
+
+.target-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(272px, 0.9fr);
+  gap: 24px;
+  align-items: center;
+  padding: clamp(24px, 4vw, 40px);
+  border: calc(4px / 4) solid #d9eef5;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 90% 10%, rgba(255, 87, 87, 0.08), transparent 26%),
+    rgba(255, 255, 255, 0.78);
+  box-shadow: 0 12px 32px rgba(33, 94, 140, 0.08);
+}
+
+.target-card h2 {
+  max-width: 480px;
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(24px, 3.4vw, 44px);
+  line-height: 1.05;
+}
+
+.target-card p:not(.tsmt-eyebrow) {
+  max-width: 540px;
+  margin: 16px 0 0;
+  color: var(--navy);
+  font-weight: 820;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.facts-list {
+  display: grid;
+  gap: 12px;
+}
+
+.fact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 12px;
+  color: var(--navy);
+  font-weight: 850;
+  border-radius: 12px;
+  background: #eefafd;
+}
+
+.fact-item svg {
+  flex-shrink: 0;
+  color: var(--teal-dark);
+}
+
+/* ==========================================================================
+   LOCATION
+   ========================================================================== */
+
+.tsmt-location {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(376px, 1.1fr);
+  gap: 20px;
+  align-items: stretch;
+  margin-top: 32px;
+}
+
+.location-copy,
+.location-card {
+  border: calc(4px / 4) solid #d9eef5;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 12px 32px rgba(33, 94, 140, 0.08);
+}
+
+.location-copy {
+  padding: clamp(20px, 3vw, 32px);
+  border-radius: 24px;
+}
+
+.location-copy h2 {
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(24px, 3vw, 40px);
+  line-height: 1.08;
+}
+
+.location-notice {
+  margin: 16px 0 0;
+  color: var(--navy);
+  font-weight: 820;
+  line-height: 1.65;
+}
+
+.location-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.location-card {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  min-height: 188px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.location-card svg {
+  margin-bottom: 12px;
+  color: var(--teal-dark);
+}
+
+.location-card h3 {
+  margin: 0 0 8px;
+  color: var(--navy);
+  font-size: 16px;
+}
+
+.location-card p {
+  margin: 0 0 8px;
+  color: var(--navy);
+  font-weight: 850;
+  line-height: 1.45;
+}
+
+.location-card span {
+  color: var(--teal-dark);
+  font-weight: 1000;
+}
+
+/* ==========================================================================
+   JOIN CTA
+   ========================================================================== */
+
+.tsmt-join {
+  display: grid;
+  grid-template-columns: 256px minmax(0, 1fr) auto;
+  gap: 20px;
+  align-items: center;
+  margin-top: 32px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: calc(4px / 4) solid #d9eef5;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 12px 32px rgba(33, 94, 140, 0.08);
+}
+
+.join-image-wrap {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.join-image {
+  display: block;
+  width: 100%;
+  height: 136px;
+  object-fit: cover;
+}
+
+.join-copy h2 {
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(20px, 2.6vw, 36px);
+  line-height: 1.12;
+}
+
+.join-copy h2 span {
+  display: block;
+  color: var(--coral);
+}
+
+.join-copy p {
+  margin: 12px 0 0;
+  color: var(--navy);
+  font-weight: 850;
+}
+
+.join-actions {
+  display: grid;
+  gap: 12px;
+  min-width: 188px;
+}
+
+.join-actions .btn {
+  justify-content: center;
+}
+
+.join-phone {
+  color: white;
+  background: var(--teal-dark);
+}
+
+/* ==========================================================================
+   RESPONSIVE: 900px-
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+  .tsmt-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .tsmt-floating-card {
+    right: 20px;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .why-card-soft {
+    grid-column: 1 / -1;
+    min-height: 164px;
+  }
+
+  .classes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tsmt-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .target-card {
+    grid-template-columns: 1fr;
+  }
+
+  .tsmt-location {
+    grid-template-columns: 1fr;
+  }
+
+  .tsmt-join {
+    grid-template-columns: 212px 1fr;
+  }
+
+  .join-actions {
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE: 676px-
+   ========================================================================== */
+
+@media (max-width: 900px) {
+  .tsmt-page {
+    padding-top: 16px;
+  }
+
+  .tsmt-hero h1 {
+    font-size: clamp(36px, 11vw, 60px);
+  }
+
+  .tsmt-hero-visual {
+    min-height: 272px;
+  }
+
+  .tsmt-floating-card {
+    position: relative;
+    right: auto;
+    top: auto;
+    width: 100%;
+    min-width: 0;
+    margin-top: 12px;
+    transform: none;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .classes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .location-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .tsmt-join {
+    grid-template-columns: 1fr;
+  }
+
+  .join-image {
+    height: 180px;
+  }
+
+  .join-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE: 480px-
+   ========================================================================== */
+
+@media (max-width: 640px) {
+  .tsmt-hero-visual {
+    min-height: 224px;
+    border-radius: 24px;
+  }
+
+  .tsmt-hero-image {
+    border-radius: 24px;
+  }
+
+  .why-card,
+  .tsmt-panel,
+  .target-card,
+  .location-copy {
+    padding: 20px 16px;
+    border-radius: 20px;
+  }
+
+  .class-card {
+    min-height: 188px;
+  }
+
+  .tsmt-panel {
+    min-height: 0;
+  }
+
+  .benefit-item {
+    grid-template-columns: 36px 1fr;
+    gap: 12px;
+  }
+
+  .team-image-wrap {
+    min-height: 144px;
+  }
+
+  .fact-item {
+    align-items: flex-start;
+  }
+
+  .location-card {
+    min-height: 156px;
+  }
+
+  .tsmt-join {
+    padding: 12px;
+    border-radius: 20px;
+  }
+
+  .join-image {
+    height: 144px;
+  }
+}

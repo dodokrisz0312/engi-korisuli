@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { CalendarDays, Menu, X } from "lucide-react";
 import { useState } from "react";
 import logoImage from "@/assets/logo.png";
-import { navItems } from "@/data/site";
+import { navItems } from "@/data/constants";
 
 function isActiveLink(pathname: string, href: string) {
   if (href === "/") return pathname === "/";

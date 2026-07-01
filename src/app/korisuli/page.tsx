@@ -1,130 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Award,
-  Brain,
-  CalendarDays,
-  Eye,
-  GraduationCap,
-  Heart,
-  Megaphone,
-  Phone,
-  ShieldCheck,
-  Sparkles,
-  Star,
-  Target,
-  Trophy,
-  Users,
-} from "lucide-react";
+import { Award, CalendarDays, Phone, Trophy, Users } from "lucide-react";
 import { Header } from "@/components/Header";
 import { CTA } from "@/components/Sections";
 import penguinWaveImage from "@/assets/penguin-wave.png";
-import { galleryItems } from "@/data/site";
-
-const founders = [
-  {
-    name: "Engi Klári és Tóth Attila",
-    points: [
-      "Nyolcszoros jégtánc magyar bajnokok",
-      "Európa- és Világbajnokság IV. helyezés",
-      "Háromszoros olimpikonok",
-    ],
-  },
-  {
-    name: "Száraz András",
-    points: [
-      "Többszörös magyar bajnok",
-      "Mesteredző",
-      "Napjainkban Svédországban segíti a versenyzők felkészülését",
-    ],
-  },
-];
-
-const timeline = [
-  {
-    year: "1977",
-    icon: <Sparkles size={34} />,
-    text: "Az Engi–Tóth jégtánckettős aktív amatőr pályafutása 1977 februárban kezdődött.",
-  },
-  {
-    year: "1992",
-    icon: <Award size={34} />,
-    text: "Albertville-i Téli Olimpiai Játékokkal fejeződött be. Egy év profi pályafutás, majd a Profi Világbajnokság 3. helyezés.",
-  },
-  {
-    year: "1995",
-    icon: <Users size={34} />,
-    text: "Gyermekvállalás után, felmérve az igényeket, megalapítottuk közös jégiskolánkat.",
-  },
-  {
-    year: "1996",
-    icon: <GraduationCap size={34} />,
-    text: "Újpesten kezdtük az utánpótlás nevelést, majd a Pólus Centerben lettünk az első korcsolyaiskola.",
-  },
-  {
-    year: "Napjaink",
-    icon: <Star size={34} />,
-    text: "Korábbi versenyzők és edzőtársak segítségével, ösztönnel és szakmai tudással fejlődünk.",
-  },
-];
-
-const goals = [
-  {
-    icon: <Heart size={32} />,
-    title: "Sport és mozgás iránti szeretet kifejlesztése",
-  },
-  {
-    icon: <Eye size={32} />,
-    title: "Térlátás elsajátítása",
-  },
-  {
-    icon: <Sparkles size={32} />,
-    title: "Korcsolya alapjainak elsajátítása",
-  },
-  {
-    icon: <Target size={32} />,
-    title: "Figyelem és az összpontosítás gyakorlása",
-  },
-  {
-    icon: <Brain size={32} />,
-    title: "Mozgáskoordináció javítása",
-  },
-  {
-    icon: <GraduationCap size={32} />,
-    title: "Iskolába történő beilleszkedés megkönnyítése",
-  },
-  {
-    icon: <ShieldCheck size={32} />,
-    title: "Egyensúlyérzék fejlesztése",
-  },
-  {
-    icon: <Trophy size={32} />,
-    title: "További lehetőségek biztosítása a versenysport irányába",
-  },
-];
-
-const infoItems = [
-  {
-    icon: <CalendarDays size={30} />,
-    text: "Az oktatások korcsolyatudásnak megfelelően, csoportokban történnek. A szezon általában szeptember közepétől június közepéig tart.",
-  },
-  {
-    icon: <Sparkles size={30} />,
-    text: "Nyári programunk a jégkorcsolya tábor, melyre mindenkit szeretettel várunk. Célunk, hogy a gyerekek hasznosan és jó társaságban töltsék az időt.",
-  },
-  {
-    icon: <ShieldCheck size={30} />,
-    text: "Teljesen kezdőket és haladókat egyaránt szeretettel várunk. Kérjük, kényelmes ruhában és saját korcsolyával érkezzetek, ha van.",
-  },
-  {
-    icon: <Award size={30} />,
-    text: "Kesztyű használata kötelező, valamint ajánlott a vízhatlan ruha.",
-  },
-  {
-    icon: <Megaphone size={30} />,
-    text: "Bejelentkezni javasolt, ősszel és tavasszal is. Bármelyik időpont látogatható, a csoportokhoz folyamatosan lehet csatlakozni.",
-  },
-];
+import { galleryItems, korisuliPage } from "@/data/constants";
 
 export default function KorisuliPage() {
   return (
@@ -174,7 +54,7 @@ export default function KorisuliPage() {
           </div>
 
           <div className="founders-grid">
-            {founders.map((founder) => (
+            {korisuliPage.founders.map((founder) => (
               <article className="founder-card" key={founder.name}>
                 <div>
                   <h3>{founder.name}</h3>
@@ -208,13 +88,18 @@ export default function KorisuliPage() {
           </div>
 
           <div className="timeline-grid">
-            {timeline.map((item) => (
-              <article className="timeline-card" key={item.year}>
-                <div className="timeline-icon">{item.icon}</div>
-                <h3>{item.year}</h3>
-                <p>{item.text}</p>
-              </article>
-            ))}
+            {korisuliPage.timeline.map((item) => {
+              const Icon = item.icon;
+              return (
+                <article className="timeline-card" key={item.year}>
+                  <div className="timeline-icon">
+                    <Icon size={34} />
+                  </div>
+                  <h3>{item.year}</h3>
+                  <p>{item.text}</p>
+                </article>
+              );
+            })}
           </div>
         </section>
 
@@ -223,12 +108,17 @@ export default function KorisuliPage() {
             <h2>Céljaink a gyermekek korcsolyaoktatásával</h2>
 
             <div className="goals-grid">
-              {goals.map((goal) => (
-                <div className="goal-item" key={goal.title}>
-                  <div className="goal-icon">{goal.icon}</div>
-                  <p>{goal.title}</p>
-                </div>
-              ))}
+              {korisuliPage.goals.map((goal) => {
+                const Icon = goal.icon;
+                return (
+                  <div className="goal-item" key={goal.title}>
+                    <div className="goal-icon">
+                      <Icon size={32} />
+                    </div>
+                    <p>{goal.title}</p>
+                  </div>
+                );
+              })}
             </div>
           </article>
 
@@ -238,12 +128,17 @@ export default function KorisuliPage() {
             </h2>
 
             <div className="info-list">
-              {infoItems.map((item) => (
-                <div className="info-item" key={item.text}>
-                  <div className="info-icon">{item.icon}</div>
-                  <p>{item.text}</p>
-                </div>
-              ))}
+              {korisuliPage.infoItems.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <div className="info-item" key={item.text}>
+                    <div className="info-icon">
+                      <Icon size={30} />
+                    </div>
+                    <p>{item.text}</p>
+                  </div>
+                );
+              })}
             </div>
           </article>
         </section>
