@@ -5,14 +5,14 @@
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 30px;
+  gap: 24px;
   align-items: stretch;
-  padding: 40px 0 30px;
+  padding: 32px 0 24px;
 }
 
 .hero-copy,
 .hero-visual {
-  min-height: clamp(430px, 34vw, 760px);
+  min-height: clamp(324px, 34vw, 572px);
 }
 
 /* ==========================================================================
@@ -24,11 +24,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 24px;
+  gap: 20px;
   overflow: hidden;
-  padding: clamp(28px, 4vw, 58px);
-  padding-right: 20px;
-  border: 1px solid #ddf3fa;
+  padding: clamp(20px, 4vw, 44px);
+  padding-right: 16px;
+  border: calc(4px / 4) solid #ddf3fa;
   border-radius: var(--radius);
   background: var(--card);
   box-shadow: var(--shadow);
@@ -40,25 +40,25 @@
 }
 
 .eyebrow {
-  margin: 0 0 12px;
+  margin: 0 0 8px;
   color: var(--teal-dark);
   font-weight: 900;
-  font-size: clamp(0.92rem, 1vw, 1rem);
+  font-size: clamp(12px, 1vw, 12px);
 }
 
 .hero-copy p:not(.eyebrow) {
-  max-width: 420px;
+  max-width: 316px;
   color: var(--muted);
-  font-size: clamp(1.05rem, 1.25vw, 1.2rem);
+  font-size: clamp(12px, 1.25vw, 16px);
   line-height: 1.72;
 }
 
 .hero-actions {
-  width: min(460px, 72%);
+  width: min(344px, 72%);
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 28px;
+  gap: 12px;
+  margin-top: 20px;
 }
 
 /* ==========================================================================
@@ -70,10 +70,10 @@
   right: 8px;
   bottom: 0px;
   z-index: 1;
-  width: clamp(120px, 15vw, 180px);
+  width: clamp(92px, 15vw, 136px);
   height: auto;
   pointer-events: none;
-  filter: drop-shadow(0 18px 24px rgba(17, 69, 104, 0.16));
+  filter: drop-shadow(0 16px 20px rgba(17, 69, 104, 0.16));
 }
 
 /* ==========================================================================
@@ -83,8 +83,8 @@
 .hero-visual {
   position: relative;
   overflow: hidden;
-  border: 1px solid #d8f0f8;
-  border-radius: 36px;
+  border: calc(4px / 4) solid #d8f0f8;
+  border-radius: 28px;
   background:
     linear-gradient(115deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9)),
     linear-gradient(180deg, #dff5ff, #ffffff 48%, #e8f6fb);
@@ -97,8 +97,8 @@
   inset: 0;
   background: repeating-linear-gradient(
     0deg,
-    transparent 0 55px,
-    rgba(91, 160, 210, 0.08) 56px 58px
+    transparent 0 40px,
+    rgba(91, 160, 210, 0.08) 40px 44px
   );
 }
 
@@ -114,7 +114,7 @@
 }
 
 /* ==========================================================================
-   RESPONSIVE: 1200px-
+   RESPONSIVE: 900px-
    ========================================================================== */
 
 @media (max-width: 1200px) {
@@ -123,63 +123,63 @@
     flex-direction: column;
     align-items: center;
     grid-template-columns: 1fr;
-    padding-top: 24px;
+    padding-top: 20px;
   }
 
   .hero-copy,
   .hero-visual {
     width: 100%;
-    min-height: 340px;
+    min-height: 256px;
   }
 
   .hero-penguin {
-    width: 150px;
+    width: 112px;
   }
 
   .hero-actions {
-    width: min(560px, 90%);
+    width: min(420px, 90%);
     display: flex;
     flex-wrap: wrap;
-    gap: 14px;
-    margin-top: 28px;
+    gap: 12px;
+    margin-top: 20px;
   }
 }
 
 /* ==========================================================================
-   RESPONSIVE: 700px-
+   RESPONSIVE: 524px-
    ========================================================================== */
 
 @media (max-width: 700px) {
   .hero-copy {
     align-items: center;
     text-align: center;
-    min-height: 360px;
-    gap: 16px;
+    min-height: 272px;
+    gap: 12px;
   }
 
   .hero-copy h1 {
-    font-size: 28px;
+    font-size: 20px;
   }
 
   .hero-copy p:not(.eyebrow) {
-    font-size: 16px;
+    font-size: 12px;
     margin: 0;
   }
 
   .hero-visual {
-    min-height: 300px;
+    min-height: 224px;
   }
 
   .eyebrow {
-    margin-top: 32px;
+    margin-top: 24px;
   }
 
   .hero-penguin {
-    top: 12px;
-    left: 16px;
+    top: 8px;
+    left: 12px;
     bottom: unset;
     right: unset;
-    width: 70px;
+    width: 52px;
   }
 
   .hero-actions {
@@ -189,10 +189,10 @@
 }
 
 /* ==========================================================================
-   RESPONSIVE: 530px-
+   RESPONSIVE: 400px-
    ========================================================================== */
 
-@media (max-width: 530px) {
+@media (max-width: 532px) {
   .eyebrow {
     width: 65%;
   }

@@ -1,25 +1,25 @@
 .site-footer {
   width: 100%;
-  margin-top: 44px;
+  margin-top: 32px;
   overflow: hidden;
   color: white;
-  border-radius: 28px 28px 0 0;
+  border-radius: 20px 20px 0 0;
   background: #27b9bd;
 }
 
 .footer-inner {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(190px, auto) minmax(130px, auto) 70px;
+  grid-template-columns: minmax(0, 1fr) minmax(144px, auto) minmax(100px, auto) 52px;
   align-items: start;
-  gap: 24px;
-  padding: 16px 0 10px;
+  gap: 20px;
+  padding: 12px 0 8px;
 }
 
 .footer-inner h3 {
   margin: 0 0 8px;
   color: white;
-  font-size: 0.9rem;
+  font-size: 12px;
   line-height: 1.1;
 }
 
@@ -33,34 +33,34 @@
 .footer-brand h2 {
   margin: 0;
   color: white;
-  font-size: 1.35rem;
+  font-size: 16px;
   line-height: 1.05;
 }
 
 .footer-brand strong {
   color: white;
-  font-size: 0.9rem;
+  font-size: 12px;
 }
 
 .footer-brand span {
   color: rgba(255, 255, 255, 0.92);
   font-weight: 750;
-  font-size: 0.86rem;
+  font-size: 12px;
 }
 
 .footer-contact {
   display: grid;
-  gap: 6px;
+  gap: 4px;
   height: 100%;
   align-content: center;
   font-weight: 850;
-  font-size: 0.86rem;
+  font-size: 12px;
 }
 
 .footer-contact a {
   display: inline-flex;
   align-items: center;
-  gap: 9px;
+  gap: 8px;
   color: white;
   line-height: 1.25;
   transition: opacity 0.18s ease;
@@ -78,8 +78,8 @@
 }
 
 .footer-follow {
-  padding-left: 20px;
-  border-left: 1px solid rgba(255, 255, 255, 0.32);
+  padding-left: 16px;
+  border-left: calc(4px / 4) solid rgba(255, 255, 255, 0.32);
   height: 100%;
   align-content: center;
 }
@@ -87,17 +87,17 @@
 .social-links {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
 }
 
 .social-links a {
   display: grid;
   place-items: center;
-  width: 36px;
-  height: 36px;
+  width: 28px;
+  height: 28px;
   color: white;
   border-radius: 50%;
-  box-shadow: 0 10px 18px rgba(16, 96, 122, 0.16);
+  box-shadow: 0 8px 16px rgba(16, 96, 122, 0.16);
 }
 
 .social-links a:nth-child(1) {
@@ -111,10 +111,10 @@
 .footer-penguin {
   display: block;
   justify-self: end;
-  width: 70px;
+  width: 52px;
   height: auto;
   pointer-events: none;
-  filter: drop-shadow(0 10px 14px rgba(16, 96, 122, 0.13));
+  filter: drop-shadow(0 8px 12px rgba(16, 96, 122, 0.13));
 }
 
 .footer-bottom {
@@ -123,13 +123,13 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 18px;
+  gap: 16px;
   margin-top: 0;
-  padding-top: 9px;
-  border-top: 1px solid rgba(255, 255, 255, 0.32);
+  padding-top: 8px;
+  border-top: calc(4px / 4) solid rgba(255, 255, 255, 0.32);
   color: rgba(255, 255, 255, 0.94);
   font-weight: 750;
-  font-size: 0.78rem;
+  font-size: 8px;
 }
 
 .footer-bottom p {
@@ -140,7 +140,7 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
 }
 
 .footer-legal a {
@@ -150,9 +150,9 @@
 
 @media (max-width: 900px) {
   .footer-inner {
-    grid-template-columns: minmax(0, 1fr) auto 64px;
+    grid-template-columns: minmax(0, 1fr) auto 48px;
     align-items: center;
-    gap: 16px;
+    gap: 12px;
   }
 
   .footer-brand {
@@ -175,7 +175,7 @@
 
   .footer-penguin {
     grid-column: 3 / 4;
-    width: 64px;
+    width: 48px;
   }
 
   .footer-bottom {
@@ -188,14 +188,14 @@
 
 @media (max-width: 640px) {
   .site-footer {
-    margin-top: 40px;
+    margin-top: 32px;
   }
 
   .footer-inner {
     grid-template-columns: 1fr;
-    gap: 14px;
+    gap: 12px;
     position: relative;
-    padding: 18px 0 12px;
+    padding: 16px 0 8px;
   }
 
   .footer-contact,
@@ -211,7 +211,7 @@
   }
 
   .footer-contact h3 {
-    font-size: 1.05rem;
+    font-size: 12px;
   }
 
   .footer-follow {
@@ -219,32 +219,32 @@
   }
 
   .social-links a {
-    width: 34px;
-    height: 34px;
+    width: 28px;
+    height: 28px;
   }
 
   .footer-penguin {
     display: block;
     position: absolute;
-    top: 60px;
-    right: -40px;
-    width: 100px;
+    top: 44px;
+    right: -28px;
+    width: 76px;
   }
 
   .footer-bottom {
     grid-column: 1 / -1;
-    font-size: 0.8rem;
+    font-size: 8px;
   }
 }
 
 @media (max-width: 420px) {
   .footer-bottom {
-    gap: 10px;
+    gap: 8px;
   }
 
   .footer-legal {
     justify-content: center;
-    gap: 6px;
+    gap: 4px;
     width: 100%;
     text-align: center;
   }
