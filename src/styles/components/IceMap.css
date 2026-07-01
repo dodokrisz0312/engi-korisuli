@@ -108,7 +108,7 @@
   position: absolute;
   z-index: 4;
   display: block;
-  width: 452px;
+  width: 600px;
   height: 300px;
   min-height: 0;
   padding: 28px;
@@ -400,7 +400,7 @@
 
 @media (max-width: 1800px) {
   .program-card {
-    width: clamp(376px, calc(50vw - 224px), 452px);
+    width: clamp(500px, calc(50vw - 300px), 600px);
   }
 
   .program-content {
@@ -439,7 +439,7 @@
   }
 
   .program-card {
-    width: clamp(340px, 37.5vw, 452px);
+    width: clamp(450px, 37.5vw, 600px);
     height: 264px;
     min-height: 0;
     padding: 20px;
@@ -547,7 +547,7 @@
   }
 
   .program-card {
-    width: clamp(376px, calc(33.333vw + 152px), 452px);
+    width: clamp(500px, calc(33.333vw + 200px), 600px);
     height: 224px;
     min-height: 0;
     padding: 20px;
