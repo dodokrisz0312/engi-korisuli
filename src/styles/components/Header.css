@@ -111,25 +111,7 @@
 }
 
 /* ==========================================================================
-   HERO VISUAL
-   ========================================================================== */
-
-.hero-visual {
-  position: relative;
-  overflow: hidden;
-  min-height: clamp(324px, 34vw, 420px);
-  border: calc(4px / 4) solid #d8f0f8;
-  border-radius: 28px;
-  background: #eaf7fb;
-  box-shadow: var(--shadow);
-}
-
-.hero-image {
-  object-fit: cover;
-}
-
-/* ==========================================================================
-   RESPONSIVE: 736px-
+   RESPONSIVE: 980px-
    ========================================================================== */
 
 @media (max-width: 980px) {

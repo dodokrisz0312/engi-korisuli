@@ -1,9 +1,14 @@
+/* ==========================================================================
+   PLACEHOLDER PAGE
+   ========================================================================== */
+
 .placeholder-page {
   min-height: 55vh;
   display: grid;
   place-content: center;
   text-align: center;
 }
+
 .placeholder-page h1 {
   text-transform: capitalize;
 }
