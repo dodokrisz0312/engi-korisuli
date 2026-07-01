@@ -23,16 +23,6 @@ export default function TsmtPage() {
               Játékos, szakmailag támogatott foglalkozások 3-5 éves gyerekeknek, szárazon és jégen,
               a harmonikus mozgásfejlődésért.
             </p>
-
-            <div className="tsmt-hero-actions">
-              <Link href="/jelentkezes" className="btn primary">
-                Jelentkezés
-              </Link>
-
-              <Link href="/elerhetosegek" className="btn secondary">
-                Kapcsolat
-              </Link>
-            </div>
           </div>
 
           <div className="tsmt-hero-visual">
@@ -76,8 +66,8 @@ export default function TsmtPage() {
             <article className="why-card">
               <h3>A korcsolyázás komplexen fejleszt</h3>
               <p>
-                A korcsolyázás nagyon jól fejleszti a koordinációt, az egyensúlyt és a térlátást. Nem
-                egyoldalú sport, mert mindkét oldalt megmozgatja, és komoly testtudatot ad a
+                A korcsolyázás nagyon jól fejleszti a koordinációt, az egyensúlyt és a térlátást.
+                Nem egyoldalú sport, mert mindkét oldalt megmozgatja, és komoly testtudatot ad a
                 gyermekeknek a lábfejtől a fejbúbig.
               </p>
             </article>
