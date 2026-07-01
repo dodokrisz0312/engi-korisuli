@@ -22,12 +22,13 @@
   align-items: start;
   gap: 20px;
   padding: 12px 0 8px;
+  width: 90vw;
 }
 
 .footer-inner h3 {
   margin: 0 0 8px;
   color: white;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.1;
 }
 
@@ -45,19 +46,19 @@
 .footer-brand h2 {
   margin: 0;
   color: white;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.05;
 }
 
 .footer-brand strong {
   color: white;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .footer-brand span {
   color: rgba(255, 255, 255, 0.92);
   font-weight: 750;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 /* ==========================================================================
@@ -135,7 +136,7 @@
 .footer-penguin {
   display: block;
   justify-self: end;
-  width: 52px;
+  width: 72px;
   height: auto;
   pointer-events: none;
   filter: drop-shadow(0 8px 12px rgba(16, 96, 122, 0.13));
@@ -153,11 +154,12 @@
   flex-wrap: wrap;
   gap: 16px;
   margin-top: 0;
-  padding-top: 8px;
+  padding-top: 12px;
+  padding-bottom: 8px;
   border-top: calc(4px / 4) solid rgba(255, 255, 255, 0.32);
   color: rgba(255, 255, 255, 0.94);
   font-weight: 750;
-  font-size: 8px;
+  font-size: 12px;
 }
 
 .footer-bottom p {
@@ -247,7 +249,7 @@
   }
 
   .footer-contact h3 {
-    font-size: 12px;
+    font-size: 16px;
   }
 
   .footer-follow {
@@ -269,7 +271,7 @@
 
   .footer-bottom {
     grid-column: 1 / -1;
-    font-size: 8px;
+    font-size: 12px;
   }
 }
 
