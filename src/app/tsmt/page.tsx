@@ -209,7 +209,7 @@ export default function TsmtPage() {
           subtitle="A mozgásfejlesztés játékos módon támogatja a gyerekek testtudatát, koordinációját és önbizalmát."
           buttons={[
             {
-              href: "/jelentkezes",
+              href: "/elerhetosegek#jelentkezes",
               label: "Jelentkezés",
               icon: CalendarDays,
             },

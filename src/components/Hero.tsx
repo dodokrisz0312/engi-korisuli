@@ -14,7 +14,7 @@ export function Hero() {
           az önbizalmat és a jég szeretetét.
         </p>
         <div className="hero-actions">
-          <Link className="btn primary" href="/jelentkezes">
+          <Link className="btn primary" href="/elerhetosegek#jelentkezes">
             Próbára jelentkezés
           </Link>
           <Link className="btn ghost" href="/orarend">

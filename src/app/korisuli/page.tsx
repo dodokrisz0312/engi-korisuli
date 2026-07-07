@@ -150,7 +150,7 @@ export default function KorisuliPage() {
           subtitle="Várunk szeretettel minden korosztályt, kezdőket és haladókat egyaránt!"
           buttons={[
             {
-              href: "/jelentkezes",
+              href: "/elerhetosegek#jelentkezes",
               label: "Próbaórára jelentkezés",
               icon: CalendarDays,
             },

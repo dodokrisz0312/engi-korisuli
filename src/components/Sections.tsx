@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ChevronRight, Instagram, Mail, Phone } from "lucide-react";
 import { GalleryLightbox } from "@/components/GalleryLightbox";
 import penguinFooterImage from "@/assets/penguin-footer.png";
-import { galleryItems, stats, teachers } from "@/data/constants";
+import { contactPage, galleryItems, stats, teachers } from "@/data/constants";
 
 function FacebookIcon() {
   return (
@@ -108,13 +108,13 @@ export function CTA() {
 
         <div className="footer-contact" aria-label="Elérhetőségek">
           <h3>Elérhetőségek</h3>
-          <a href="tel:+36301234567">
+          <a href={contactPage.contact.phoneHref}>
             <Phone size={14} aria-hidden="true" />
-            +36 30 123 4567
+            {contactPage.contact.phone}
           </a>
-          <a href="mailto:info@engikorisuli.hu">
+          <a href={`mailto:${contactPage.contact.email}`}>
             <Mail size={14} aria-hidden="true" />
-            info@engikorisuli.hu
+            {contactPage.contact.email}
           </a>
         </div>
 
@@ -122,14 +122,19 @@ export function CTA() {
           <h3>Kövess minket!</h3>
           <div className="social-links">
             <a
-              href="https://facebook.com/engikorisuli"
+              href={contactPage.contact.facebook}
               aria-label="Facebook"
               target="_blank"
               rel="noreferrer"
             >
               <FacebookIcon />
             </a>
-            <a href="#" aria-label="Instagram">
+            <a
+              href={contactPage.contact.instagram}
+              aria-label="Instagram"
+              target="_blank"
+              rel="noreferrer"
+            >
               <Instagram size={18} aria-hidden="true" />
             </a>
           </div>

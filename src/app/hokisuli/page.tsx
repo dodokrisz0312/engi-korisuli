@@ -209,7 +209,7 @@ export default function HokisuliPage() {
         <section className="hoki-location section-shell">
           <div className="hoki-location-copy">
             <p className="hoki-eyebrow">Jégpálya</p>
-            <h2>A Pólus Center pályája az otthonunk</h2>
+            <h2>A Vasas Jégcentrum pályája az otthonunk</h2>
             <p>
               Igyekszünk szülő- és gyerekbarát edzésprogramot összeállítani, hogy mindig teljes
               létszámmal tudjunk részt venni rajta. A száraz edzés bevezetés alatt van, elsősorban
@@ -241,7 +241,7 @@ export default function HokisuliPage() {
           subtitle="Kezdőket és ügyesedni vágyó gyerekeket is szeretettel várunk játékos, biztonságos edzéseinken."
           buttons={[
             {
-              href: "/jelentkezes",
+              href: "/elerhetosegek#jelentkezes",
               label: "Jelentkezés",
               icon: CalendarDays,
             },

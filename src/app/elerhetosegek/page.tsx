@@ -3,6 +3,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import { Header } from "@/components/Header";
 import { CTA } from "@/components/Sections";
 import { ContactForm } from "@/components/ContactForm";
+import { SmoothHashScroll } from "@/components/SmoothHashScroll";
 import { contactPage } from "@/data/constants";
 
 export default function ElerhetosegekPage() {
@@ -12,6 +13,7 @@ export default function ElerhetosegekPage() {
 
   return (
     <>
+      <SmoothHashScroll />
       <main className="contact-page">
         <Header />
 
@@ -65,7 +67,7 @@ export default function ElerhetosegekPage() {
           </div>
         </section>
 
-        <section className="contact-main-grid section-shell">
+        <section id="jelentkezes" className="contact-main-grid section-shell">
           <article className="contact-form-panel">
             <div className="contact-section-heading">
               <p className="contact-eyebrow">Jelentkezési űrlap</p>

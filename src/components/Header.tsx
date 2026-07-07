@@ -16,7 +16,7 @@ function isActiveLink(pathname: string, href: string) {
 export function Header() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
-  const isSignupActive = isActiveLink(pathname, "/jelentkezes");
+  const isSignupActive = isActiveLink(pathname, "/elerhetosegek");
 
   return (
     <header className="site-header">
@@ -42,7 +42,7 @@ export function Header() {
 
       <Link
         className={`header-cta ${isSignupActive ? "is-active" : ""}`}
-        href="/jelentkezes"
+        href="/elerhetosegek#jelentkezes"
         aria-current={isSignupActive ? "page" : undefined}
       >
         <CalendarDays size={18} /> Jelentkezés
@@ -75,7 +75,7 @@ export function Header() {
         })}
         <Link
           className={`mobile-cta ${isSignupActive ? "is-active" : ""}`}
-          href="/jelentkezes"
+          href="/elerhetosegek#jelentkezes"
           onClick={() => setOpen(false)}
         >
           <CalendarDays size={18} /> Jelentkezés

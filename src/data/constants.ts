@@ -102,7 +102,7 @@ export const programs = [
 export const stats = [
   { value: "30", label: "év tapasztalat", icon: CalendarDays },
   { value: "1000+", label: "boldog gyermek", icon: UsersRound },
-  { value: "3", label: "helyszín", icon: MapPin },
+  { value: "2", label: "helyszín", icon: MapPin },
   { value: "100%", label: "Elégedettség", icon: Heart },
 ];
 
@@ -289,8 +289,8 @@ export const tsmtPage = {
     {
       icon: MapPin,
       title: "Helyszín",
-      text: "Pólus Center - Fitness Five & Gym",
-      note: "Pest",
+      text: "Kikötő Ifjúsági Közösségi Tér",
+      note: "1156 Budapest, Száraznád utca 5.",
     },
     {
       icon: CalendarDays,
@@ -444,8 +444,8 @@ export const hokisuliPage = {
     {
       icon: MapPin,
       title: "Jégpálya",
-      text: "Pólus Center",
-      note: "jelenlegi otthonunk",
+      text: "Vasas Jégcentrum",
+      note: "1048 Budapest, Homoktövis utca 1.",
     },
     {
       icon: Clock,
@@ -522,7 +522,7 @@ export const oktatokPage = {
       name: "Madárné Kerekes Krisztina",
       role: "Szakedző, gyógypedagógus",
       focus:
-        "A Pólus jégiskola kezdeteitől van a csapattal. TSMT pedagógusként sokat tanulunk tőle mindannyian.",
+        "A jégiskola kezdeteitől van a csapattal. TSMT pedagógusként sokat tanulunk tőle mindannyian.",
       image: teacherKerekesKrisztaImage,
       highlights: [
         "EB és VB jégtáncos résztvevő",
