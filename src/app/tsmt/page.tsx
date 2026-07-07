@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Brain, CalendarDays, CheckCircle2, Clock, Dumbbell } from "lucide-react";
 import { Header } from "@/components/Header";
+import { JoinSection } from "@/components/JoinSection";
 import { CTA } from "@/components/Sections";
 import { tsmtPage } from "@/data/constants";
 import tsmtHeroImage from "@/assets/tsmt.jpg";
@@ -203,39 +203,26 @@ export default function TsmtPage() {
           </div>
         </section>
 
-        <section className="tsmt-join section-shell">
-          <div className="join-image-wrap">
-            <Image
-              src={tsmtJoinImage}
-              width={420}
-              height={260}
-              alt="Gyermek mozgásfejlesztő foglalkozáson"
-              className="join-image"
-            />
-          </div>
-
-          <div className="join-copy">
-            <h2>
-              Segítsük együtt, <span>hogy magabiztosabban mozogjon!</span>
-            </h2>
-            <p>
-              A mozgásfejlesztés játékos módon támogatja a gyerekek testtudatát, koordinációját és
-              önbizalmát.
-            </p>
-          </div>
-
-          <div className="join-actions">
-            <Link href="/jelentkezes" className="btn primary">
-              <CalendarDays size={20} />
-              Jelentkezés
-            </Link>
-
-            <Link href="/elerhetosegek" className="btn secondary join-phone">
-              <Clock size={20} />
-              Érdeklődés
-            </Link>
-          </div>
-        </section>
+        <JoinSection
+          image={tsmtJoinImage}
+          imageAlt="Gyermek mozgásfejlesztő foglalkozáson"
+          title="Segítsük együtt,"
+          titleAccent="hogy magabiztosabban mozogjon!"
+          subtitle="A mozgásfejlesztés játékos módon támogatja a gyerekek testtudatát, koordinációját és önbizalmát."
+          buttons={[
+            {
+              href: "/jelentkezes",
+              label: "Jelentkezés",
+              icon: CalendarDays,
+            },
+            {
+              href: "/elerhetosegek",
+              label: "Érdeklődés",
+              icon: Clock,
+              variant: "secondary",
+            },
+          ]}
+        />
       </main>
 
       <CTA />

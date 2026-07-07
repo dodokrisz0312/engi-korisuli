@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Award, CalendarDays, Phone, Trophy, Users } from "lucide-react";
 import { Header } from "@/components/Header";
+import { JoinSection } from "@/components/JoinSection";
 import { CTA } from "@/components/Sections";
 import penguinWaveImage from "@/assets/penguin-wave.png";
 import { galleryItems, korisuliPage } from "@/data/constants";
@@ -143,36 +143,26 @@ export default function KorisuliPage() {
           </article>
         </section>
 
-        <section className="korisuli-join section-shell">
-          <div className="join-image-wrap">
-            <Image
-              src={galleryItems[3].image}
-              width={420}
-              height={260}
-              alt="Mosolygó gyermek a jégpályán"
-              className="join-image"
-            />
-          </div>
-
-          <div className="join-copy">
-            <h2>
-              Csatlakozz jégiskolánkhoz, <span>és fedezd fel a korcsolyázás örömét!</span>
-            </h2>
-            <p>Várunk szeretettel minden korosztályt, kezdőket és haladókat egyaránt!</p>
-          </div>
-
-          <div className="join-actions">
-            <Link href="/jelentkezes" className="btn primary">
-              <CalendarDays size={20} />
-              Próbaórára jelentkezés
-            </Link>
-
-            <Link href="/elerhetosegek" className="btn secondary join-phone">
-              <Phone size={20} />
-              Kapcsolat felvétele
-            </Link>
-          </div>
-        </section>
+        <JoinSection
+          image={galleryItems[3].image}
+          imageAlt="Mosolygó gyermek a jégpályán"
+          title="Csatlakozz jégiskolánkhoz,"
+          titleAccent="és fedezd fel a korcsolyázás örömét!"
+          subtitle="Várunk szeretettel minden korosztályt, kezdőket és haladókat egyaránt!"
+          buttons={[
+            {
+              href: "/jelentkezes",
+              label: "Próbaórára jelentkezés",
+              icon: CalendarDays,
+            },
+            {
+              href: "/elerhetosegek",
+              label: "Kapcsolat felvétele",
+              icon: Phone,
+              variant: "secondary",
+            },
+          ]}
+        />
       </main>
 
       <CTA />

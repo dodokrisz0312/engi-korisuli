@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
 import { CalendarDays, CheckCircle2, Clock, Trophy, Users } from "lucide-react";
 import { Header } from "@/components/Header";
+import { JoinSection } from "@/components/JoinSection";
 import { CTA } from "@/components/Sections";
 import { hokisuliPage } from "@/data/constants";
 import galleryImage7 from "@/assets/gallery/korisuli/oktatasaink_1.jpg";
@@ -235,39 +235,26 @@ export default function HokisuliPage() {
           </div>
         </section>
 
-        <section className="hoki-join section-shell">
-          <div className="hoki-join-image-wrap">
-            <Image
-              src={galleryImage7}
-              width={420}
-              height={260}
-              alt="Gyerek jégkorong felszerelésben"
-              className="hoki-join-image"
-            />
-          </div>
-
-          <div className="hoki-join-copy">
-            <h2>
-              Próbáld ki a hokit, <span>és építsünk erős kori alapokat!</span>
-            </h2>
-            <p>
-              Kezdőket és ügyesedni vágyó gyerekeket is szeretettel várunk játékos, biztonságos
-              edzéseinken.
-            </p>
-          </div>
-
-          <div className="hoki-join-actions">
-            <Link href="/jelentkezes" className="btn primary">
-              <CalendarDays size={20} />
-              Jelentkezés
-            </Link>
-
-            <Link href="/elerhetosegek" className="btn secondary hoki-join-phone">
-              <Clock size={20} />
-              Érdeklődés
-            </Link>
-          </div>
-        </section>
+        <JoinSection
+          image={galleryImage7}
+          imageAlt="Gyerek jégkorong felszerelésben"
+          title="Próbáld ki a hokit,"
+          titleAccent="és építsünk erős kori alapokat!"
+          subtitle="Kezdőket és ügyesedni vágyó gyerekeket is szeretettel várunk játékos, biztonságos edzéseinken."
+          buttons={[
+            {
+              href: "/jelentkezes",
+              label: "Jelentkezés",
+              icon: CalendarDays,
+            },
+            {
+              href: "/elerhetosegek",
+              label: "Érdeklődés",
+              icon: Clock,
+              variant: "secondary",
+            },
+          ]}
+        />
       </main>
 
       <CTA />

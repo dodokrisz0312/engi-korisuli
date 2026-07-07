@@ -531,69 +531,6 @@
 }
 
 /* ==========================================================================
-   JOIN CTA
-   ========================================================================== */
-
-.tsmt-join {
-  display: grid;
-  grid-template-columns: 256px minmax(0, 1fr) auto;
-  gap: 20px;
-  align-items: center;
-  margin-top: 32px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border: calc(4px / 4) solid #d9eef5;
-  border-radius: 24px;
-  background: rgba(255, 255, 255, 0.78);
-  box-shadow: 0 12px 32px rgba(33, 94, 140, 0.08);
-}
-
-.join-image-wrap {
-  overflow: hidden;
-  border-radius: 20px;
-}
-
-.join-image {
-  display: block;
-  width: 100%;
-  height: 136px;
-  object-fit: cover;
-}
-
-.join-copy h2 {
-  margin: 0;
-  color: var(--navy);
-  font-size: clamp(20px, 2.6vw, 36px);
-  line-height: 1.12;
-}
-
-.join-copy h2 span {
-  display: block;
-  color: var(--coral);
-}
-
-.join-copy p {
-  margin: 12px 0 0;
-  color: var(--navy);
-  font-weight: 850;
-}
-
-.join-actions {
-  display: grid;
-  gap: 12px;
-  min-width: 188px;
-}
-
-.join-actions .btn {
-  justify-content: center;
-}
-
-.join-phone {
-  color: white;
-  background: var(--teal-dark);
-}
-
-/* ==========================================================================
    RESPONSIVE: 900px-
    ========================================================================== */
 
@@ -629,15 +566,6 @@
 
   .tsmt-location {
     grid-template-columns: 1fr;
-  }
-
-  .tsmt-join {
-    grid-template-columns: 212px 1fr;
-  }
-
-  .join-actions {
-    grid-column: 1 / -1;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -681,18 +609,6 @@
   }
 
   .location-cards {
-    grid-template-columns: 1fr;
-  }
-
-  .tsmt-join {
-    grid-template-columns: 1fr;
-  }
-
-  .join-image {
-    height: 180px;
-  }
-
-  .join-actions {
     grid-template-columns: 1fr;
   }
 }
@@ -742,14 +658,5 @@
 
   .location-card {
     min-height: 156px;
-  }
-
-  .tsmt-join {
-    padding: 12px;
-    border-radius: 20px;
-  }
-
-  .join-image {
-    height: 144px;
   }
 }
