@@ -1,4 +1,4 @@
-import {
+﻿import {
   Activity,
   Award,
   Brain,
@@ -572,6 +572,108 @@ export const oktatokPage = {
         "Gyerekkora óta velünk van, eleinte résztvevőként, ma már oktatóként és adminisztrátorként is segít.",
       image: teacherDominikaImage,
       highlights: ["Adminisztráció", "Segédedzői feladatok", "Szervezés és napi rutin támogatása"],
+    },
+  ],
+};
+
+type PublicGalleryImage = {
+  src: string;
+  alt: string;
+};
+
+const galleryPath = (folder: string, file: string) => `/images/gallery/${folder}/${file}`;
+
+const makeGalleryImages = (folder: string, files: string[], label: string): PublicGalleryImage[] =>
+  files.map((file, index) => ({
+    src: galleryPath(folder, file),
+    alt: `${label} ${index + 1}. kép`,
+  }));
+
+const paddedGalleryFiles = (prefix: string, count: number) =>
+  Array.from(
+    { length: count },
+    (_, index) => `${prefix}_${String(index + 1).padStart(2, "0")}.JPG`
+  );
+
+const korisuliFiles = [
+  "Polusjeg.jpg",
+  ...[
+    2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28,
+    29, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41,
+  ].map((index) => `Polusjeg-${index}.jpg`),
+  ...[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 17].map((index) => `oktatasaink_${index}.jpg`),
+  ...[11, 12, 14, 15, 16].map((index) => `oktatasaink_${index}.JPG`),
+];
+
+const hokisuliFiles = [
+  ...[1, 2, 3].map((index) => `Hoki_${index}.JPEG`),
+  ...Array.from({ length: 13 }, (_, index) => `Hoki_${index + 4}.JPG`),
+];
+
+const mozgaskoordinacioFiles = [
+  "mozgaskoordinacio.jpg",
+  ...Array.from({ length: 17 }, (_, index) => `mozgaskoordinacio_${index + 2}.jpg`),
+];
+
+const nyariTaborFiles = ["2018_koritabor_fokep.png", ...paddedGalleryFiles("2018_koritabor", 31)];
+
+const farsangFiles = [
+  ...[1, 2].map((index) => `Farsang_${index}.JPEG`),
+  ...Array.from({ length: 38 }, (_, index) => `Farsang_${index + 3}.JPG`),
+  "Farsang_41.png",
+];
+
+const mikulasFiles = ["2018_mikulas_fokep.png", ...paddedGalleryFiles("2018_mikulas", 5)];
+
+export const galleryPage = {
+  folders: [
+    {
+      title: "Korisuli",
+      slug: "korisuli",
+      description:
+        "Korcsolya óráinkon igyekszünk a gyermekek fejlődését hatékony és játékos feladatokkal elérni.",
+      coverImage: galleryPath("korisuli", korisuliFiles[0]),
+      images: makeGalleryImages("korisuli", korisuliFiles, "Korisuli"),
+    },
+    {
+      title: "Hokisuli",
+      slug: "hokisuli",
+      description:
+        "RTK Vasló Hokicsapatunk keményen edz, hogy bizonyos nagy alkalmakkor megcsillogtathassák a tudásukat a hokimeccseken.",
+      coverImage: galleryPath("hokisuli", hokisuliFiles[0]),
+      images: makeGalleryImages("hokisuli", hokisuliFiles, "Hokisuli"),
+    },
+    {
+      title: "Mozgáskoordinációs Foglalkozások",
+      slug: "mozgasfejlesztes",
+      description:
+        "Mozgásjavító (TSMT) torna foglalkozásokkal segítjük fejleszteni a gyerekek izomzatát, egyensúly- és ritmusérzékét, mindezt a testtudat összehangolásával.",
+      coverImage: galleryPath("mozgaskoordinacio", mozgaskoordinacioFiles[0]),
+      images: makeGalleryImages("mozgaskoordinacio", mozgaskoordinacioFiles, "Mozgáskoordináció"),
+    },
+    {
+      title: "Nyári Tábor",
+      slug: "nyari-tabor",
+      description:
+        "Minden nyáron megrendezzük a klasszikus korcsolya és mozgáskoordinációs torna táborunkat, hogy a nyári szünet alatt is mozgásban maradjunk!",
+      coverImage: galleryPath("nyari_tabor", nyariTaborFiles[0]),
+      images: makeGalleryImages("nyari_tabor", nyariTaborFiles, "Nyári tábor"),
+    },
+    {
+      title: "Farsang & Halloween",
+      slug: "farsang-halloween",
+      description:
+        "Minden évben rendezünk a Farsangi, illetve a Halloween-i ünnepekkor beöltözős mulatságot a jégen a gyerekkel, amikor rendkívüli oktatást tartunk ügyességi sorversenyekkel.",
+      coverImage: galleryPath("farsang", farsangFiles[0]),
+      images: makeGalleryImages("farsang", farsangFiles, "Farsang és Halloween"),
+    },
+    {
+      title: "Mikulás",
+      slug: "mikulas",
+      description:
+        "Minden évben meglátogat minket is a Mikulás a jégen. Ilyenkor a Mikulás minden csoportnál megnézi az apróságokat és ők bemutathatják mit tanultak az elmúlt hetek/hónapok alatt.",
+      coverImage: galleryPath("mikulas", mikulasFiles[0]),
+      images: makeGalleryImages("mikulas", mikulasFiles, "Mikulás"),
     },
   ],
 };

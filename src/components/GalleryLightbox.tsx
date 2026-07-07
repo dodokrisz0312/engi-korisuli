@@ -8,7 +8,7 @@ import { createPortal } from "react-dom";
 
 type GalleryLightboxItem = {
   label: string;
-  image: StaticImageData;
+  image: StaticImageData | string;
   className: string;
 };
 
@@ -62,7 +62,12 @@ export function GalleryLightbox({ items }: GalleryLightboxProps) {
     selectedItem && isMounted
       ? createPortal(
           <div className="gallery-lightbox" role="dialog" aria-modal="true" onClick={close}>
-            <button className="gallery-lightbox-close" type="button" onClick={close} aria-label="Bezárás">
+            <button
+              className="gallery-lightbox-close"
+              type="button"
+              onClick={close}
+              aria-label="Bezárás"
+            >
               <X size={24} />
             </button>
 
@@ -78,16 +83,24 @@ export function GalleryLightbox({ items }: GalleryLightboxProps) {
               <ChevronLeft size={30} />
             </button>
 
-            <figure className="gallery-lightbox-content" onClick={(event) => event.stopPropagation()}>
+            <figure
+              className="gallery-lightbox-content"
+              onClick={(event) => event.stopPropagation()}
+            >
               <Image
                 className="gallery-lightbox-image"
                 src={selectedItem.image}
                 alt={selectedItem.label}
+                width={1200}
+                height={800}
                 sizes="(max-width: 900px) calc(100vw - 48px), 920px"
                 priority
               />
               <figcaption>
-                {selectedItem.label} <span>{selectedDisplayIndex} / {items.length}</span>
+                {selectedItem.label}{" "}
+                <span>
+                  {selectedDisplayIndex} / {items.length}
+                </span>
               </figcaption>
             </figure>
 
@@ -103,7 +116,7 @@ export function GalleryLightbox({ items }: GalleryLightboxProps) {
               <ChevronRight size={30} />
             </button>
           </div>,
-          document.body,
+          document.body
         )
       : null;
 
@@ -118,7 +131,7 @@ export function GalleryLightbox({ items }: GalleryLightboxProps) {
             onClick={() => setSelectedIndex(index)}
             aria-label={`${item.label} megnyitása`}
           >
-            <Image src={item.image} alt={item.label} sizes="180px" />
+            <Image src={item.image} alt={item.label} width={360} height={360} sizes="180px" />
             <span className="gallery-overlay">
               <span>{item.label}</span>
             </span>
