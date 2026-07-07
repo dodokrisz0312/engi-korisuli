@@ -1,0 +1,1709 @@
+/* ==========================================================================
+   HOKISULI PAGE - BASE
+   ========================================================================== */
+
+.hoki-page {
+  position: relative;
+  overflow: hidden;
+  padding-top: 0;
+}
+
+.hoki-page::before,
+.hoki-page::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 748px;
+  pointer-events: none;
+}
+
+.hoki-page::before {
+  left: -136px;
+  top: 180px;
+  width: 256px;
+  height: 256px;
+  background: rgba(211, 244, 250, 0.58);
+}
+
+.hoki-page::after {
+  right: -136px;
+  top: 336px;
+  width: 272px;
+  height: 272px;
+  background: rgba(255, 241, 221, 0.72);
+}
+
+/* ==========================================================================
+   HERO
+   ========================================================================== */
+
+.hoki-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(224px, 0.9fr) minmax(316px, 1.35fr);
+  gap: clamp(20px, 4vw, 48px);
+  align-items: center;
+  min-height: 392px;
+  padding-top: 20px;
+}
+
+.hoki-hero-copy {
+  position: relative;
+  padding: clamp(16px, 3vw, 36px) 0;
+}
+
+.hoki-eyebrow {
+  margin: 0 0 8px;
+  color: var(--teal-dark);
+  font-weight: 1000;
+  font-size: 12px;
+}
+
+.hoki-hero h1 {
+  max-width: 440px;
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(40px, 5.8vw, 76px);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.hoki-hero h1 span {
+  display: block;
+  color: var(--coral);
+}
+
+.hoki-hero-copy > p:not(.hoki-eyebrow) {
+  max-width: 420px;
+  margin: 16px 0 0;
+  color: var(--navy);
+  font-weight: 900;
+  font-size: clamp(12px, 1.5vw, 16px);
+  line-height: 1.5;
+}
+
+.hoki-hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.hoki-hero-badges span {
+  display: inline-grid;
+  place-items: center;
+  min-width: 54px;
+  height: 54px;
+  padding: 0 14px;
+  color: white;
+  font-weight: 1000;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--teal-dark), #69d4d4);
+  box-shadow: 0 12px 28px rgba(33, 94, 140, 0.12);
+}
+
+.hoki-hero-badges span:nth-child(2) {
+  background: linear-gradient(135deg, var(--coral), #ff9c87);
+}
+
+.hoki-hero-badges span:nth-child(3) {
+  color: var(--navy);
+  background: #fff3d9;
+}
+
+.hoki-hero-visual {
+  position: relative;
+  min-height: clamp(292px, 34vw, 404px);
+  overflow: visible;
+  border-radius: 36px;
+}
+
+.hoki-hero-image {
+  border-radius: 36px;
+  object-fit: cover;
+  box-shadow: 0 20px 44px rgba(33, 94, 140, 0.14);
+}
+
+.hoki-hero-visual::after {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 16%;
+  bottom: 16%;
+  height: 2px;
+  border-radius: 999px;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.9) 0 12px,
+    transparent 12px 24px
+  );
+  opacity: 0.75;
+  transform: rotate(-6deg);
+}
+
+.hoki-puck {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: #1b2f48;
+  box-shadow: 0 10px 18px rgba(16, 36, 56, 0.22);
+}
+
+.hoki-puck-one {
+  left: 18%;
+  bottom: 20%;
+}
+
+.hoki-puck-two {
+  right: 22%;
+  top: 18%;
+  width: 12px;
+  height: 12px;
+  opacity: 0.58;
+}
+
+.hoki-floating-card {
+  position: absolute;
+  right: -24px;
+  top: 50%;
+  display: grid;
+  gap: 8px;
+  width: min(204px, 35%);
+  min-width: 172px;
+  padding: 24px 20px;
+  color: var(--navy);
+  border: calc(4px / 4) solid #d9eef5;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 16px 36px rgba(33, 94, 140, 0.14);
+  transform: translateY(-50%);
+}
+
+.hoki-floating-card svg,
+.hoki-floating-card strong,
+.hoki-floating-card span {
+  color: var(--teal-dark);
+}
+
+.hoki-floating-card strong {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.hoki-floating-card span {
+  max-width: 128px;
+  font-weight: 1000;
+  line-height: 1.25;
+}
+
+.hoki-floating-card p {
+  margin: 8px 0 0;
+  color: var(--navy);
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   SECTION TITLES
+   ========================================================================== */
+
+.hoki-section {
+  margin-top: 36px;
+}
+
+.hoki-section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.hoki-section-title h2 {
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(20px, 2.5vw, 32px);
+  line-height: 1.1;
+}
+
+.hoki-section-title span {
+  width: 40px;
+  height: 8px;
+  background:
+    radial-gradient(circle at 8px 4px, var(--teal-dark) 4px, transparent 4px),
+    radial-gradient(circle at 20px 4px, var(--teal-dark) 4px, transparent 4px),
+    radial-gradient(circle at 32px 4px, var(--teal-dark) 4px, transparent 4px);
+  opacity: 0.85;
+}
+
+/* ==========================================================================
+   MILESTONES
+   ========================================================================== */
+
+.hoki-milestones-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.hoki-milestone-card {
+  position: relative;
+  min-height: 224px;
+  padding: 20px;
+  text-align: center;
+  border: calc(4px / 4) solid #d9eef5;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 12px 32px rgba(33, 94, 140, 0.07);
+}
+
+.hoki-milestone-card:nth-child(2) {
+  border-color: rgba(255, 174, 57, 0.32);
+  background: rgba(255, 249, 238, 0.9);
+}
+
+.hoki-milestone-card:nth-child(3) {
+  border-color: rgba(155, 109, 255, 0.24);
+  background: rgba(250, 247, 255, 0.9);
+}
+
+.hoki-milestone-card:nth-child(4) {
+  border-color: rgba(255, 87, 87, 0.22);
+  background: rgba(255, 247, 247, 0.9);
+}
+
+.hoki-milestone-icon {
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 14px;
+  color: var(--teal-dark);
+  border-radius: 748px;
+  background: #dff7fb;
+}
+
+.hoki-milestone-card strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--coral);
+  font-size: 20px;
+  line-height: 1;
+}
+
+.hoki-milestone-card h3 {
+  margin: 0 0 10px;
+  color: var(--teal-dark);
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.hoki-milestone-card p {
+  margin: 0;
+  color: var(--navy);
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   GOAL PANEL
+   ========================================================================== */
+
+.hoki-goal-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1.08fr);
+  gap: 20px;
+  padding: clamp(24px, 4vw, 40px);
+  border: calc(4px / 4) solid #d9eef5;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 96% 8%, rgba(255, 174, 57, 0.16), transparent 24%),
+    rgba(255, 255, 255, 0.78);
+  box-shadow: 0 12px 32px rgba(33, 94, 140, 0.08);
+}
+
+.hoki-goal-copy h2 {
+  max-width: 500px;
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(24px, 3.4vw, 44px);
+  line-height: 1.05;
+}
+
+.hoki-goal-copy p:not(.hoki-eyebrow) {
+  max-width: 520px;
+  margin: 16px 0 0;
+  color: var(--navy);
+  font-weight: 820;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.hoki-goal-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.hoki-goal-card {
+  position: relative;
+  min-height: 164px;
+  padding: 20px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #eefafd;
+}
+
+.hoki-goal-card::after {
+  content: attr(data-number);
+  position: absolute;
+  right: 14px;
+  bottom: -6px;
+  color: rgba(39, 185, 189, 0.16);
+  font-weight: 1000;
+  font-size: 56px;
+  line-height: 1;
+}
+
+.hoki-goal-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 12px;
+  color: var(--teal-dark);
+  border-radius: 14px;
+  background: white;
+}
+
+.hoki-goal-card:nth-child(even) .hoki-goal-icon {
+  color: var(--coral);
+}
+
+.hoki-goal-card h3 {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 8px;
+  color: var(--navy);
+  font-size: 14px;
+}
+
+.hoki-goal-card p {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: var(--navy);
+  font-weight: 780;
+  font-size: 12px;
+  line-height: 1.48;
+}
+
+/* ==========================================================================
+   COACHES
+   ========================================================================== */
+
+.hoki-coaches-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.hoki-coach-card {
+  display: grid;
+  grid-template-columns: 172px 1fr;
+  gap: 20px;
+  min-height: 360px;
+  padding: 20px;
+  border: calc(4px / 4) solid #d9eef5;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow: 0 12px 32px rgba(33, 94, 140, 0.08);
+}
+
+.hoki-coach-image-wrap {
+  align-self: start;
+  overflow: hidden;
+  border-radius: 22px;
+  background: #eaf7fb;
+}
+
+.hoki-coach-image {
+  display: block;
+  width: 100%;
+  height: 172px;
+  object-fit: cover;
+}
+
+.hoki-coach-title {
+  margin: 0 0 8px;
+  color: var(--teal-dark);
+  font-weight: 1000;
+  font-size: 12px;
+}
+
+.hoki-coach-card h3 {
+  margin: 0 0 14px;
+  color: var(--navy);
+  font-size: clamp(20px, 2vw, 28px);
+  line-height: 1.1;
+}
+
+.hoki-badge-list,
+.hoki-task-box ul {
+  display: grid;
+  gap: 9px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hoki-badge-list li,
+.hoki-task-box li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: var(--navy);
+  font-weight: 820;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.hoki-badge-list svg,
+.hoki-task-box svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: var(--teal-dark);
+}
+
+.hoki-task-box {
+  margin-top: 16px;
+  padding: 14px;
+  border-radius: 18px;
+  background: #eefafd;
+}
+
+.hoki-task-box h4 {
+  margin: 0 0 10px;
+  color: var(--teal-dark);
+  font-size: 13px;
+}
+
+/* ==========================================================================
+   TRAINING + BENEFITS
+   ========================================================================== */
+
+.hoki-info-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(272px, 0.88fr);
+  gap: 20px;
+  margin-top: 32px;
+}
+
+.hoki-panel {
+  min-height: 420px;
+  padding: clamp(20px, 3vw, 32px);
+  border: calc(4px / 4) solid #d9eef5;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow: 0 12px 32px rgba(33, 94, 140, 0.08);
+}
+
+.hoki-panel h2 {
+  margin: 0 0 24px;
+  color: var(--navy);
+  font-size: clamp(24px, 2.8vw, 36px);
+  line-height: 1.08;
+}
+
+.hoki-training-grid,
+.hoki-benefits-list {
+  display: grid;
+  gap: 16px;
+}
+
+.hoki-training-item,
+.hoki-benefit-item {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.hoki-training-icon,
+.hoki-benefit-icon {
+  display: grid;
+  place-items: center;
+  color: var(--teal-dark);
+}
+
+.hoki-training-item:nth-child(even) .hoki-training-icon,
+.hoki-benefit-item:nth-child(even) .hoki-benefit-icon {
+  color: var(--coral);
+}
+
+.hoki-training-item h3,
+.hoki-benefit-item h3 {
+  margin: 0 0 8px;
+  color: var(--navy);
+  font-size: 14px;
+  line-height: 1.25;
+}
+
+.hoki-training-item p,
+.hoki-benefit-item p {
+  margin: 0;
+  color: var(--navy);
+  font-weight: 780;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   LOCATION
+   ========================================================================== */
+
+.hoki-location {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(376px, 1.1fr);
+  gap: 20px;
+  align-items: stretch;
+  margin-top: 32px;
+}
+
+.hoki-location-copy,
+.hoki-location-card {
+  border: calc(4px / 4) solid #d9eef5;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 12px 32px rgba(33, 94, 140, 0.08);
+}
+
+.hoki-location-copy {
+  padding: clamp(20px, 3vw, 32px);
+  border-radius: 24px;
+}
+
+.hoki-location-copy h2 {
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(24px, 3vw, 40px);
+  line-height: 1.08;
+}
+
+.hoki-location-copy p:not(.hoki-eyebrow) {
+  margin: 16px 0 0;
+  color: var(--navy);
+  font-weight: 820;
+  line-height: 1.65;
+}
+
+.hoki-location-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.hoki-location-card {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  min-height: 188px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.hoki-location-card svg {
+  margin-bottom: 12px;
+  color: var(--teal-dark);
+}
+
+.hoki-location-card h3 {
+  margin: 0 0 8px;
+  color: var(--navy);
+  font-size: 16px;
+}
+
+.hoki-location-card p {
+  margin: 0 0 8px;
+  color: var(--navy);
+  font-weight: 850;
+  line-height: 1.45;
+}
+
+.hoki-location-card span {
+  color: var(--teal-dark);
+  font-weight: 1000;
+}
+
+/* ==========================================================================
+   JOIN CTA
+   ========================================================================== */
+
+.hoki-join {
+  display: grid;
+  grid-template-columns: 256px minmax(0, 1fr) auto;
+  gap: 20px;
+  align-items: center;
+  margin-top: 32px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: calc(4px / 4) solid #d9eef5;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 12px 32px rgba(33, 94, 140, 0.08);
+}
+
+.hoki-join-image-wrap {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.hoki-join-image {
+  display: block;
+  width: 100%;
+  height: 136px;
+  object-fit: cover;
+}
+
+.hoki-join-copy h2 {
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(20px, 2.6vw, 36px);
+  line-height: 1.12;
+}
+
+.hoki-join-copy h2 span {
+  display: block;
+  color: var(--coral);
+}
+
+.hoki-join-copy p {
+  margin: 12px 0 0;
+  color: var(--navy);
+  font-weight: 850;
+}
+
+.hoki-join-actions {
+  display: grid;
+  gap: 12px;
+  min-width: 188px;
+}
+
+.hoki-join-actions .btn {
+  justify-content: center;
+}
+
+.hoki-join-phone {
+  color: white;
+  background: var(--teal-dark);
+}
+
+/* ==========================================================================
+   RESPONSIVE: 1200px-
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+  .hoki-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hoki-floating-card {
+    right: 20px;
+  }
+
+  .hoki-milestones-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hoki-goal-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .hoki-coaches-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hoki-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hoki-location {
+    grid-template-columns: 1fr;
+  }
+
+  .hoki-join {
+    grid-template-columns: 212px 1fr;
+  }
+
+  .hoki-join-actions {
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE: 900px-
+   ========================================================================== */
+
+@media (max-width: 900px) {
+  .hoki-page {
+    padding-top: 16px;
+  }
+
+  .hoki-hero h1 {
+    font-size: clamp(36px, 11vw, 60px);
+  }
+
+  .hoki-hero-visual {
+    min-height: 272px;
+  }
+
+  .hoki-floating-card {
+    position: relative;
+    right: auto;
+    top: auto;
+    width: 100%;
+    min-width: 0;
+    margin-top: 12px;
+    transform: none;
+  }
+
+  .hoki-goal-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hoki-coach-card {
+    grid-template-columns: 1fr;
+  }
+
+  .hoki-location-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hoki-join {
+    grid-template-columns: 1fr;
+  }
+
+  .hoki-join-image {
+    height: 180px;
+  }
+
+  .hoki-join-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE: 640px-
+   ========================================================================== */
+
+@media (max-width: 640px) {
+  .hoki-hero-visual {
+    min-height: 224px;
+    border-radius: 24px;
+  }
+
+  .hoki-hero-image {
+    border-radius: 24px;
+  }
+
+  .hoki-milestones-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hoki-goal-panel,
+  .hoki-panel,
+  .hoki-location-copy {
+    padding: 20px 16px;
+    border-radius: 20px;
+  }
+
+  .hoki-milestone-card,
+  .hoki-goal-card,
+  .hoki-coach-card {
+    border-radius: 20px;
+  }
+
+  .hoki-coach-image {
+    height: 196px;
+  }
+
+  .hoki-training-item,
+  .hoki-benefit-item {
+    grid-template-columns: 36px 1fr;
+    gap: 12px;
+  }
+
+  .hoki-location-card {
+    min-height: 156px;
+  }
+
+  .hoki-join {
+    padding: 12px;
+    border-radius: 20px;
+  }
+
+  .hoki-join-image {
+    height: 144px;
+  }
+} /* ==========================================================================
+   HOKISULI PAGE - BASE
+   ========================================================================== */
+
+.hoki-page {
+  position: relative;
+  overflow: hidden;
+  padding-top: 0;
+}
+
+.hoki-page::before,
+.hoki-page::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 748px;
+  pointer-events: none;
+}
+
+.hoki-page::before {
+  left: -136px;
+  top: 180px;
+  width: 256px;
+  height: 256px;
+  background: rgba(211, 244, 250, 0.58);
+}
+
+.hoki-page::after {
+  right: -136px;
+  top: 336px;
+  width: 272px;
+  height: 272px;
+  background: rgba(255, 241, 221, 0.72);
+}
+
+/* ==========================================================================
+   HERO
+   ========================================================================== */
+
+.hoki-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(224px, 0.9fr) minmax(316px, 1.35fr);
+  gap: clamp(20px, 4vw, 48px);
+  align-items: center;
+  min-height: 392px;
+  padding-top: 20px;
+}
+
+.hoki-hero-copy {
+  position: relative;
+  padding: clamp(16px, 3vw, 36px) 0;
+}
+
+.hoki-eyebrow {
+  margin: 0 0 8px;
+  color: var(--teal-dark);
+  font-weight: 1000;
+  font-size: 12px;
+}
+
+.hoki-hero h1 {
+  max-width: 440px;
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(40px, 5.8vw, 76px);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.hoki-hero h1 span {
+  display: block;
+  color: var(--coral);
+}
+
+.hoki-hero-copy > p:not(.hoki-eyebrow) {
+  max-width: 420px;
+  margin: 16px 0 0;
+  color: var(--navy);
+  font-weight: 900;
+  font-size: clamp(12px, 1.5vw, 16px);
+  line-height: 1.5;
+}
+
+.hoki-hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.hoki-hero-badges span {
+  display: inline-grid;
+  place-items: center;
+  min-width: 54px;
+  height: 54px;
+  padding: 0 14px;
+  color: white;
+  font-weight: 1000;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--teal-dark), #69d4d4);
+  box-shadow: 0 12px 28px rgba(33, 94, 140, 0.12);
+}
+
+.hoki-hero-badges span:nth-child(2) {
+  background: linear-gradient(135deg, var(--coral), #ff9c87);
+}
+
+.hoki-hero-badges span:nth-child(3) {
+  color: var(--navy);
+  background: #fff3d9;
+}
+
+.hoki-hero-visual {
+  position: relative;
+  min-height: clamp(292px, 34vw, 404px);
+  overflow: visible;
+  border-radius: 36px;
+}
+
+.hoki-hero-image {
+  border-radius: 36px;
+  object-fit: cover;
+  box-shadow: 0 20px 44px rgba(33, 94, 140, 0.14);
+}
+
+.hoki-hero-visual::after {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 16%;
+  bottom: 16%;
+  height: 2px;
+  border-radius: 999px;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.9) 0 12px,
+    transparent 12px 24px
+  );
+  opacity: 0.75;
+  transform: rotate(-6deg);
+}
+
+.hoki-puck {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: #1b2f48;
+  box-shadow: 0 10px 18px rgba(16, 36, 56, 0.22);
+}
+
+.hoki-puck-one {
+  left: 18%;
+  bottom: 20%;
+}
+
+.hoki-puck-two {
+  right: 22%;
+  top: 18%;
+  width: 12px;
+  height: 12px;
+  opacity: 0.58;
+}
+
+.hoki-floating-card {
+  position: absolute;
+  right: -24px;
+  top: 50%;
+  display: grid;
+  gap: 8px;
+  width: min(204px, 35%);
+  min-width: 172px;
+  padding: 24px 20px;
+  color: var(--navy);
+  border: calc(4px / 4) solid #d9eef5;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 16px 36px rgba(33, 94, 140, 0.14);
+  transform: translateY(-50%);
+}
+
+.hoki-floating-card svg,
+.hoki-floating-card strong,
+.hoki-floating-card span {
+  color: var(--teal-dark);
+}
+
+.hoki-floating-card strong {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.hoki-floating-card span {
+  max-width: 128px;
+  font-weight: 1000;
+  line-height: 1.25;
+}
+
+.hoki-floating-card p {
+  margin: 8px 0 0;
+  color: var(--navy);
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   SECTION TITLES
+   ========================================================================== */
+
+.hoki-section {
+  margin-top: 36px;
+}
+
+.hoki-section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.hoki-section-title h2 {
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(20px, 2.5vw, 32px);
+  line-height: 1.1;
+}
+
+.hoki-section-title span {
+  width: 40px;
+  height: 8px;
+  background:
+    radial-gradient(circle at 8px 4px, var(--teal-dark) 4px, transparent 4px),
+    radial-gradient(circle at 20px 4px, var(--teal-dark) 4px, transparent 4px),
+    radial-gradient(circle at 32px 4px, var(--teal-dark) 4px, transparent 4px);
+  opacity: 0.85;
+}
+
+/* ==========================================================================
+   MILESTONES
+   ========================================================================== */
+
+.hoki-milestones-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.hoki-milestone-card {
+  position: relative;
+  min-height: 224px;
+  padding: 20px;
+  text-align: center;
+  border: calc(4px / 4) solid #d9eef5;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 12px 32px rgba(33, 94, 140, 0.07);
+}
+
+.hoki-milestone-card:nth-child(2) {
+  border-color: rgba(255, 174, 57, 0.32);
+  background: rgba(255, 249, 238, 0.9);
+}
+
+.hoki-milestone-card:nth-child(3) {
+  border-color: rgba(155, 109, 255, 0.24);
+  background: rgba(250, 247, 255, 0.9);
+}
+
+.hoki-milestone-card:nth-child(4) {
+  border-color: rgba(255, 87, 87, 0.22);
+  background: rgba(255, 247, 247, 0.9);
+}
+
+.hoki-milestone-icon {
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 14px;
+  color: var(--teal-dark);
+  border-radius: 748px;
+  background: #dff7fb;
+}
+
+.hoki-milestone-card strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--coral);
+  font-size: 20px;
+  line-height: 1;
+}
+
+.hoki-milestone-card h3 {
+  margin: 0 0 10px;
+  color: var(--teal-dark);
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.hoki-milestone-card p {
+  margin: 0;
+  color: var(--navy);
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   GOAL PANEL
+   ========================================================================== */
+
+.hoki-goal-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1.08fr);
+  gap: 20px;
+  padding: clamp(24px, 4vw, 40px);
+  border: calc(4px / 4) solid #d9eef5;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 96% 8%, rgba(255, 174, 57, 0.16), transparent 24%),
+    rgba(255, 255, 255, 0.78);
+  box-shadow: 0 12px 32px rgba(33, 94, 140, 0.08);
+}
+
+.hoki-goal-copy h2 {
+  max-width: 500px;
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(24px, 3.4vw, 44px);
+  line-height: 1.05;
+}
+
+.hoki-goal-copy p:not(.hoki-eyebrow) {
+  max-width: 520px;
+  margin: 16px 0 0;
+  color: var(--navy);
+  font-weight: 820;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.hoki-goal-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.hoki-goal-card {
+  position: relative;
+  min-height: 164px;
+  padding: 20px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #eefafd;
+}
+
+.hoki-goal-card::after {
+  content: attr(data-number);
+  position: absolute;
+  right: 14px;
+  bottom: -6px;
+  color: rgba(39, 185, 189, 0.16);
+  font-weight: 1000;
+  font-size: 56px;
+  line-height: 1;
+}
+
+.hoki-goal-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 12px;
+  color: var(--teal-dark);
+  border-radius: 14px;
+  background: white;
+}
+
+.hoki-goal-card:nth-child(even) .hoki-goal-icon {
+  color: var(--coral);
+}
+
+.hoki-goal-card h3 {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 8px;
+  color: var(--navy);
+  font-size: 14px;
+}
+
+.hoki-goal-card p {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: var(--navy);
+  font-weight: 780;
+  font-size: 12px;
+  line-height: 1.48;
+}
+
+/* ==========================================================================
+   COACHES
+   ========================================================================== */
+
+.hoki-coaches-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.hoki-coach-card {
+  display: grid;
+  grid-template-columns: 172px 1fr;
+  gap: 20px;
+  min-height: 360px;
+  padding: 20px;
+  border: calc(4px / 4) solid #d9eef5;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow: 0 12px 32px rgba(33, 94, 140, 0.08);
+}
+
+.hoki-coach-image-wrap {
+  align-self: start;
+  overflow: hidden;
+  border-radius: 22px;
+  background: #eaf7fb;
+}
+
+.hoki-coach-image {
+  display: block;
+  width: 100%;
+  height: 172px;
+  object-fit: cover;
+}
+
+.hoki-coach-title {
+  margin: 0 0 8px;
+  color: var(--teal-dark);
+  font-weight: 1000;
+  font-size: 12px;
+}
+
+.hoki-coach-card h3 {
+  margin: 0 0 14px;
+  color: var(--navy);
+  font-size: clamp(20px, 2vw, 28px);
+  line-height: 1.1;
+}
+
+.hoki-badge-list,
+.hoki-task-box ul {
+  display: grid;
+  gap: 9px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hoki-badge-list li,
+.hoki-task-box li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: var(--navy);
+  font-weight: 820;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.hoki-badge-list svg,
+.hoki-task-box svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: var(--teal-dark);
+}
+
+.hoki-task-box {
+  margin-top: 16px;
+  padding: 14px;
+  border-radius: 18px;
+  background: #eefafd;
+}
+
+.hoki-task-box h4 {
+  margin: 0 0 10px;
+  color: var(--teal-dark);
+  font-size: 13px;
+}
+
+/* ==========================================================================
+   TRAINING + BENEFITS
+   ========================================================================== */
+
+.hoki-info-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(272px, 0.88fr);
+  gap: 20px;
+  margin-top: 32px;
+}
+
+.hoki-panel {
+  min-height: 420px;
+  padding: clamp(20px, 3vw, 32px);
+  border: calc(4px / 4) solid #d9eef5;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow: 0 12px 32px rgba(33, 94, 140, 0.08);
+}
+
+.hoki-panel h2 {
+  margin: 0 0 24px;
+  color: var(--navy);
+  font-size: clamp(24px, 2.8vw, 36px);
+  line-height: 1.08;
+}
+
+.hoki-training-grid,
+.hoki-benefits-list {
+  display: grid;
+  gap: 16px;
+}
+
+.hoki-training-item,
+.hoki-benefit-item {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.hoki-training-icon,
+.hoki-benefit-icon {
+  display: grid;
+  place-items: center;
+  color: var(--teal-dark);
+}
+
+.hoki-training-item:nth-child(even) .hoki-training-icon,
+.hoki-benefit-item:nth-child(even) .hoki-benefit-icon {
+  color: var(--coral);
+}
+
+.hoki-training-item h3,
+.hoki-benefit-item h3 {
+  margin: 0 0 8px;
+  color: var(--navy);
+  font-size: 14px;
+  line-height: 1.25;
+}
+
+.hoki-training-item p,
+.hoki-benefit-item p {
+  margin: 0;
+  color: var(--navy);
+  font-weight: 780;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   LOCATION
+   ========================================================================== */
+
+.hoki-location {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(376px, 1.1fr);
+  gap: 20px;
+  align-items: stretch;
+  margin-top: 32px;
+}
+
+.hoki-location-copy,
+.hoki-location-card {
+  border: calc(4px / 4) solid #d9eef5;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 12px 32px rgba(33, 94, 140, 0.08);
+}
+
+.hoki-location-copy {
+  padding: clamp(20px, 3vw, 32px);
+  border-radius: 24px;
+}
+
+.hoki-location-copy h2 {
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(24px, 3vw, 40px);
+  line-height: 1.08;
+}
+
+.hoki-location-copy p:not(.hoki-eyebrow) {
+  margin: 16px 0 0;
+  color: var(--navy);
+  font-weight: 820;
+  line-height: 1.65;
+}
+
+.hoki-location-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.hoki-location-card {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  min-height: 188px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.hoki-location-card svg {
+  margin-bottom: 12px;
+  color: var(--teal-dark);
+}
+
+.hoki-location-card h3 {
+  margin: 0 0 8px;
+  color: var(--navy);
+  font-size: 16px;
+}
+
+.hoki-location-card p {
+  margin: 0 0 8px;
+  color: var(--navy);
+  font-weight: 850;
+  line-height: 1.45;
+}
+
+.hoki-location-card span {
+  color: var(--teal-dark);
+  font-weight: 1000;
+}
+
+/* ==========================================================================
+   JOIN CTA
+   ========================================================================== */
+
+.hoki-join {
+  display: grid;
+  grid-template-columns: 256px minmax(0, 1fr) auto;
+  gap: 20px;
+  align-items: center;
+  margin-top: 32px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: calc(4px / 4) solid #d9eef5;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 12px 32px rgba(33, 94, 140, 0.08);
+}
+
+.hoki-join-image-wrap {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.hoki-join-image {
+  display: block;
+  width: 100%;
+  height: 136px;
+  object-fit: cover;
+}
+
+.hoki-join-copy h2 {
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(20px, 2.6vw, 36px);
+  line-height: 1.12;
+}
+
+.hoki-join-copy h2 span {
+  display: block;
+  color: var(--coral);
+}
+
+.hoki-join-copy p {
+  margin: 12px 0 0;
+  color: var(--navy);
+  font-weight: 850;
+}
+
+.hoki-join-actions {
+  display: grid;
+  gap: 12px;
+  min-width: 188px;
+}
+
+.hoki-join-actions .btn {
+  justify-content: center;
+}
+
+.hoki-join-phone {
+  color: white;
+  background: var(--teal-dark);
+}
+
+/* ==========================================================================
+   RESPONSIVE: 1200px-
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+  .hoki-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hoki-floating-card {
+    right: 20px;
+  }
+
+  .hoki-milestones-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hoki-goal-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .hoki-coaches-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hoki-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hoki-location {
+    grid-template-columns: 1fr;
+  }
+
+  .hoki-join {
+    grid-template-columns: 212px 1fr;
+  }
+
+  .hoki-join-actions {
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE: 900px-
+   ========================================================================== */
+
+@media (max-width: 900px) {
+  .hoki-page {
+    padding-top: 16px;
+  }
+
+  .hoki-hero h1 {
+    font-size: clamp(36px, 11vw, 60px);
+  }
+
+  .hoki-hero-visual {
+    min-height: 272px;
+  }
+
+  .hoki-floating-card {
+    position: relative;
+    right: auto;
+    top: auto;
+    width: 100%;
+    min-width: 0;
+    margin-top: 12px;
+    transform: none;
+  }
+
+  .hoki-goal-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hoki-coach-card {
+    grid-template-columns: 1fr;
+  }
+
+  .hoki-location-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hoki-join {
+    grid-template-columns: 1fr;
+  }
+
+  .hoki-join-image {
+    height: 180px;
+  }
+
+  .hoki-join-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE: 640px-
+   ========================================================================== */
+
+@media (max-width: 640px) {
+  .hoki-hero-visual {
+    min-height: 224px;
+    border-radius: 24px;
+  }
+
+  .hoki-hero-image {
+    border-radius: 24px;
+  }
+
+  .hoki-milestones-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hoki-goal-panel,
+  .hoki-panel,
+  .hoki-location-copy {
+    padding: 20px 16px;
+    border-radius: 20px;
+  }
+
+  .hoki-milestone-card,
+  .hoki-goal-card,
+  .hoki-coach-card {
+    border-radius: 20px;
+  }
+
+  .hoki-coach-image {
+    height: 196px;
+  }
+
+  .hoki-training-item,
+  .hoki-benefit-item {
+    grid-template-columns: 36px 1fr;
+    gap: 12px;
+  }
+
+  .hoki-location-card {
+    min-height: 156px;
+  }
+
+  .hoki-join {
+    padding: 12px;
+    border-radius: 20px;
+  }
+
+  .hoki-join-image {
+    height: 144px;
+  }
+}

@@ -3,6 +3,8 @@ import {
   Award,
   Brain,
   CalendarDays,
+  Clock,
+  Dumbbell,
   Eye,
   GraduationCap,
   Heart,
@@ -19,6 +21,7 @@ import {
   Trophy,
   Users,
   UsersRound,
+  Zap,
 } from "lucide-react";
 import type { StaticImageData } from "next/image";
 import galleryImage1 from "@/assets/gallery/korisuli/Polusjeg.jpg";
@@ -29,9 +32,6 @@ import galleryImage5 from "@/assets/gallery/korisuli/Polusjeg-14.jpg";
 import galleryImage6 from "@/assets/gallery/korisuli/Polusjeg-20.jpg";
 import galleryImage7 from "@/assets/gallery/korisuli/oktatasaink_1.jpg";
 import galleryImage8 from "@/assets/gallery/korisuli/oktatasaink_6.jpg";
-import tsmtHeroImage from "@/assets/tsmt.jpg";
-import tsmtTeamImage from "@/assets/tsmt.png";
-import tsmtJoinImage from "@/assets/gallery/korisuli/oktatasaink_8.jpg";
 import teacherViktorImage from "@/assets/teachers/devenyi_viktor.jpg";
 import teacherKlariImage from "@/assets/teachers/engi_klari_1.jpg";
 import teacherDominikaImage from "@/assets/teachers/toth_dominika.jpg";
@@ -209,11 +209,6 @@ export const korisuliPage = {
 };
 
 export const tsmtPage = {
-  images: {
-    hero: tsmtHeroImage,
-    team: tsmtTeamImage,
-    join: tsmtJoinImage,
-  },
   benefits: [
     {
       icon: Brain,
@@ -298,6 +293,161 @@ export const tsmtPage = {
       title: "Csoportlétszám",
       text: "Kis csoportos foglalkozások",
       note: "10-15 fő",
+    },
+  ],
+};
+
+export const hokisuliPage = {
+  milestones: [
+    {
+      year: "1912",
+      icon: Users,
+      title: "RTK megalakulása",
+      text: "A Rákosmenti Testedző Kör azzal a céllal alakult, hogy a fiatalok körében megszerettesse a mozgás jelentőségét.",
+    },
+    {
+      year: "2019",
+      icon: ShieldCheck,
+      title: "Jégkorong szakosztály",
+      text: "A jégkorong szakosztály 2019 márciusában alakult, ekkor kértük felvételünket a Magyar Jégkorong Szövetség tagjai közé.",
+    },
+    {
+      year: "2019/2020",
+      icon: Trophy,
+      title: "Első teljes szezon",
+      text: "Az első teljes szezonban az U8 piros bajnokságba neveztünk be, és célként megjelent az U10 korosztály kipróbálása is.",
+    },
+    {
+      year: "Most",
+      icon: Sparkles,
+      title: "Folyamatos fejlődés",
+      text: "Jelenleg 13 igazolt játékosunk van, és folyamatos az új gyerekek bevonása, felvétele.",
+    },
+  ],
+
+  goalCards: [
+    {
+      icon: Sparkles,
+      title: "Erős korcsolyaalapok",
+      text: "A fő hangsúlyt kezdetben az alapos korcsolyatudásra tesszük, mert ez a későbbi jó játék alapja.",
+    },
+    {
+      icon: Target,
+      title: "Hoki alapok játékosan",
+      text: "A gyerekek fokozatosan ismerkednek meg az ütőkezeléssel, szabályokkal, hokitechnikai feladatokkal.",
+    },
+    {
+      icon: Trophy,
+      title: "Tornák és meccshelyzetek",
+      text: "Célunk az U8 és U10 korosztályos tornákon való részvétel, barátságos mérkőzésekkel és versenyhelyzetekkel.",
+    },
+    {
+      icon: Zap,
+      title: "Továbblépési lehetőség",
+      text: "A gyerekek számára lehetőséget biztosítunk nagyobb egyesületekbe való bekerüléshez is.",
+    },
+  ],
+  coaches: [
+    {
+      name: "Haszonits-Kálmán Zita",
+      title: "Vezetőedző",
+      image: teacherKlariImage,
+      badges: [
+        "A történelmi első magyar női hokiválogatott tagja",
+        "Divízió II. női Világbajnokság bronzérem",
+        "Jégkorong B licensz edző",
+      ],
+      tasks: [
+        "jégkorong megismertetése",
+        "hokitechnikai feladatok vezénylése",
+        "szabályok ismertetése és betanítása",
+        "versenyeztetés",
+        "száraz edzések lebonyolítása",
+      ],
+    },
+    {
+      name: "Engi Klára",
+      title: "Koritechnikai edző és csapatmenedzser",
+      image: teacherKlariImage,
+      badges: [
+        "Európa- és Világbajnoki 4. helyezett jégtáncos",
+        "25 éve foglalkozik kisgyermekek korcsolyaoktatásával",
+        "Jégkorong B licensz edző",
+      ],
+      tasks: [
+        "korcsolyatechnika fejlesztése",
+        "segédedzői feladatok",
+        "toborzás",
+        "adminisztráció",
+        "kapcsolattartás a szülők és a szövetség felé",
+      ],
+    },
+  ],
+
+  trainingCards: [
+    {
+      icon: CalendarDays,
+      title: "Szezon",
+      text: "Szeptembertől június közepéig tartunk edzéseket. A felkészülést korábban augusztus végi intenzív edzőtáborral kezdtük.",
+    },
+    {
+      icon: Sparkles,
+      title: "Heti 3 jégedzés",
+      text: "A program 2 korcsolya- és hokitechnikai edzést, valamint 1 kifejezett hoki szituációs és meccshelyzetes edzést tartalmaz.",
+    },
+    {
+      icon: Trophy,
+      title: "Tornák",
+      text: "A szezon második felében korosztályos tornákon való részvételt tervezünk, havonta akár két tornával.",
+    },
+    {
+      icon: Dumbbell,
+      title: "Száraz edzés",
+      text: "A száraz edzés bevezetés alatt van, elsősorban táborok alkalmával kerül be az edzésprogramba.",
+    },
+  ],
+
+  benefits: [
+    {
+      icon: ShieldCheck,
+      title: "Biztonságosabb mozgás a jégen",
+      text: "Az erős korcsolyaalapok segítik, hogy a gyerekek magabiztosabban mozogjanak és jobban reagáljanak helyzetekre.",
+    },
+    {
+      icon: Zap,
+      title: "Gyors reakció és döntés",
+      text: "A hoki játékossága fejleszti a figyelmet, helyzetfelismerést és a gyors döntéshozatalt.",
+    },
+    {
+      icon: Users,
+      title: "Csapatszellem",
+      text: "A gyerekek megtapasztalják az együttműködés, egymásra figyelés és közös siker élményét.",
+    },
+    {
+      icon: Target,
+      title: "Fókusz és kitartás",
+      text: "Az edzések játékosan, de következetesen építik a koncentrációt, szabálykövetést és sportos hozzáállást.",
+    },
+  ],
+
+  locationCards: [
+    {
+      icon: MapPin,
+      title: "Jégpálya",
+      text: "Pólus Center",
+      note: "jelenlegi otthonunk",
+    },
+    {
+      icon: Clock,
+      title: "Edzésrend",
+      text: "Heti 3 jégedzés",
+      note: "szezonban",
+    },
+    {
+      icon: Users,
+      title: "Játékosok",
+      text: "13 igazolt játékos",
+      note: "folyamatos felvétel",
     },
   ],
 };

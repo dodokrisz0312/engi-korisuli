@@ -4,6 +4,9 @@ import { Brain, CalendarDays, CheckCircle2, Clock, Dumbbell } from "lucide-react
 import { Header } from "@/components/Header";
 import { CTA } from "@/components/Sections";
 import { tsmtPage } from "@/data/constants";
+import tsmtHeroImage from "@/assets/tsmt.jpg";
+import tsmtTeamImage from "@/assets/tsmt.png";
+import tsmtJoinImage from "@/assets/gallery/korisuli/oktatasaink_8.jpg";
 
 export default function TsmtPage() {
   return (
@@ -27,7 +30,7 @@ export default function TsmtPage() {
 
           <div className="tsmt-hero-visual">
             <Image
-              src={tsmtPage.images.hero}
+              src={tsmtHeroImage}
               alt="Gyerekek mozgáskoordinációs foglalkozáson"
               fill
               priority
@@ -133,7 +136,7 @@ export default function TsmtPage() {
 
             <div className="team-image-wrap">
               <Image
-                src={tsmtPage.images.team}
+                src={tsmtTeamImage}
                 alt="TSMT és mozgásfejlesztő foglalkozás"
                 fill
                 className="team-image"
@@ -203,7 +206,7 @@ export default function TsmtPage() {
         <section className="tsmt-join section-shell">
           <div className="join-image-wrap">
             <Image
-              src={tsmtPage.images.join}
+              src={tsmtJoinImage}
               width={420}
               height={260}
               alt="Gyermek mozgásfejlesztő foglalkozáson"
