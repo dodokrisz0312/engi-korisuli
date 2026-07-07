@@ -14,9 +14,10 @@ type GalleryLightboxItem = {
 
 type GalleryLightboxProps = {
   items: GalleryLightboxItem[];
+  variant?: "grid" | "carousel";
 };
 
-export function GalleryLightbox({ items }: GalleryLightboxProps) {
+export function GalleryLightbox({ items, variant = "grid" }: GalleryLightboxProps) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [isMounted, setIsMounted] = useState(false);
   const selectedItem = selectedIndex === null ? null : items[selectedIndex];
@@ -122,7 +123,7 @@ export function GalleryLightbox({ items }: GalleryLightboxProps) {
 
   return (
     <>
-      <div className="gallery-grid">
+      <div className={`gallery-grid gallery-grid-${variant}`}>
         {items.map((item, index) => (
           <button
             className={`gallery-tile ${item.className}`}

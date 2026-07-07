@@ -129,6 +129,23 @@
   overflow: hidden;
 }
 
+.gallery-grid-carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(152px, calc((100% - 56px) / 8));
+  grid-template-columns: none;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 8px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+}
+
+.gallery-grid-carousel .gallery-tile {
+  width: 100%;
+  scroll-snap-align: start;
+}
+
 /* ==========================================================================
    GALLERY TILE
    ========================================================================== */
@@ -286,22 +303,14 @@
    ========================================================================== */
 
 @media (max-width: 1600px) {
-  .gallery-grid {
+  .gallery-grid:not(.gallery-grid-carousel) {
     grid-template-columns: repeat(7, minmax(0, 1fr));
-  }
-
-  .gallery-tile:nth-child(n + 8) {
-    display: none;
   }
 }
 
 @media (max-width: 1200px) {
-  .gallery-grid {
+  .gallery-grid:not(.gallery-grid-carousel) {
     grid-template-columns: repeat(6, minmax(0, 1fr));
-  }
-
-  .gallery-tile:nth-child(n + 7) {
-    display: none;
   }
 }
 
@@ -378,11 +387,11 @@
   .stat:last-child {
     border-right: 0;
   }
-  .gallery-grid {
+  .gallery-grid:not(.gallery-grid-carousel) {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-  .gallery-tile:nth-child(n + 5) {
-    display: none;
+  .gallery-grid-carousel {
+    grid-auto-columns: minmax(148px, 28vw);
   }
   .teacher-grid {
     grid-template-columns: 1fr;
@@ -426,11 +435,11 @@
     flex-direction: column;
     margin-top: 28px;
   }
-  .gallery-grid {
+  .gallery-grid:not(.gallery-grid-carousel) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .gallery-tile:nth-child(n + 3) {
-    display: none;
+  .gallery-grid-carousel {
+    grid-auto-columns: minmax(136px, 44vw);
   }
   .gallery-lightbox {
     padding: 16px;

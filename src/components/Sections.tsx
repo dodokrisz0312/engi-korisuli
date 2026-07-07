@@ -57,7 +57,7 @@ export function Gallery() {
           Több kép a galériában <ChevronRight size={16} />
         </Link>
       </div>
-      <GalleryLightbox items={galleryItems} />
+      <GalleryLightbox items={galleryItems} variant="carousel" />
     </section>
   );
 }
