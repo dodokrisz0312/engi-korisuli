@@ -22,6 +22,11 @@
   Users,
   UsersRound,
   Zap,
+  Facebook,
+  Instagram,
+  Mail,
+  Phone,
+  TramFront,
 } from "lucide-react";
 import type { StaticImageData } from "next/image";
 import galleryImage1 from "@/assets/gallery/korisuli/Polusjeg.jpg";
@@ -674,6 +679,91 @@ export const galleryPage = {
         "Minden évben meglátogat minket is a Mikulás a jégen. Ilyenkor a Mikulás minden csoportnál megnézi az apróságokat és ők bemutathatják mit tanultak az elmúlt hetek/hónapok alatt.",
       coverImage: galleryPath("mikulas", mikulasFiles[0]),
       images: makeGalleryImages("mikulas", mikulasFiles, "Mikulás"),
+    },
+  ],
+};
+
+export const contactPage = {
+  contact: {
+    email: "engiklara@gmail.com",
+    phone: "06-70-978-3703",
+    phoneHref: "tel:+36709783703",
+    facebook: "https://www.facebook.com/engikorisuli/",
+    instagram: "https://www.instagram.com/engikorisuli/",
+  },
+
+  programs: [
+    {
+      value: "korcsolya",
+      label: "Korisuli",
+    },
+    {
+      value: "hoki",
+      label: "Hokisuli",
+    },
+    {
+      value: "tsmt",
+      label: "TSMT",
+    },
+  ],
+
+  locations: [
+    {
+      title: "Korisuli és Hokisuli",
+      address: "1048 Budapest, Homoktövis utca 1.",
+      place: "Vasas Jégcentrum",
+      mapUrl:
+        "https://www.google.com/maps/search/?api=1&query=Vasas+J%C3%A9gcentrum+1048+Budapest+Homokt%C3%B6vis+utca+1",
+      embedUrl:
+        "https://www.google.com/maps?q=Vasas%20J%C3%A9gcentrum%201048%20Budapest%20Homokt%C3%B6vis%20utca%201&output=embed",
+      icon: MapPin,
+      tips: [
+        "Autóval érkezve a Vasas Jégcentrum környékén parkolási lehetőség elérhető",
+        "14-es villamossal a Megyeri út megállóig (végállomás) érdemes menni, innen pár perc séta",
+        "122-es, 296-os vagy 30-as busszal a Homoktövis utca megállóig lehet menni, innen pár perc séta",
+      ],
+    },
+    {
+      title: "TSMT / mozgáskoordináció",
+      address: "1156 Budapest, Száraznád utca 5.",
+      place: "Kikötő Ifjúsági Közösségi Tér",
+      mapUrl:
+        "https://www.google.com/maps/search/?api=1&query=Kik%C3%B6t%C5%91+Ifj%C3%BAs%C3%A1gi+K%C3%B6z%C3%B6ss%C3%A9gi+T%C3%A9r+1156+Budapest+Sz%C3%A1razn%C3%A1d+utca+5",
+      embedUrl:
+        "https://www.google.com/maps?q=Kik%C3%B6t%C5%91%20Ifj%C3%BAs%C3%A1gi%20K%C3%B6z%C3%B6ss%C3%A9gi%20T%C3%A9r%201156%20Budapest%20Sz%C3%A1razn%C3%A1d%20utca%205&output=embed",
+      icon: MapPin,
+      tips: [
+        "Autóval érkezve a Száraznád utca környékén parkolási lehetőség elérhető",
+        "7-es, 7E, 8E, 133E vagy 196A busszal a Vásárcsarnok megállóig érdemes menni, innen pár perc séta",
+        "69-es villamossal a Vásárcsarnok megállóig lehet menni, innen pár perc séta",
+      ],
+    },
+  ],
+
+  socialCards: [
+    {
+      title: "Facebook",
+      text: "Aktuális hírek, események és képek a jégiskola életéből.",
+      href: "https://www.facebook.com/engikorisuli/",
+      icon: Facebook,
+    },
+    {
+      title: "Instagram",
+      text: "Pillanatok a jégről, táborokból és foglalkozásainkról.",
+      href: "https://www.instagram.com/engikorisuli/",
+      icon: Instagram,
+    },
+    {
+      title: "E-mail",
+      text: "Írj nekünk közvetlenül jelentkezéssel vagy kérdéssel kapcsolatban.",
+      href: "mailto:engiklara@gmail.com",
+      icon: Mail,
+    },
+    {
+      title: "Telefon",
+      text: "Sürgősebb kérdés esetén telefonon is elérhetőek vagyunk.",
+      href: "tel:+36709783703",
+      icon: Phone,
     },
   ],
 };
