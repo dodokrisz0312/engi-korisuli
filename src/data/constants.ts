@@ -34,6 +34,11 @@ import galleryImage7 from "@/assets/gallery/korisuli/oktatasaink_1.jpg";
 import galleryImage8 from "@/assets/gallery/korisuli/oktatasaink_6.jpg";
 import teacherViktorImage from "@/assets/teachers/devenyi_viktor.jpg";
 import teacherKlariImage from "@/assets/teachers/engi_klari_1.jpg";
+import teacherHaszonitsZitaImage from "@/assets/teachers/haszonits_kálmán_zita.jpg";
+import teacherKerekesKrisztaImage from "@/assets/teachers/kerekes_kriszta.jpg";
+import teacherMadarLiliImage from "@/assets/teachers/madar_lili.jpg";
+import teacherNemethSzilviaImage from "@/assets/teachers/nemeth_szilvia.jpg";
+import teacherSzakalKatalinImage from "@/assets/teachers/szakal_katalin.jpg";
 import teacherDominikaImage from "@/assets/teachers/toth_dominika.jpg";
 
 export type GalleryItem = {
@@ -454,3 +459,119 @@ export const hokisuliPage = {
 
 export const SnowIcon = Snowflake;
 export const MedalIcon = Medal;
+
+export const oktatokPage = {
+  stats: [
+    {
+      icon: Trophy,
+      value: "8x",
+      label: "magyar bajnoki háttér",
+    },
+    {
+      icon: Users,
+      value: "8",
+      label: "oktató és segítő",
+    },
+    {
+      icon: Heart,
+      value: "kezdőtől",
+      label: "haladó csoportig",
+    },
+  ],
+
+  values: [
+    {
+      icon: Heart,
+      title: "Szeretetteljes légkör",
+      text: "Fontos számunkra, hogy a gyerekek biztonságban, jókedvűen és bizalommal tanuljanak.",
+    },
+    {
+      icon: ShieldCheck,
+      title: "Biztonságos fejlődés",
+      text: "Lépésről lépésre építjük fel a korcsolyatudást, életkorhoz és tudásszinthez igazítva.",
+    },
+    {
+      icon: Sparkles,
+      title: "Játékos tanulás",
+      text: "A technikai alapokat sok játékkal, sikerélménnyel és motiváló feladatokkal tanítjuk.",
+    },
+    {
+      icon: Brain,
+      title: "Szakmai háttér",
+      text: "Műkorcsolya, jégtánc, hoki, TSMT és pedagógiai tapasztalat is erősíti a csapatunkat.",
+    },
+  ],
+
+  instructors: [
+    {
+      name: "Engi Klári",
+      role: "Vezetőedző, alapító tag",
+      focus: "Jégiskola vezetője, minden korosztállyal foglalkozik, de legtöbbet a kezdőkkel.",
+      image: teacherKlariImage,
+      featured: true,
+      highlights: ["8x magyar bajnok", "EB és VB IV. helyezett", "3x olimpikon jégtáncos"],
+      quote:
+        "A gyerekekkel való foglalkozás, a bizalmuk elnyerése örömet okoz, feltölt, és ha ezzel Nekik is átadhatok valami hasznosat, akkor ez a legjobb dolog a világon mindenki számára!",
+    },
+    {
+      name: "Madárné Kerekes Krisztina",
+      role: "Szakedző, gyógypedagógus",
+      focus:
+        "A Pólus jégiskola kezdeteitől van a csapattal. TSMT pedagógusként sokat tanulunk tőle mindannyian.",
+      image: teacherKerekesKrisztaImage,
+      highlights: [
+        "EB és VB jégtáncos résztvevő",
+        "TSMT pedagógus",
+        "Kezdő és kiscsoportok specialistája",
+      ],
+    },
+    {
+      name: "Dévényi Viktor",
+      role: "Edző",
+      focus:
+        "Egyetlen férfi kollégánk, aki hosszú évek óta támogatja munkánkat. Középső és nagy csoportokkal foglalkozik.",
+      image: teacherViktorImage,
+      highlights: ["Középső csoportok", "Nagy csoportok", "Sokéves oktatói háttér"],
+    },
+    {
+      name: "Szakál Katalin",
+      role: "Szakedző",
+      focus:
+        "Kati 28 éve foglalkozik műkorcsolyával. Célja a technikai korcsolyázás tanítása mellett a sport iránti szeretet népszerűsítése.",
+      image: teacherSzakalKatalinImage,
+      highlights: ["28 év tapasztalat", "Válogatott versenyzői múlt", "Revütáncos háttér"],
+    },
+    {
+      name: "Dr. Németh Szilvia",
+      role: "Edző",
+      focus:
+        "Műkorcsolya, jégtánc és szinkronkorcsolya háttere miatt gyakorlottan tanítja a gyerekeket, szeretettel figyel rájuk immár 10 éve a korisuliban.",
+      image: teacherNemethSzilviaImage,
+      highlights: ["Műkorcsolya háttér", "Jégtánc", "Szinkronkorcsolya", "10 év a korisuliban"],
+    },
+    {
+      name: "Haszonits-Kálmán Zita",
+      role: "Jégkorong sportedző",
+      focus:
+        "Hokis múltja miatt jó átmenetet biztosít a műkorcsolya és hoki között. Főként a középső csoportokkal foglalkozik.",
+      image: teacherHaszonitsZitaImage,
+      highlights: ["Jégkorong háttér", "Középső csoportok", "Műkori és hoki közötti átmenet"],
+    },
+    {
+      name: "Madár Lili",
+      role: "Segédedző",
+      focus:
+        "Gyerekkora óta velünk van, eleinte résztvevőként, ma már oktatóként. Jó érzéke van a gyerekekhez, melyben pszichológiai tanulmányai is segítik.",
+      image: teacherMadarLiliImage,
+      highlights: ["Kis csoportok", "Középső csoportok", "Pszichológiai tanulmányok"],
+    },
+    {
+      name: "Tóth Dominika",
+      role: "Adminisztrátor, segédedző",
+      focus:
+        "Gyerekkora óta velünk van, eleinte résztvevőként, ma már oktatóként és adminisztrátorként is segít.",
+      image: teacherDominikaImage,
+      highlights: ["Adminisztráció", "Segédedzői feladatok", "Szervezés és napi rutin támogatása"],
+    },
+  ],
+};
