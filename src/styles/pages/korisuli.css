@@ -53,13 +53,6 @@
   padding: clamp(16px, 3vw, 36px) 0;
 }
 
-.korisuli-eyebrow {
-  margin: 0 0 8px;
-  color: var(--teal-dark);
-  font-weight: 1000;
-  font-size: 12px;
-}
-
 .korisuli-hero h1 {
   max-width: 392px;
   margin: 0;
@@ -74,7 +67,7 @@
   color: var(--coral);
 }
 
-.korisuli-hero-copy > p:not(.korisuli-eyebrow) {
+.korisuli-hero-copy > p {
   max-width: 392px;
   margin: 16px 0 0;
   color: var(--navy);

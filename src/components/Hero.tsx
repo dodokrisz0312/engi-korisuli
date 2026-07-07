@@ -8,7 +8,6 @@ export function Hero() {
   return (
     <section className="hero section-shell">
       <div className="hero-copy">
-        <p className="eyebrow">Gyerekbarát jégoktatás 4 éves kortól</p>
         <h1>Első lépések a jégen, életre szóló élmények!</h1>
         <p>
           Játékos, biztonságos és szeretetteljes oktatás minden gyermeknek. Fejlesztjük a mozgást,

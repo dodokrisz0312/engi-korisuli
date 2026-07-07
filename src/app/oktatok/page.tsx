@@ -15,8 +15,6 @@ export default function OktatokPage() {
 
         <section className="oktatok-hero section-shell">
           <div className="oktatok-hero-copy">
-            <p className="oktatok-eyebrow">Oktatóink</p>
-
             <h1>
               Akik végigkísérik <span>a gyerekeket a jégen</span>
             </h1>

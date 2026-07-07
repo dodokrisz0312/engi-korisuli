@@ -13,8 +13,6 @@ export default function GaleriaPage() {
 
         <section className="gallery-hero section-shell">
           <div className="gallery-hero-copy">
-            <p className="gallery-eyebrow">Galéria</p>
-
             <h1>
               Pillanatok <span>a jégről</span>
             </h1>

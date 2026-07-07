@@ -14,7 +14,6 @@ export default function KorisuliPage() {
 
         <section className="korisuli-hero section-shell">
           <div className="korisuli-hero-copy">
-            <p className="korisuli-eyebrow">Jégiskolánk</p>
             <h1>
               Jégiskolánk <span>története</span>
             </h1>

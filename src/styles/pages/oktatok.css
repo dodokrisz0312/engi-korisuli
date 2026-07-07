@@ -73,7 +73,7 @@
   color: var(--coral);
 }
 
-.oktatok-hero-copy > p:not(.oktatok-eyebrow) {
+.oktatok-hero-copy > p {
   max-width: 620px;
   margin: 16px auto 0;
   color: var(--navy);

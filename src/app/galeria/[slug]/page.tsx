@@ -38,8 +38,6 @@ export default async function GalleryFolderPage({ params }: GalleryFolderPagePro
               Vissza a galériákhoz
             </Link>
 
-            <p className="gallery-folder-eyebrow">Galéria mappa</p>
-
             <h1>
               {folder.title}
               <span> képei</span>

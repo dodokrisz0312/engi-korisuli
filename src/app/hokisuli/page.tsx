@@ -14,8 +14,6 @@ export default function HokisuliPage() {
 
         <section className="hoki-hero section-shell">
           <div className="hoki-hero-copy">
-            <p className="hoki-eyebrow">Engi Hokisuli</p>
-
             <h1>
               Játékosan <span>a hoki világába</span>
             </h1>

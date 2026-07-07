@@ -16,8 +16,6 @@ export default function TsmtPage() {
 
         <section className="tsmt-hero section-shell">
           <div className="tsmt-hero-copy">
-            <p className="tsmt-eyebrow">Mozgáskoordinációs foglalkozások</p>
-
             <h1>
               TSMT és <span>mozgásfejlesztés</span>
             </h1>

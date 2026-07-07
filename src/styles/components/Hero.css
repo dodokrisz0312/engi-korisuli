@@ -39,14 +39,7 @@
   z-index: 2;
 }
 
-.eyebrow {
-  margin: 0 0 8px;
-  color: var(--teal-dark);
-  font-weight: 900;
-  font-size: clamp(12px, 1vw, 12px);
-}
-
-.hero-copy p:not(.eyebrow) {
+.hero-copy p {
   max-width: 316px;
   color: var(--muted);
   font-size: clamp(12px, 1.25vw, 16px);
@@ -165,17 +158,13 @@
     font-size: 20px;
   }
 
-  .hero-copy p:not(.eyebrow) {
+  .hero-copy p {
     font-size: 12px;
     margin: 0;
   }
 
   .hero-visual {
     min-height: 224px;
-  }
-
-  .eyebrow {
-    margin-top: 24px;
   }
 
   .hero-penguin {
@@ -195,9 +184,3 @@
 /* ==========================================================================
    RESPONSIVE: 532px-
    ========================================================================== */
-
-@media (max-width: 532px) {
-  .eyebrow {
-    width: 65%;
-  }
-}
