@@ -113,9 +113,11 @@
   min-height: 0;
   padding: 28px;
   overflow: hidden;
-  color: white;
+  color: var(--navy);
+  border: calc(4px / 4) solid rgba(217, 238, 245, 0.95);
   border-radius: 20px;
-  box-shadow: 0 16px 40px rgba(24, 104, 151, 0.18);
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 12px 32px rgba(33, 94, 140, 0.1);
   isolation: isolate;
 }
 
@@ -134,7 +136,7 @@
   top: 16px;
   right: 20px;
   z-index: 2;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(39, 185, 189, 0.2);
   font-size: 40px;
   pointer-events: none;
 }
@@ -164,6 +166,7 @@
 
 .program-card p {
   margin: 0 0 8px;
+  color: var(--navy);
   font-weight: 900;
   font-size: 16px;
   line-height: 1.35;
@@ -172,9 +175,9 @@
 .program-card small {
   display: block;
   max-width: 316px;
+  color: var(--muted);
   font-size: 12px;
   line-height: 1.6;
-  opacity: 0.93;
 }
 
 .program-card a {
@@ -182,6 +185,7 @@
   align-items: center;
   gap: 4px;
   margin-top: 16px;
+  color: var(--teal-dark);
   font-weight: 1000;
   font-size: 12px;
 }
@@ -206,45 +210,50 @@
    ========================================================================== */
 
 .program-card.teal {
-  background: linear-gradient(135deg, #22b9b8, #76d8d7);
+  background:
+    radial-gradient(circle at 92% 12%, rgba(39, 185, 189, 0.14), transparent 30%),
+    rgba(255, 255, 255, 0.86);
 }
 
 .program-card.orange {
-  color: #7a3b00;
-  background: linear-gradient(135deg, #ffae39, #ffd38e);
+  background:
+    radial-gradient(circle at 92% 12%, rgba(255, 174, 57, 0.18), transparent 30%),
+    rgba(255, 255, 255, 0.86);
 }
 
 .program-card.blue {
-  background: linear-gradient(135deg, #3484f5, #74b8ff);
+  background:
+    radial-gradient(circle at 92% 12%, rgba(47, 125, 241, 0.12), transparent 30%),
+    rgba(255, 255, 255, 0.86);
 }
 
 .program-card.teal::before {
   background: linear-gradient(
     90deg,
-    rgba(31, 185, 186, 1) 0%,
-    rgba(31, 185, 186, 1) 55%,
-    rgba(31, 185, 186, 0.25) 68%,
-    rgba(31, 185, 186, 0.05) 100%
+    rgba(238, 250, 253, 0.98) 0%,
+    rgba(238, 250, 253, 0.94) 55%,
+    rgba(238, 250, 253, 0) 68%,
+    rgba(238, 250, 253, 0) 100%
   );
 }
 
 .program-card.orange::before {
   background: linear-gradient(
     90deg,
-    rgba(255, 174, 57, 1) 0%,
-    rgba(255, 174, 57, 1) 55%,
-    rgba(255, 174, 57, 0.34) 68%,
-    rgba(255, 174, 57, 0.08) 100%
+    rgba(255, 243, 217, 0.98) 0%,
+    rgba(255, 243, 217, 0.94) 55%,
+    rgba(255, 243, 217, 0) 68%,
+    rgba(255, 243, 217, 0) 100%
   );
 }
 
 .program-card.blue::before {
   background: linear-gradient(
     90deg,
-    rgba(52, 132, 245, 1) 0%,
-    rgba(52, 132, 245, 1) 55%,
-    rgba(52, 132, 245, 0.34) 68%,
-    rgba(52, 132, 245, 0.08) 100%
+    rgba(234, 247, 251, 0.98) 0%,
+    rgba(234, 247, 251, 0.94) 55%,
+    rgba(234, 247, 251, 0) 68%,
+    rgba(234, 247, 251, 0) 100%
   );
 }
 
@@ -262,6 +271,7 @@
   background-position: center right;
   background-repeat: no-repeat;
   opacity: 1;
+  filter: saturate(0.88) brightness(1.08);
   transform: scale(1.02);
 }
 
