@@ -87,6 +87,8 @@
 
 .korisuli-hero-visual {
   position: relative;
+  width: 100%;
+  max-width: 780px;
   min-height: clamp(292px, 34vw, 404px);
   overflow: visible;
   border-radius: 36px;
@@ -430,23 +432,39 @@
 }
 
 /* ==========================================================================
+   RESPONSIVE: 1600px-
+   ========================================================================== */
+
+@media (max-width: 1600px) {
+  .korisuli-hero-penguin {
+    display: none;
+  }
+}
+
+/* ==========================================================================
    RESPONSIVE: 1200px-
    ========================================================================== */
 
 @media (max-width: 1200px) {
   .korisuli-hero {
     grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 12px;
   }
 
   .korisuli-hero-copy {
-    min-height: 272px;
+    min-height: 0;
+    text-align: center;
+  }
+
+  .korisuli-hero h1,
+  .korisuli-hero-copy > p {
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .korisuli-hero-penguin {
-    right: 20px;
-    left: auto;
-    bottom: 0;
-    width: 96px;
+    display: none;
   }
 
   .korisuli-stat-card {
@@ -476,18 +494,51 @@
     overflow: hidden;
   }
 
+  .korisuli-page .join-section-image-wrap {
+    width: 100%;
+    max-width: 600px;
+    justify-self: center;
+  }
+
+  .korisuli-page .join-section-image {
+    height: 222px;
+  }
+
+  .korisuli-page .join-section-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .korisuli-stat-card {
     right: 16px;
-    top: auto;
-    bottom: 16px;
-    width: min(240px, calc(100% - 28px));
-    min-width: 0;
-    padding: 16px 16px;
-    transform: none;
+    top: 50%;
+    display: grid;
+    gap: 7px;
+    width: min(196px, 40%);
+    min-width: 154px;
+    padding: 20px 16px;
+    border-radius: 24px;
+    transform: translateY(-50%);
+  }
+
+  .korisuli-stat-card svg {
+    width: 34px;
+    height: 34px;
+  }
+
+  .korisuli-stat-card strong {
+    font-size: 22px;
+  }
+
+  .korisuli-stat-card span {
+    max-width: none;
+    font-size: 13px;
   }
 
   .korisuli-stat-card p {
-    display: none;
+    display: block;
+    margin-top: 4px;
+    font-size: 11px;
+    line-height: 1.4;
   }
 
   .founders-grid {
@@ -505,7 +556,7 @@
 
 @media (max-width: 640px) {
   .korisuli-hero-copy {
-    min-height: 272px;
+    min-height: unset;
   }
 
   .korisuli-hero-penguin {
@@ -552,5 +603,33 @@
     width: 36px;
     height: 36px;
     border-radius: 12px;
+  }
+}
+
+@media (max-width: 500px) {
+  .korisuli-stat-card {
+    right: 12px;
+    gap: 5px;
+    width: min(154px, 44%);
+    min-width: 0;
+    padding: 12px;
+    border-radius: 18px;
+  }
+
+  .korisuli-stat-card svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .korisuli-stat-card strong {
+    font-size: 18px;
+  }
+
+  .korisuli-stat-card span {
+    font-size: 12px;
+  }
+
+  .korisuli-stat-card p {
+    display: none;
   }
 }

@@ -23,13 +23,13 @@
 } from "lucide-react";
 import type { StaticImageData } from "next/image";
 import galleryImage1 from "@/assets/gallery/korisuli/korisuli_1.jpg";
-import galleryImage2 from "@/assets/gallery/korisuli/korisuli_8.jpg";
-import galleryImage3 from "@/assets/gallery/korisuli/korisuli_14.jpg";
-import galleryImage4 from "@/assets/gallery/korisuli/korisuli_20.jpg";
-import galleryImage5 from "@/assets/gallery/korisuli/korisuli_28.jpg";
-import galleryImage6 from "@/assets/gallery/korisuli/korisuli_36.jpg";
-import galleryImage7 from "@/assets/gallery/korisuli/korisuli_2.jpg";
-import galleryImage8 from "@/assets/gallery/korisuli/korisuli_11.jpg";
+import galleryImage2 from "@/assets/gallery/hokisuli/hokisuli_1.jpg";
+import galleryImage3 from "@/assets/gallery/mozgaskoordinacio/mozgaskoordinacio_1.jpg";
+import galleryImage4 from "@/assets/gallery/nyari_tabor_2018/nyari_tabor_2018_1.jpg";
+import galleryImage5 from "@/assets/gallery/farsang_2019/farsang_2019_1.jpg";
+import galleryImage6 from "@/assets/gallery/halloween_2020/halloween_2020_1.jpg";
+import galleryImage7 from "@/assets/gallery/halloween_2021/halloween_2021_1.jpg";
+import galleryImage8 from "@/assets/gallery/mikulas/mikulas_1.jpg";
 import teacherViktorImage from "@/assets/teachers/devenyi_viktor.jpg";
 import teacherKlariImage from "@/assets/teachers/engi_klari_1.jpg";
 import teacherHaszonitsZitaImage from "@/assets/teachers/haszonits_kálmán_zita.jpg";
@@ -108,14 +108,14 @@ export const stats = [
 ];
 
 export const galleryItems: GalleryItem[] = [
-  { label: "Első lépések a jégen", image: galleryImage1, className: "tile-1" },
-  { label: "Kis csapat a pályán", image: galleryImage2, className: "tile-2" },
-  { label: "Ügyességi feladatok", image: galleryImage3, className: "tile-3" },
-  { label: "Játék és fejlődés", image: galleryImage4, className: "tile-4" },
-  { label: "Korisuli pillanat", image: galleryImage5, className: "tile-5" },
-  { label: "Gyakorlás a jégen", image: galleryImage6, className: "tile-6" },
-  { label: "Oktatás közben", image: galleryImage7, className: "tile-7" },
-  { label: "Vidám jégóra", image: galleryImage8, className: "tile-8" },
+  { label: "Korisuli", image: galleryImage1, className: "tile-1" },
+  { label: "Hokisuli", image: galleryImage2, className: "tile-2" },
+  { label: "Mozgáskoordináció", image: galleryImage3, className: "tile-3" },
+  { label: "Nyári tábor", image: galleryImage4, className: "tile-4" },
+  { label: "Farsang", image: galleryImage5, className: "tile-5" },
+  { label: "Halloween 2020", image: galleryImage6, className: "tile-6" },
+  { label: "Halloween 2021", image: galleryImage7, className: "tile-7" },
+  { label: "Mikulás", image: galleryImage8, className: "tile-8" },
 ];
 
 export const teachers: Teacher[] = [

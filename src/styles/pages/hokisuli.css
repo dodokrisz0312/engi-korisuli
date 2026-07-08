@@ -40,7 +40,7 @@
 .hoki-hero {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(224px, 0.9fr) minmax(316px, 1.35fr);
+  grid-template-columns: minmax(196px, 0.85fr) minmax(0, 1.4fr);
   gap: clamp(20px, 4vw, 48px);
   align-items: center;
   min-height: 392px;
@@ -60,10 +60,10 @@
 }
 
 .hoki-hero h1 {
-  max-width: 440px;
+  max-width: 392px;
   margin: 0;
   color: var(--navy);
-  font-size: clamp(40px, 5.8vw, 76px);
+  font-size: clamp(40px, 6vw, 80px);
   line-height: 0.95;
   letter-spacing: -0.06em;
 }
@@ -74,7 +74,7 @@
 }
 
 .hoki-hero-copy > p {
-  max-width: 420px;
+  max-width: 392px;
   margin: 16px 0 0;
   color: var(--navy);
   font-weight: 900;
@@ -113,6 +113,8 @@
 
 .hoki-hero-visual {
   position: relative;
+  width: 100%;
+  max-width: 780px;
   min-height: clamp(292px, 34vw, 404px);
   overflow: visible;
   border-radius: 36px;
@@ -124,59 +126,18 @@
   box-shadow: 0 20px 44px rgba(33, 94, 140, 0.14);
 }
 
-.hoki-hero-visual::after {
-  content: "";
-  position: absolute;
-  left: 8%;
-  right: 16%;
-  bottom: 16%;
-  height: 2px;
-  border-radius: 999px;
-  background: repeating-linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0.9) 0 12px,
-    transparent 12px 24px
-  );
-  opacity: 0.75;
-  transform: rotate(-6deg);
-}
-
-.hoki-puck {
-  position: absolute;
-  z-index: 2;
-  display: block;
-  width: 18px;
-  height: 18px;
-  border-radius: 999px;
-  background: #1b2f48;
-  box-shadow: 0 10px 18px rgba(16, 36, 56, 0.22);
-}
-
-.hoki-puck-one {
-  left: 18%;
-  bottom: 20%;
-}
-
-.hoki-puck-two {
-  right: 22%;
-  top: 18%;
-  width: 12px;
-  height: 12px;
-  opacity: 0.58;
-}
-
 .hoki-floating-card {
   position: absolute;
-  right: -24px;
+  right: 20px;
   top: 50%;
   display: grid;
   gap: 8px;
-  width: min(204px, 35%);
-  min-width: 172px;
+  width: min(196px, 34%);
+  min-width: 164px;
   padding: 24px 20px;
   color: var(--navy);
   border: calc(4px / 4) solid #d9eef5;
-  border-radius: 24px;
+  border-radius: 28px;
   background: rgba(255, 255, 255, 0.92);
   box-shadow: 0 16px 36px rgba(33, 94, 140, 0.14);
   transform: translateY(-50%);
@@ -648,6 +609,22 @@
 @media (max-width: 1200px) {
   .hoki-hero {
     grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 12px;
+  }
+
+  .hoki-hero-copy {
+    text-align: center;
+  }
+
+  .hoki-hero h1,
+  .hoki-hero-copy > p {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .hoki-hero-badges {
+    justify-content: center;
   }
 
   .hoki-floating-card {
@@ -681,7 +658,7 @@
 
 @media (max-width: 900px) {
   .hoki-page {
-    padding-top: 16px;
+    padding-top: 0;
   }
 
   .hoki-hero h1 {
@@ -689,17 +666,41 @@
   }
 
   .hoki-hero-visual {
-    min-height: 272px;
+    min-height: 316px;
+    overflow: hidden;
   }
 
   .hoki-floating-card {
-    position: relative;
-    right: auto;
-    top: auto;
-    width: 100%;
-    min-width: 0;
-    margin-top: 12px;
-    transform: none;
+    right: 16px;
+    top: 50%;
+    display: grid;
+    gap: 7px;
+    width: min(196px, 40%);
+    min-width: 154px;
+    padding: 20px 16px;
+    border-radius: 24px;
+    transform: translateY(-50%);
+  }
+
+  .hoki-floating-card svg {
+    width: 34px;
+    height: 34px;
+  }
+
+  .hoki-floating-card strong {
+    font-size: 22px;
+  }
+
+  .hoki-floating-card span {
+    max-width: none;
+    font-size: 13px;
+  }
+
+  .hoki-floating-card p {
+    display: block;
+    margin-top: 4px;
+    font-size: 11px;
+    line-height: 1.4;
   }
 
   .hoki-goal-cards {
@@ -721,7 +722,7 @@
 
 @media (max-width: 640px) {
   .hoki-hero-visual {
-    min-height: 224px;
+    min-height: 272px;
     border-radius: 24px;
   }
 
@@ -801,7 +802,7 @@
 .hoki-hero {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(224px, 0.9fr) minmax(316px, 1.35fr);
+  grid-template-columns: minmax(196px, 0.85fr) minmax(0, 1.4fr);
   gap: clamp(20px, 4vw, 48px);
   align-items: center;
   min-height: 392px;
@@ -821,10 +822,10 @@
 }
 
 .hoki-hero h1 {
-  max-width: 440px;
+  max-width: 392px;
   margin: 0;
   color: var(--navy);
-  font-size: clamp(40px, 5.8vw, 76px);
+  font-size: clamp(40px, 6vw, 80px);
   line-height: 0.95;
   letter-spacing: -0.06em;
 }
@@ -835,7 +836,7 @@
 }
 
 .hoki-hero-copy > p {
-  max-width: 420px;
+  max-width: 392px;
   margin: 16px 0 0;
   color: var(--navy);
   font-weight: 900;
@@ -874,6 +875,8 @@
 
 .hoki-hero-visual {
   position: relative;
+  width: 100%;
+  max-width: 780px;
   min-height: clamp(292px, 34vw, 404px);
   overflow: visible;
   border-radius: 36px;
@@ -885,59 +888,18 @@
   box-shadow: 0 20px 44px rgba(33, 94, 140, 0.14);
 }
 
-.hoki-hero-visual::after {
-  content: "";
-  position: absolute;
-  left: 8%;
-  right: 16%;
-  bottom: 16%;
-  height: 2px;
-  border-radius: 999px;
-  background: repeating-linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0.9) 0 12px,
-    transparent 12px 24px
-  );
-  opacity: 0.75;
-  transform: rotate(-6deg);
-}
-
-.hoki-puck {
-  position: absolute;
-  z-index: 2;
-  display: block;
-  width: 18px;
-  height: 18px;
-  border-radius: 999px;
-  background: #1b2f48;
-  box-shadow: 0 10px 18px rgba(16, 36, 56, 0.22);
-}
-
-.hoki-puck-one {
-  left: 18%;
-  bottom: 20%;
-}
-
-.hoki-puck-two {
-  right: 22%;
-  top: 18%;
-  width: 12px;
-  height: 12px;
-  opacity: 0.58;
-}
-
 .hoki-floating-card {
   position: absolute;
-  right: -24px;
+  right: 20px;
   top: 50%;
   display: grid;
   gap: 8px;
-  width: min(204px, 35%);
-  min-width: 172px;
+  width: min(196px, 34%);
+  min-width: 164px;
   padding: 24px 20px;
   color: var(--navy);
   border: calc(4px / 4) solid #d9eef5;
-  border-radius: 24px;
+  border-radius: 28px;
   background: rgba(255, 255, 255, 0.92);
   box-shadow: 0 16px 36px rgba(33, 94, 140, 0.14);
   transform: translateY(-50%);
@@ -1409,6 +1371,22 @@
 @media (max-width: 1200px) {
   .hoki-hero {
     grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 12px;
+  }
+
+  .hoki-hero-copy {
+    text-align: center;
+  }
+
+  .hoki-hero h1,
+  .hoki-hero-copy > p {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .hoki-hero-badges {
+    justify-content: center;
   }
 
   .hoki-floating-card {
@@ -1442,7 +1420,7 @@
 
 @media (max-width: 900px) {
   .hoki-page {
-    padding-top: 16px;
+    padding-top: 0;
   }
 
   .hoki-hero h1 {
@@ -1450,17 +1428,41 @@
   }
 
   .hoki-hero-visual {
-    min-height: 272px;
+    min-height: 316px;
+    overflow: hidden;
   }
 
   .hoki-floating-card {
-    position: relative;
-    right: auto;
-    top: auto;
-    width: 100%;
-    min-width: 0;
-    margin-top: 12px;
-    transform: none;
+    right: 16px;
+    top: 50%;
+    display: grid;
+    gap: 7px;
+    width: min(196px, 40%);
+    min-width: 154px;
+    padding: 20px 16px;
+    border-radius: 24px;
+    transform: translateY(-50%);
+  }
+
+  .hoki-floating-card svg {
+    width: 34px;
+    height: 34px;
+  }
+
+  .hoki-floating-card strong {
+    font-size: 22px;
+  }
+
+  .hoki-floating-card span {
+    max-width: none;
+    font-size: 13px;
+  }
+
+  .hoki-floating-card p {
+    display: block;
+    margin-top: 4px;
+    font-size: 11px;
+    line-height: 1.4;
   }
 
   .hoki-goal-cards {
@@ -1482,7 +1484,7 @@
 
 @media (max-width: 640px) {
   .hoki-hero-visual {
-    min-height: 224px;
+    min-height: 272px;
     border-radius: 24px;
   }
 
@@ -1519,5 +1521,33 @@
 
   .hoki-location-card {
     min-height: 156px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hoki-floating-card {
+    right: 12px;
+    gap: 5px;
+    width: min(154px, 44%);
+    min-width: 0;
+    padding: 12px;
+    border-radius: 18px;
+  }
+
+  .hoki-floating-card svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .hoki-floating-card strong {
+    font-size: 18px;
+  }
+
+  .hoki-floating-card span {
+    font-size: 12px;
+  }
+
+  .hoki-floating-card p {
+    display: none;
   }
 }

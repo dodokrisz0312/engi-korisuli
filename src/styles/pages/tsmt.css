@@ -40,7 +40,7 @@
 .tsmt-hero {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(224px, 0.9fr) minmax(316px, 1.35fr);
+  grid-template-columns: minmax(196px, 0.85fr) minmax(0, 1.4fr);
   gap: clamp(20px, 4vw, 48px);
   align-items: center;
   min-height: 392px;
@@ -60,10 +60,10 @@
 }
 
 .tsmt-hero h1 {
-  max-width: 420px;
+  max-width: 392px;
   margin: 0;
   color: var(--navy);
-  font-size: clamp(40px, 5.8vw, 76px);
+  font-size: clamp(40px, 6vw, 80px);
   line-height: 0.95;
   letter-spacing: -0.06em;
 }
@@ -74,7 +74,7 @@
 }
 
 .tsmt-hero-copy > p {
-  max-width: 420px;
+  max-width: 392px;
   margin: 16px 0 0;
   color: var(--navy);
   font-weight: 900;
@@ -91,6 +91,8 @@
 
 .tsmt-hero-visual {
   position: relative;
+  width: 100%;
+  max-width: 780px;
   min-height: clamp(292px, 34vw, 404px);
   overflow: visible;
   border-radius: 36px;
@@ -104,16 +106,16 @@
 
 .tsmt-floating-card {
   position: absolute;
-  right: -24px;
+  right: 20px;
   top: 50%;
   display: grid;
   gap: 8px;
-  width: min(204px, 35%);
-  min-width: 172px;
+  width: min(196px, 34%);
+  min-width: 164px;
   padding: 24px 20px;
   color: var(--navy);
   border: calc(4px / 4) solid #d9eef5;
-  border-radius: 24px;
+  border-radius: 28px;
   background: rgba(255, 255, 255, 0.92);
   box-shadow: 0 16px 36px rgba(33, 94, 140, 0.14);
   transform: translateY(-50%);
@@ -537,6 +539,22 @@
 @media (max-width: 1200px) {
   .tsmt-hero {
     grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 12px;
+  }
+
+  .tsmt-hero-copy {
+    text-align: center;
+  }
+
+  .tsmt-hero h1,
+  .tsmt-hero-copy > p {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .tsmt-hero-actions {
+    justify-content: center;
   }
 
   .tsmt-floating-card {
@@ -575,7 +593,7 @@
 
 @media (max-width: 900px) {
   .tsmt-page {
-    padding-top: 16px;
+    padding-top: 0;
   }
 
   .tsmt-hero h1 {
@@ -583,17 +601,41 @@
   }
 
   .tsmt-hero-visual {
-    min-height: 272px;
+    min-height: 316px;
+    overflow: hidden;
   }
 
   .tsmt-floating-card {
-    position: relative;
-    right: auto;
-    top: auto;
-    width: 100%;
-    min-width: 0;
-    margin-top: 12px;
-    transform: none;
+    right: 16px;
+    top: 50%;
+    display: grid;
+    gap: 7px;
+    width: min(196px, 40%);
+    min-width: 154px;
+    padding: 20px 16px;
+    border-radius: 24px;
+    transform: translateY(-50%);
+  }
+
+  .tsmt-floating-card svg {
+    width: 34px;
+    height: 34px;
+  }
+
+  .tsmt-floating-card strong {
+    font-size: 22px;
+  }
+
+  .tsmt-floating-card span {
+    max-width: none;
+    font-size: 13px;
+  }
+
+  .tsmt-floating-card p {
+    display: block;
+    margin-top: 4px;
+    font-size: 11px;
+    line-height: 1.4;
   }
 
   .why-grid {
@@ -619,7 +661,7 @@
 
 @media (max-width: 640px) {
   .tsmt-hero-visual {
-    min-height: 224px;
+    min-height: 272px;
     border-radius: 24px;
   }
 
@@ -658,5 +700,33 @@
 
   .location-card {
     min-height: 156px;
+  }
+}
+
+@media (max-width: 500px) {
+  .tsmt-floating-card {
+    right: 12px;
+    gap: 5px;
+    width: min(154px, 44%);
+    min-width: 0;
+    padding: 12px;
+    border-radius: 18px;
+  }
+
+  .tsmt-floating-card svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .tsmt-floating-card strong {
+    font-size: 18px;
+  }
+
+  .tsmt-floating-card span {
+    font-size: 12px;
+  }
+
+  .tsmt-floating-card p {
+    display: none;
   }
 }

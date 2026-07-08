@@ -6,9 +6,9 @@ import { JoinSection } from "@/components/JoinSection";
 import { CTA } from "@/components/Sections";
 import { tsmtPage } from "@/data/constants";
 import { createSeoMetadata, pageSeo } from "@/data/seo";
-import tsmtHeroImage from "@/assets/tsmt.jpg";
-import tsmtTeamImage from "@/assets/tsmt.png";
-import tsmtJoinImage from "@/assets/gallery/korisuli/korisuli_15.jpg";
+import tsmtHeroImage from "@/assets/gallery/mozgaskoordinacio/mozgaskoordinacio_1.jpg";
+import tsmtTeamImage from "@/assets/gallery/mozgaskoordinacio/mozgaskoordinacio_6.jpg";
+import tsmtJoinImage from "@/assets/gallery/mozgaskoordinacio/mozgaskoordinacio_11.jpg";
 
 export const metadata: Metadata = createSeoMetadata(pageSeo.tsmt);
 

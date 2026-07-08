@@ -43,9 +43,6 @@ export default function HokisuliPage() {
               className="hoki-hero-image"
             />
 
-            <span className="hoki-puck hoki-puck-one" />
-            <span className="hoki-puck hoki-puck-two" />
-
             <div className="hoki-floating-card">
               <Trophy size={42} aria-hidden="true" />
               <strong>13 fő</strong>

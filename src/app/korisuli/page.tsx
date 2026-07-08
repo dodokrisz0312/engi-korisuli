@@ -7,6 +7,7 @@ import { CTA } from "@/components/Sections";
 import penguinWaveImage from "@/assets/penguin-wave.png";
 import { galleryItems, korisuliPage } from "@/data/constants";
 import { createSeoMetadata, pageSeo } from "@/data/seo";
+import korisuliHeroImage from "@/assets/engi_toth.png";
 
 export const metadata: Metadata = createSeoMetadata(pageSeo.korisuli);
 
@@ -33,7 +34,7 @@ export default function KorisuliPage() {
 
           <div className="korisuli-hero-visual">
             <Image
-              src={galleryItems[0].image}
+              src={korisuliHeroImage}
               alt="Mosolygó gyerekek korcsolyázás közben"
               fill
               priority
@@ -147,7 +148,7 @@ export default function KorisuliPage() {
         </section>
 
         <JoinSection
-          image={galleryItems[3].image}
+          image={galleryItems[0].image}
           imageAlt="Mosolygó gyermek a jégpályán"
           title="Csatlakozz jégiskolánkhoz,"
           titleAccent="és fedezd fel a korcsolyázás örömét!"
