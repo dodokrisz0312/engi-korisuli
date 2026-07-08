@@ -43,7 +43,7 @@ export default function KorisuliPage() {
 
             <div className="korisuli-stat-card">
               <Award size={42} aria-hidden="true" />
-              <strong>28+</strong>
+              <strong>30+</strong>
               <span>éve a jég szerelmeseinek</span>
               <p>Megbízható oktatás, szakmai tapasztalat és sok-sok mosoly.</p>
             </div>
