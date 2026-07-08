@@ -600,6 +600,23 @@ type PublicGalleryImage = {
   alt: string;
 };
 
+type PublicGallerySubfolder = {
+  title: string;
+  slug: string;
+  description: string;
+  coverImage: string;
+  images: PublicGalleryImage[];
+};
+
+type PublicGalleryFolder = {
+  title: string;
+  slug: string;
+  description: string;
+  coverImage: string;
+  images?: PublicGalleryImage[];
+  subfolders?: PublicGallerySubfolder[];
+};
+
 /* ==========================================================================
    Gallery Page
    ========================================================================== */
@@ -638,9 +655,12 @@ const mozgaskoordinacioFiles = [
   ...Array.from({ length: 17 }, (_, index) => `mozgaskoordinacio_${index + 2}.jpg`),
 ];
 
-const nyariTaborFiles = ["2018_koritabor_fokep.png", ...paddedGalleryFiles("2018_koritabor", 31)];
+const nyariTabor2018Files = [
+  "2018_koritabor_fokep.png",
+  ...paddedGalleryFiles("2018_koritabor", 31),
+];
 
-const farsangFiles = [
+const farsang2019Files = [
   ...[1, 2].map((index) => `Farsang_${index}.JPEG`),
   ...Array.from({ length: 38 }, (_, index) => `Farsang_${index + 3}.JPG`),
   "Farsang_41.png",
@@ -648,7 +668,9 @@ const farsangFiles = [
 
 const mikulasFiles = ["2018_mikulas_fokep.png", ...paddedGalleryFiles("2018_mikulas", 5)];
 
-export const galleryPage = {
+const emptyGalleryImages: PublicGalleryImage[] = [];
+
+export const galleryPage: { folders: PublicGalleryFolder[] } = {
   folders: [
     {
       title: "Korisuli",
@@ -679,16 +701,54 @@ export const galleryPage = {
       slug: "nyari-tabor",
       description:
         "Minden nyáron megrendezzük a klasszikus korcsolya és mozgáskoordinációs torna táborunkat, hogy a nyári szünet alatt is mozgásban maradjunk!",
-      coverImage: galleryPath("nyari_tabor", nyariTaborFiles[0]),
-      images: makeGalleryImages("nyari_tabor", nyariTaborFiles, "Nyári tábor"),
+      coverImage: galleryPath("nyari_tabor", nyariTabor2018Files[0]),
+      subfolders: [
+        {
+          title: "Nyári Tábor 2018",
+          slug: "nyari-tabor-2018",
+          description:
+            "Képek a 2018-as nyári korcsolya és mozgáskoordinációs tábor vidám pillanataiból.",
+          coverImage: galleryPath("nyari_tabor", nyariTabor2018Files[0]),
+          images: makeGalleryImages("nyari_tabor", nyariTabor2018Files, "Nyári Tábor 2018"),
+        },
+        {
+          title: "Nyári Tábor 2019",
+          slug: "nyari-tabor-2019",
+          description: "A 2019-es nyári tábor képei hamarosan felkerülnek a galériába.",
+          coverImage: galleryPath("nyari_tabor", nyariTabor2018Files[0]),
+          images: emptyGalleryImages,
+        },
+      ],
     },
     {
       title: "Farsang & Halloween",
       slug: "farsang-halloween",
       description:
         "Minden évben rendezünk a Farsangi, illetve a Halloween-i ünnepekkor beöltözős mulatságot a jégen a gyerekkel, amikor rendkívüli oktatást tartunk ügyességi sorversenyekkel.",
-      coverImage: galleryPath("farsang", farsangFiles[0]),
-      images: makeGalleryImages("farsang", farsangFiles, "Farsang és Halloween"),
+      coverImage: galleryPath("farsang", farsang2019Files[0]),
+      subfolders: [
+        {
+          title: "Farsang 2019",
+          slug: "farsang-2019",
+          description: "Képek a 2019-es farsangi beöltözős jégóráról és ügyességi játékokról.",
+          coverImage: galleryPath("farsang", farsang2019Files[0]),
+          images: makeGalleryImages("farsang", farsang2019Files, "Farsang 2019"),
+        },
+        {
+          title: "Halloween 2020",
+          slug: "halloween-2020",
+          description: "A 2020-as Halloween galéria képei hamarosan felkerülnek.",
+          coverImage: galleryPath("farsang", farsang2019Files[0]),
+          images: emptyGalleryImages,
+        },
+        {
+          title: "Halloween 2021",
+          slug: "halloween-2021",
+          description: "A 2021-es Halloween galéria képei hamarosan felkerülnek.",
+          coverImage: galleryPath("farsang", farsang2019Files[0]),
+          images: emptyGalleryImages,
+        },
+      ],
     },
     {
       title: "Mikulás",

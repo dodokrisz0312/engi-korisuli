@@ -134,11 +134,18 @@ export const pageSeo: Record<string, SeoRoute> = {
 
 export const sitemapRoutes = Object.values(pageSeo).filter((route) => !route.noIndex);
 
-export const galleryFolderRoutes = galleryPage.folders.map((folder) => ({
-  path: `/galeria/${folder.slug}`,
-  title: `${folder.title} képek | Engi Korisuli Galéria`,
-  description: folder.description,
-}));
+export const galleryFolderRoutes = galleryPage.folders.flatMap((folder) => [
+  {
+    path: `/galeria/${folder.slug}`,
+    title: `${folder.title} képek | Engi Korisuli Galéria`,
+    description: folder.description,
+  },
+  ...(folder.subfolders ?? []).map((subfolder) => ({
+    path: `/galeria/${folder.slug}/${subfolder.slug}`,
+    title: `${subfolder.title} képek | Engi Korisuli Galéria`,
+    description: subfolder.description,
+  })),
+]);
 
 export const organizationJsonLd = {
   "@context": "https://schema.org",

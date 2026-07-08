@@ -1,7 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { ArrowLeft, Sparkles } from "lucide-react";
+import { ArrowLeft, ChevronRight, FolderOpen, Sparkles } from "lucide-react";
 import { Header } from "@/components/Header";
 import { CTA } from "@/components/Sections";
 import { GalleryLightbox } from "@/components/GalleryLightbox";
@@ -39,6 +40,9 @@ export default async function GalleryFolderPage({ params }: GalleryFolderPagePro
     notFound();
   }
 
+  const hasSubfolders = Boolean(folder.subfolders?.length);
+  const images = folder.images ?? [];
+
   return (
     <>
       <main className="gallery-folder-page">
@@ -63,19 +67,59 @@ export default async function GalleryFolderPage({ params }: GalleryFolderPagePro
         <section className="gallery-folder-section section-shell">
           <div className="gallery-folder-section-title">
             <span />
-            <h2>{folder.title}</h2>
+            <h2>{hasSubfolders ? "Mappák" : folder.title}</h2>
             <span />
           </div>
 
-          <GalleryLightbox
-            items={folder.images.map((image, index) => ({
-              label: image.alt,
-              image: image.src,
-              className: `tile-${(index % 8) + 1}`,
-            }))}
-          />
+          {hasSubfolders ? (
+            <div className="gallery-folders-grid">
+              {folder.subfolders?.map((subfolder, index) => (
+                <Link
+                  href={`/galeria/${folder.slug}/${subfolder.slug}`}
+                  className="gallery-folder-card"
+                  key={subfolder.slug}
+                >
+                  <div className="gallery-folder-image-wrap">
+                    <Image
+                      src={subfolder.coverImage}
+                      alt={subfolder.title}
+                      fill
+                      className="gallery-folder-image"
+                    />
 
-          {folder.images.length === 0 && (
+                    <div className="gallery-folder-overlay">
+                      <FolderOpen size={34} aria-hidden="true" />
+                      <span>Megnyitás</span>
+                    </div>
+                  </div>
+
+                  <div className="gallery-folder-content">
+                    <div className="gallery-folder-topline">
+                      <span>{String(index + 1).padStart(2, "0")}</span>
+                      <Sparkles size={18} aria-hidden="true" />
+                    </div>
+
+                    <h3>{subfolder.title}</h3>
+                    <p>{subfolder.description}</p>
+
+                    <div className="gallery-folder-link">
+                      Galéria megnyitása <ChevronRight size={16} />
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          ) : (
+            <GalleryLightbox
+              items={images.map((image, index) => ({
+                label: image.alt,
+                image: image.src,
+                className: `tile-${(index % 8) + 1}`,
+              }))}
+            />
+          )}
+
+          {!hasSubfolders && images.length === 0 && (
             <div className="gallery-empty-state">
               <Sparkles size={38} aria-hidden="true" />
               <h3>Hamarosan érkeznek a képek</h3>
