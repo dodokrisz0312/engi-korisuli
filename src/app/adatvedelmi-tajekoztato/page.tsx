@@ -53,7 +53,7 @@ export default function AdatvedelmiTajekoztatoPage() {
                 <a href="mailto:engiklara@gmail.com">engiklara@gmail.com</a>
               </p>
               <p>
-                <strong>Telefon:</strong> <a href="tel:+36709783703">06-70-978-3703</a>
+                <strong>Telefon:</strong> <a href="tel:+36709783703">06 70 978 3703</a>
               </p>
               <p>
                 <strong>Weboldal:</strong>{" "}

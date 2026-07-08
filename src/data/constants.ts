@@ -686,7 +686,7 @@ export const galleryPage = {
 export const contactPage = {
   contact: {
     email: "engiklara@gmail.com",
-    phone: "06-70-978-3703",
+    phone: "06 70 978 3703",
     phoneHref: "tel:+36709783703",
     facebook: "https://www.facebook.com/engikorisuli/",
     instagram: "https://www.instagram.com/engikorisuli/",
