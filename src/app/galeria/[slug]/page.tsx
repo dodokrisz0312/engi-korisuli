@@ -1,10 +1,12 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ArrowLeft, Sparkles } from "lucide-react";
 import { Header } from "@/components/Header";
 import { CTA } from "@/components/Sections";
 import { GalleryLightbox } from "@/components/GalleryLightbox";
 import { galleryPage } from "@/data/constants";
+import { createSeoMetadata, galleryFolderRoutes } from "@/data/seo";
 
 type GalleryFolderPageProps = {
   params: Promise<{
@@ -16,6 +18,17 @@ export function generateStaticParams() {
   return galleryPage.folders.map((folder) => ({
     slug: folder.slug,
   }));
+}
+
+export async function generateMetadata({ params }: GalleryFolderPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const route = galleryFolderRoutes.find((item) => item.path === `/galeria/${slug}`);
+
+  if (!route) {
+    return {};
+  }
+
+  return createSeoMetadata(route);
 }
 
 export default async function GalleryFolderPage({ params }: GalleryFolderPageProps) {

@@ -1,7 +1,11 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { Cookie, FileText, Mail, ShieldCheck, UserCheck } from "lucide-react";
 import { Header } from "@/components/Header";
 import { CTA } from "@/components/Sections";
+import { createSeoMetadata, pageSeo } from "@/data/seo";
+
+export const metadata: Metadata = createSeoMetadata(pageSeo.adatvedelem);
 
 export default function AdatvedelmiTajekoztatoPage() {
   return (

@@ -1,8 +1,12 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 import { CheckCircle2, Quote, Star } from "lucide-react";
 import { Header } from "@/components/Header";
 import { CTA } from "@/components/Sections";
 import { oktatokPage } from "@/data/constants";
+import { createSeoMetadata, pageSeo } from "@/data/seo";
+
+export const metadata: Metadata = createSeoMetadata(pageSeo.oktatok);
 
 export default function OktatokPage() {
   const featuredInstructor = oktatokPage.instructors.find((instructor) => instructor.featured);

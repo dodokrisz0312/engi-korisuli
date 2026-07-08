@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import {
   AlertCircle,
   CalendarDays,
@@ -11,6 +12,9 @@ import {
 } from "lucide-react";
 import { Header } from "@/components/Header";
 import { CTA } from "@/components/Sections";
+import { createSeoMetadata, pageSeo } from "@/data/seo";
+
+export const metadata: Metadata = createSeoMetadata(pageSeo.aszf);
 
 export default function AszfPage() {
   return (

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { Header } from "@/components/Header";
@@ -6,6 +7,9 @@ import { CTA } from "@/components/Sections";
 import { ContactForm } from "@/components/ContactForm";
 import { SmoothHashScroll } from "@/components/SmoothHashScroll";
 import { contactPage } from "@/data/constants";
+import { createSeoMetadata, pageSeo } from "@/data/seo";
+
+export const metadata: Metadata = createSeoMetadata(pageSeo.elerhetosegek);
 
 export default function ElerhetosegekPage() {
   const socialContactCards = [

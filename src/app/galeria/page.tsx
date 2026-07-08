@@ -1,9 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { ChevronRight, FolderOpen, Sparkles } from "lucide-react";
 import { Header } from "@/components/Header";
 import { CTA } from "@/components/Sections";
 import { galleryPage } from "@/data/constants";
+import { createSeoMetadata, pageSeo } from "@/data/seo";
+
+export const metadata: Metadata = createSeoMetadata(pageSeo.galeria);
 
 export default function GaleriaPage() {
   return (

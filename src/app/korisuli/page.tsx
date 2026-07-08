@@ -1,10 +1,14 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 import { Award, CalendarDays, Phone, Trophy, Users } from "lucide-react";
 import { Header } from "@/components/Header";
 import { JoinSection } from "@/components/JoinSection";
 import { CTA } from "@/components/Sections";
 import penguinWaveImage from "@/assets/penguin-wave.png";
 import { galleryItems, korisuliPage } from "@/data/constants";
+import { createSeoMetadata, pageSeo } from "@/data/seo";
+
+export const metadata: Metadata = createSeoMetadata(pageSeo.korisuli);
 
 export default function KorisuliPage() {
   return (

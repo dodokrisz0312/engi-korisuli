@@ -1,12 +1,16 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 import { Brain, CalendarDays, CheckCircle2, Clock, Dumbbell } from "lucide-react";
 import { Header } from "@/components/Header";
 import { JoinSection } from "@/components/JoinSection";
 import { CTA } from "@/components/Sections";
 import { tsmtPage } from "@/data/constants";
+import { createSeoMetadata, pageSeo } from "@/data/seo";
 import tsmtHeroImage from "@/assets/tsmt.jpg";
 import tsmtTeamImage from "@/assets/tsmt.png";
 import tsmtJoinImage from "@/assets/gallery/korisuli/oktatasaink_8.jpg";
+
+export const metadata: Metadata = createSeoMetadata(pageSeo.tsmt);
 
 export default function TsmtPage() {
   return (

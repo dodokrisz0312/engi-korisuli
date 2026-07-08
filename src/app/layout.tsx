@@ -1,14 +1,23 @@
 import type { Metadata, Viewport } from "next";
 import { CookieConsent } from "@/components/CookieConsent";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
+import {
+  createSeoMetadata,
+  organizationJsonLd,
+  pageSeo,
+  siteName,
+  siteUrl,
+} from "@/data/seo";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
-  title: "Engi Korisuli | Korcsolya, TSMT és Hoki iskola",
-  description: "Gyerekbarát korcsolyaoktatás, TSMT és hokisuli kezdőknek és haladóknak.",
+  metadataBase: new URL(siteUrl),
+  applicationName: siteName,
+  ...createSeoMetadata(pageSeo.home),
   icons: {
     icon: "/favicon.ico",
   },
+  category: "education",
 };
 
 export const viewport: Viewport = {
@@ -21,6 +30,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="hu">
       <body>
         <GoogleAnalytics />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd),
+          }}
+        />
         {children}
         <CookieConsent />
       </body>
