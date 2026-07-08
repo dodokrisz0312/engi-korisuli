@@ -10,11 +10,9 @@
   Heart,
   HeartPulse,
   MapPin,
-  Medal,
   Megaphone,
   Music2,
   ShieldCheck,
-  Snowflake,
   Sparkles,
   Star,
   Target,
@@ -22,11 +20,7 @@
   Users,
   UsersRound,
   Zap,
-  Mail,
-  Phone,
-  TramFront,
 } from "lucide-react";
-import { FaFacebook, FaInstagram } from "react-icons/fa";
 import type { StaticImageData } from "next/image";
 import galleryImage1 from "@/assets/gallery/korisuli/Polusjeg.jpg";
 import galleryImage2 from "@/assets/gallery/korisuli/Polusjeg-4.jpg";
@@ -45,18 +39,26 @@ import teacherNemethSzilviaImage from "@/assets/teachers/nemeth_szilvia.jpg";
 import teacherSzakalKatalinImage from "@/assets/teachers/szakal_katalin.jpg";
 import teacherDominikaImage from "@/assets/teachers/toth_dominika.jpg";
 
-export type GalleryItem = {
+/* ==========================================================================
+   Types
+   ========================================================================== */
+
+type GalleryItem = {
   label: string;
   image: StaticImageData;
   className: string;
 };
 
-export type Teacher = {
+type Teacher = {
   name: string;
   role: string;
   text: string;
   image: StaticImageData;
 };
+
+/* ==========================================================================
+   Shared Navigation And Home Data
+   ========================================================================== */
 
 export const navItems = [
   { label: "Kezdőlap", href: "/" },
@@ -137,6 +139,10 @@ export const teachers: Teacher[] = [
   },
 ];
 
+/* ==========================================================================
+   Korisuli Page
+   ========================================================================== */
+
 export const korisuliPage = {
   founders: [
     {
@@ -216,6 +222,10 @@ export const korisuliPage = {
     },
   ],
 };
+
+/* ==========================================================================
+   TSMT Page
+   ========================================================================== */
 
 export const tsmtPage = {
   benefits: [
@@ -305,6 +315,10 @@ export const tsmtPage = {
     },
   ],
 };
+
+/* ==========================================================================
+   Hokisuli Page
+   ========================================================================== */
 
 export const hokisuliPage = {
   milestones: [
@@ -461,8 +475,9 @@ export const hokisuliPage = {
   ],
 };
 
-export const SnowIcon = Snowflake;
-export const MedalIcon = Medal;
+/* ==========================================================================
+   Oktatok Page
+   ========================================================================== */
 
 export const oktatokPage = {
   stats: [
@@ -585,6 +600,10 @@ type PublicGalleryImage = {
   alt: string;
 };
 
+/* ==========================================================================
+   Gallery Page
+   ========================================================================== */
+
 const galleryPath = (folder: string, file: string) => `/images/gallery/${folder}/${file}`;
 
 const makeGalleryImages = (folder: string, files: string[], label: string): PublicGalleryImage[] =>
@@ -682,14 +701,20 @@ export const galleryPage = {
   ],
 };
 
+/* ==========================================================================
+   Contact Page
+   ========================================================================== */
+
+const contactDetails = {
+  email: "engiklara@gmail.com",
+  phone: "06 70 978 3703",
+  phoneHref: "tel:+36709783703",
+  facebook: "https://www.facebook.com/engikorisuli/",
+  instagram: "https://www.instagram.com/engikorisuli/",
+};
+
 export const contactPage = {
-  contact: {
-    email: "engiklara@gmail.com",
-    phone: "06 70 978 3703",
-    phoneHref: "tel:+36709783703",
-    facebook: "https://www.facebook.com/engikorisuli/",
-    instagram: "https://www.instagram.com/engikorisuli/",
-  },
+  contact: contactDetails,
 
   programs: [
     {
@@ -736,33 +761,6 @@ export const contactPage = {
         "7-es, 7E, 8E, 133E vagy 196A busszal a Vásárcsarnok megállóig érdemes menni, innen pár perc séta",
         "69-es villamossal a Vásárcsarnok megállóig lehet menni, innen pár perc séta",
       ],
-    },
-  ],
-
-  socialCards: [
-    {
-      title: "Facebook",
-      text: "Aktuális hírek, események és képek a jégiskola életéből.",
-      href: "https://www.facebook.com/engikorisuli/",
-      icon: FaFacebook,
-    },
-    {
-      title: "Instagram",
-      text: "Pillanatok a jégről, táborokból és foglalkozásainkról.",
-      href: "https://www.instagram.com/engikorisuli/",
-      icon: FaInstagram,
-    },
-    {
-      title: "E-mail",
-      text: "Írj nekünk közvetlenül jelentkezéssel vagy kérdéssel kapcsolatban.",
-      href: "mailto:engiklara@gmail.com",
-      icon: Mail,
-    },
-    {
-      title: "Telefon",
-      text: "Sürgősebb kérdés esetén telefonon is elérhetőek vagyunk.",
-      href: "tel:+36709783703",
-      icon: Phone,
     },
   ],
 };

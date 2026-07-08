@@ -8,9 +8,16 @@ import { SmoothHashScroll } from "@/components/SmoothHashScroll";
 import { contactPage } from "@/data/constants";
 
 export default function ElerhetosegekPage() {
-  const socialContactCards = contactPage.socialCards.filter(
-    (item) => item.title === "Facebook" || item.title === "Instagram"
-  );
+  const socialContactCards = [
+    {
+      title: "Facebook",
+      href: contactPage.contact.facebook,
+    },
+    {
+      title: "Instagram",
+      href: contactPage.contact.instagram,
+    },
+  ];
 
   return (
     <>
