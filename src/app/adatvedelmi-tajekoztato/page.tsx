@@ -17,14 +17,15 @@ export default function AdatvedelmiTajekoztatoPage() {
 
             <p>
               Az alábbi tájékoztató összefoglalja, hogyan kezeljük a weboldalon megadott személyes
-              adatokat, valamint hogyan használunk sütiket és Google Analytics mérést.
+              adatokat, a foglalkozásokon készült fénykép- és videófelvételeket, valamint hogyan
+              használunk sütiket és Google Analytics mérést.
             </p>
           </div>
 
           <div className="privacy-hero-card">
             <ShieldCheck size={42} aria-hidden="true" />
             <strong>átlátható adatkezelés</strong>
-            <span>kapcsolatfelvétel, jelentkezés és sütik</span>
+            <span>kapcsolatfelvétel, jelentkezés, fotók és sütik</span>
             <p>
               A statisztikai sütiket csak hozzájárulás esetén használjuk, a jelentkezési adatokat
               pedig kizárólag kapcsolatfelvételre kezeljük.
@@ -120,8 +121,85 @@ export default function AdatvedelmiTajekoztatoPage() {
 
           <article className="privacy-panel">
             <div className="privacy-section-heading">
+              <FileText size={32} aria-hidden="true" />
+              <h2>3. Fénykép- és videófelvételek kezelése</h2>
+            </div>
+
+            <p>
+              A foglalkozásokon, táborokban, bemutatókon, versenyeken és egyéb eseményeken fénykép-
+              és videófelvétel készülhet. A felismerhető személyről, különösen gyermekről készült
+              fénykép- vagy videófelvétel személyes adatnak minősül.
+            </p>
+
+            <div className="privacy-table">
+              <div>
+                <strong>Kezelt adatok</strong>
+                <p>
+                  A gyermekről, résztvevőről vagy kísérőről készült fénykép- és videófelvétel,
+                  valamint az ezekhez kapcsolódó esemény, foglalkozás vagy program megnevezése.
+                </p>
+              </div>
+
+              <div>
+                <strong>Adatkezelés célja</strong>
+                <p>
+                  A foglalkozások, táborok, bemutatók és események dokumentálása, a jégiskola
+                  életének bemutatása, valamint kommunikációs és promóciós tartalmak készítése.
+                </p>
+              </div>
+
+              <div>
+                <strong>Jogalap</strong>
+                <p>
+                  Az érintett, gyermek esetén a szülő / törvényes képviselő önkéntes, konkrét,
+                  tájékozott és egyértelmű hozzájárulása.
+                </p>
+              </div>
+
+              <div>
+                <strong>Felhasználási felületek</strong>
+                <p>
+                  A hozzájárulás alapján a felvételek megjelenhetnek az Engi Korisuli weboldalán,
+                  Facebook oldalán, Instagram oldalán, valamint egyéb hivatalos kommunikációs
+                  felületein.
+                </p>
+              </div>
+
+              <div>
+                <strong>Megőrzési idő</strong>
+                <p>
+                  A felvételeket a hozzájárulás visszavonásáig, de legfeljebb addig kezeljük, amíg
+                  azok kommunikációs vagy dokumentációs célból relevánsak. A hozzájárulás
+                  visszavonása esetén a felvételt a saját felületeinkről ésszerű határidőn belül
+                  eltávolítjuk.
+                </p>
+              </div>
+
+              <div>
+                <strong>Hozzájárulás visszavonása</strong>
+                <p>
+                  A hozzájárulás bármikor visszavonható az adatkezelő elérhetőségein. A visszavonás
+                  nem érinti a korábbi, jogszerű adatkezelést.
+                </p>
+              </div>
+            </div>
+
+            <p>
+              A hozzájárulás megtagadása vagy visszavonása nem jár hátránnyal, és nem érinti a
+              gyermek foglalkozásokon, táborokon vagy eseményeken való részvételét.
+            </p>
+
+            <p>
+              Amennyiben egy felvételen több gyermek vagy résztvevő is szerepel, a felvétel
+              eltávolítását vagy további felhasználásának korlátozását az érintetti jogok gyakorlása
+              körében lehet kérni az adatkezelő elérhetőségein.
+            </p>
+          </article>
+
+          <article className="privacy-panel">
+            <div className="privacy-section-heading">
               <Cookie size={32} aria-hidden="true" />
-              <h2>3. Sütik és Google Analytics</h2>
+              <h2>4. Sütik és Google Analytics</h2>
             </div>
 
             <p>
@@ -177,7 +255,7 @@ export default function AdatvedelmiTajekoztatoPage() {
           <article className="privacy-panel">
             <div className="privacy-section-heading">
               <Mail size={32} aria-hidden="true" />
-              <h2>4. Adattovábbítás és adatfeldolgozók</h2>
+              <h2>5. Adattovábbítás és adatfeldolgozók</h2>
             </div>
 
             <p>
@@ -204,19 +282,29 @@ export default function AdatvedelmiTajekoztatoPage() {
                 <strong>Statisztika</strong>
                 <p>Google Analytics, kizárólag hozzájárulás esetén.</p>
               </div>
+
+              <div>
+                <strong>Közösségi média felületek</strong>
+                <p>
+                  Hozzájárulás alapján közzétett fényképek és videók megjelenhetnek az Engi Korisuli
+                  Facebook és Instagram oldalán. Ezeken a felületeken a Meta Platforms saját
+                  adatkezelési feltételei is irányadók lehetnek.
+                </p>
+              </div>
             </div>
           </article>
 
           <article className="privacy-panel">
             <div className="privacy-section-heading">
               <ShieldCheck size={32} aria-hidden="true" />
-              <h2>5. Az érintettek jogai</h2>
+              <h2>6. Az érintettek jogai</h2>
             </div>
 
             <p>
-              A látogatók és érdeklődők jogosultak tájékoztatást kérni személyes adataik
-              kezeléséről, kérhetik azok helyesbítését, törlését, kezelésének korlátozását, valamint
-              bizonyos esetekben tiltakozhatnak az adatkezelés ellen.
+              A látogatók, érdeklődők, résztvevők, valamint gyermek esetén a szülők / törvényes
+              képviselők jogosultak tájékoztatást kérni személyes adataik kezeléséről, kérhetik azok
+              helyesbítését, törlését, kezelésének korlátozását, valamint bizonyos esetekben
+              tiltakozhatnak az adatkezelés ellen.
             </p>
 
             <ul className="privacy-rights-list">
@@ -238,7 +326,7 @@ export default function AdatvedelmiTajekoztatoPage() {
           <article className="privacy-panel">
             <div className="privacy-section-heading">
               <FileText size={32} aria-hidden="true" />
-              <h2>6. Panasztételi lehetőség</h2>
+              <h2>7. Panasztételi lehetőség</h2>
             </div>
 
             <p>
@@ -266,7 +354,7 @@ export default function AdatvedelmiTajekoztatoPage() {
           <article className="privacy-panel">
             <div className="privacy-section-heading">
               <FileText size={32} aria-hidden="true" />
-              <h2>7. A tájékoztató módosítása</h2>
+              <h2>8. A tájékoztató módosítása</h2>
             </div>
 
             <p>

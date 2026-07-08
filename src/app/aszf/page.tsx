@@ -309,9 +309,21 @@ export default function AszfPage() {
             </div>
 
             <p>
-              A foglalkozásokon, táborokban vagy eseményeken fénykép- és videófelvétel készülhet.
-              Gyermekről készült felismerhető felvétel nyilvános kommunikációban történő
-              felhasználása kizárólag megfelelő hozzájárulás alapján történhet.
+              A foglalkozásokon, táborokban, bemutatókon és egyéb eseményeken fénykép- és
+              videófelvétel készülhet. A felvételek célja lehet a programok dokumentálása, a
+              jégiskola életének bemutatása, valamint kommunikációs és promóciós tartalmak
+              készítése.
+            </p>
+
+            <p>
+              Felismerhető gyermekről készült fénykép vagy videó weboldalon, közösségi média
+              felületen — például Facebookon vagy Instagramon — történő közzétételére kizárólag a
+              szülő / törvényes képviselő előzetes hozzájárulása alapján kerülhet sor.
+            </p>
+
+            <p>
+              A hozzájárulás megadása önkéntes. A hozzájárulás megtagadása esetén a gyermek továbbra
+              is részt vehet a foglalkozásokon, ez a részvételt nem érinti.
             </p>
 
             <p>
