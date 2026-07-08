@@ -212,11 +212,14 @@
 .gallery-folders-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
   gap: 18px;
 }
 
 .gallery-folder-card {
   display: grid;
+  width: 100%;
+  max-width: 450px;
   overflow: hidden;
   color: inherit;
   border: calc(4px / 4) solid #d9eef5;
