@@ -6,6 +6,7 @@
 @import "./components/Sections.css";
 @import "./components/Footer.css";
 @import "./components/Snowflakes.css";
+@import "./components/CookieConsent.css";
 @import "./pages/PlaceholderPage.css";
 @import "./pages/korisuli.css";
 @import "./pages/tsmt.css";
@@ -14,3 +15,4 @@
 @import "./pages/galeria.css";
 @import "./pages/gallery-folder.css";
 @import "./pages/elerhetosegek.css";
+@import "./pages/adatvedelmi-tajekoztato.css";
