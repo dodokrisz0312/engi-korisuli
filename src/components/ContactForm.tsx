@@ -68,12 +68,12 @@ export function ContactForm() {
 
         <label>
           E-mail cím *
-          <input name="email" type="email" placeholder="email@example.com" aria-required="true" />
+          <input name="email" type="email" placeholder="email@pelda.com" aria-required="true" />
         </label>
 
         <label>
           Telefonszám
-          <input name="phone" type="tel" placeholder="+36..." />
+          <input name="phone" type="tel" placeholder="+36 30 123 4567" />
         </label>
 
         <label>
