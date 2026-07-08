@@ -39,8 +39,8 @@
 
 .hoki-hero {
   position: relative;
-  display: grid;
-  grid-template-columns: minmax(196px, 0.85fr) minmax(0, 1.4fr);
+  display: flex;
+  justify-content: space-between;
   gap: clamp(20px, 4vw, 48px);
   align-items: center;
   min-height: 392px;
@@ -49,6 +49,7 @@
 
 .hoki-hero-copy {
   position: relative;
+  flex: 0 1 38%;
   padding: clamp(16px, 3vw, 36px) 0;
 }
 
@@ -113,6 +114,7 @@
 
 .hoki-hero-visual {
   position: relative;
+  flex: 1 1 62%;
   width: 100%;
   max-width: 780px;
   min-height: clamp(292px, 34vw, 404px);
@@ -608,8 +610,9 @@
 
 @media (max-width: 1200px) {
   .hoki-hero {
-    grid-template-columns: 1fr;
-    justify-items: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 12px;
   }
 
@@ -801,8 +804,8 @@
 
 .hoki-hero {
   position: relative;
-  display: grid;
-  grid-template-columns: minmax(196px, 0.85fr) minmax(0, 1.4fr);
+  display: flex;
+  justify-content: space-between;
   gap: clamp(20px, 4vw, 48px);
   align-items: center;
   min-height: 392px;
@@ -811,6 +814,7 @@
 
 .hoki-hero-copy {
   position: relative;
+  flex: 0 1 38%;
   padding: clamp(16px, 3vw, 36px) 0;
 }
 
@@ -875,6 +879,7 @@
 
 .hoki-hero-visual {
   position: relative;
+  flex: 1 1 62%;
   width: 100%;
   max-width: 780px;
   min-height: clamp(292px, 34vw, 404px);
@@ -1370,8 +1375,9 @@
 
 @media (max-width: 1200px) {
   .hoki-hero {
-    grid-template-columns: 1fr;
-    justify-items: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 12px;
   }
 
