@@ -1,20 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronRight, Instagram, Mail, Phone } from "lucide-react";
+import { ChevronRight, Mail, Phone } from "lucide-react";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { GalleryLightbox } from "@/components/GalleryLightbox";
 import penguinFooterImage from "@/assets/penguin-footer.png";
 import { contactPage, galleryItems, stats, teachers } from "@/data/constants";
-
-function FacebookIcon() {
-  return (
-    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-      <path
-        fill="currentColor"
-        d="M14.2 8.3V6.8c0-.7.5-.9.9-.9h2.2V2.2L14.2 2c-3.4 0-4.6 2-4.6 4.5v1.8H6.7v4.1h2.9V22h4.3v-9.6h2.9l.5-4.1h-3.1Z"
-      />
-    </svg>
-  );
-}
 
 export function Stats() {
   return (
@@ -127,7 +117,7 @@ export function CTA() {
               target="_blank"
               rel="noreferrer"
             >
-              <FacebookIcon />
+              <FaFacebookF size={18} aria-hidden="true" />
             </a>
             <a
               href={contactPage.contact.instagram}
@@ -135,7 +125,7 @@ export function CTA() {
               target="_blank"
               rel="noreferrer"
             >
-              <Instagram size={18} aria-hidden="true" />
+              <FaInstagram size={18} aria-hidden="true" />
             </a>
           </div>
         </div>

@@ -22,12 +22,11 @@
   Users,
   UsersRound,
   Zap,
-  Facebook,
-  Instagram,
   Mail,
   Phone,
   TramFront,
 } from "lucide-react";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 import type { StaticImageData } from "next/image";
 import galleryImage1 from "@/assets/gallery/korisuli/Polusjeg.jpg";
 import galleryImage2 from "@/assets/gallery/korisuli/Polusjeg-4.jpg";
@@ -745,13 +744,13 @@ export const contactPage = {
       title: "Facebook",
       text: "Aktuális hírek, események és képek a jégiskola életéből.",
       href: "https://www.facebook.com/engikorisuli/",
-      icon: Facebook,
+      icon: FaFacebook,
     },
     {
       title: "Instagram",
       text: "Pillanatok a jégről, táborokból és foglalkozásainkról.",
       href: "https://www.instagram.com/engikorisuli/",
-      icon: Instagram,
+      icon: FaInstagram,
     },
     {
       title: "E-mail",

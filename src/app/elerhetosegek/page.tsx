@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { Header } from "@/components/Header";
 import { CTA } from "@/components/Sections";
 import { ContactForm } from "@/components/ContactForm";
@@ -44,8 +45,6 @@ export default function ElerhetosegekPage() {
               </Link>
 
               {socialContactCards.map((item) => {
-                const Icon = item.icon;
-
                 return (
                   <Link
                     href={item.href}
@@ -54,7 +53,11 @@ export default function ElerhetosegekPage() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <Icon size={30} aria-hidden="true" />
+                    {item.title === "Facebook" ? (
+                      <FaFacebookF size={30} aria-hidden="true" />
+                    ) : (
+                      <FaInstagram size={30} aria-hidden="true" />
+                    )}
                     <strong>
                       {item.title === "Facebook"
                         ? "Engi Korisuli Facebook"
