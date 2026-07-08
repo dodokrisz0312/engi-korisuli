@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import { galleryPage } from "@/data/constants";
 
 export const siteUrl = "https://engikorisuli.com";
 export const siteName = "Engi Korisuli";
 export const defaultSeoDescription =
   "Gyerekbarát korcsolyaoktatás, TSMT mozgásfejlesztés és hokisuli kezdőknek és haladóknak Budapesten.";
 
-const defaultImage = "/images/gallery/korisuli/Polusjeg.jpg";
+const defaultImage = "/favicon.ico";
 
 type SeoMetadataOptions = {
   path?: string;
@@ -133,19 +132,6 @@ export const pageSeo: Record<string, SeoRoute> = {
 };
 
 export const sitemapRoutes = Object.values(pageSeo).filter((route) => !route.noIndex);
-
-export const galleryFolderRoutes = galleryPage.folders.flatMap((folder) => [
-  {
-    path: `/galeria/${folder.slug}`,
-    title: `${folder.title} képek | Engi Korisuli Galéria`,
-    description: folder.description,
-  },
-  ...(folder.subfolders ?? []).map((subfolder) => ({
-    path: `/galeria/${folder.slug}/${subfolder.slug}`,
-    title: `${subfolder.title} képek | Engi Korisuli Galéria`,
-    description: subfolder.description,
-  })),
-]);
 
 export const organizationJsonLd = {
   "@context": "https://schema.org",

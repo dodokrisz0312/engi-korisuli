@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
-import { galleryFolderRoutes, sitemapRoutes, siteUrl } from "@/data/seo";
+import { galleryFolderRoutes } from "@/data/gallery";
+import { sitemapRoutes, siteUrl } from "@/data/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();

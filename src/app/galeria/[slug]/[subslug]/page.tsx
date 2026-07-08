@@ -5,8 +5,8 @@ import { ArrowLeft, Sparkles } from "lucide-react";
 import { Header } from "@/components/Header";
 import { CTA } from "@/components/Sections";
 import { GalleryLightbox } from "@/components/GalleryLightbox";
-import { galleryPage } from "@/data/constants";
-import { createSeoMetadata, galleryFolderRoutes } from "@/data/seo";
+import { galleryFolderRoutes, galleryPage } from "@/data/gallery";
+import { createSeoMetadata } from "@/data/seo";
 
 type GallerySubfolderPageProps = {
   params: Promise<{
