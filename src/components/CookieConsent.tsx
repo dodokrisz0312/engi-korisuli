@@ -122,9 +122,15 @@ export function CookieConsent() {
             </div>
           )}
 
-          <Link href="/adatvedelmi-tajekoztato" className="cookie-policy-link">
-            Adatvédelmi és süti tájékoztató
-          </Link>
+          <div className="cookie-policy-links">
+            <Link href="/suti-tajekoztato" className="cookie-policy-link">
+              Süti tájékoztató
+            </Link>
+
+            <Link href="/adatvedelmi-tajekoztato" className="cookie-policy-link">
+              Adatvédelmi tájékoztató
+            </Link>
+          </div>
         </div>
 
         <div className="cookie-actions">

@@ -144,6 +144,17 @@
   gap: 7px;
 }
 
+.cookie-policy-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.cookie-policy-links .cookie-policy-link {
+  margin-top: 0;
+}
+
 /* ==========================================================================
    RESPONSIVE
    ========================================================================== */

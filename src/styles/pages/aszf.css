@@ -1,0 +1,311 @@
+/* ==========================================================================
+   TERMS PAGE - BASE
+   ========================================================================== */
+
+.terms-page {
+  position: relative;
+  overflow: hidden;
+  padding-top: 0;
+}
+
+.terms-page::before,
+.terms-page::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 748px;
+  pointer-events: none;
+}
+
+.terms-page::before {
+  left: -136px;
+  top: 180px;
+  width: 256px;
+  height: 256px;
+  background: rgba(211, 244, 250, 0.58);
+}
+
+.terms-page::after {
+  right: -136px;
+  top: 336px;
+  width: 272px;
+  height: 272px;
+  background: rgba(255, 241, 221, 0.72);
+}
+
+/* ==========================================================================
+   HERO
+   ========================================================================== */
+
+.terms-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(224px, 1fr) minmax(280px, 0.72fr);
+  gap: clamp(20px, 4vw, 48px);
+  align-items: center;
+  min-height: 360px;
+  padding-top: 20px;
+}
+
+.terms-hero-copy {
+  position: relative;
+  padding: clamp(16px, 3vw, 36px) 0;
+}
+
+.terms-eyebrow {
+  margin: 0 0 8px;
+  color: var(--teal-dark);
+  font-weight: 1000;
+  font-size: 12px;
+}
+
+.terms-hero h1 {
+  max-width: 620px;
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(40px, 5.8vw, 76px);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.terms-hero h1 span {
+  display: block;
+  color: var(--coral);
+}
+
+.terms-hero-copy > p:not(.terms-eyebrow) {
+  max-width: 560px;
+  margin: 16px 0 0;
+  color: var(--navy);
+  font-weight: 900;
+  font-size: clamp(12px, 1.5vw, 16px);
+  line-height: 1.5;
+}
+
+.terms-hero-card {
+  display: grid;
+  gap: 8px;
+  padding: 28px 24px;
+  color: var(--navy);
+  border: calc(4px / 4) solid #d9eef5;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 92% 12%, rgba(255, 174, 57, 0.18), transparent 28%),
+    rgba(255, 255, 255, 0.82);
+  box-shadow: 0 16px 36px rgba(33, 94, 140, 0.12);
+}
+
+.terms-hero-card svg,
+.terms-hero-card strong,
+.terms-hero-card span {
+  color: var(--teal-dark);
+}
+
+.terms-hero-card strong {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.terms-hero-card span {
+  max-width: 260px;
+  font-weight: 1000;
+  line-height: 1.25;
+}
+
+.terms-hero-card p {
+  margin: 8px 0 0;
+  color: var(--navy);
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   CONTENT
+   ========================================================================== */
+
+.terms-content {
+  display: grid;
+  gap: 20px;
+  margin-top: 32px;
+}
+
+.terms-panel,
+.terms-back-box {
+  padding: clamp(20px, 3vw, 32px);
+  border: calc(4px / 4) solid #d9eef5;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 12px 32px rgba(33, 94, 140, 0.08);
+}
+
+.terms-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.terms-section-heading svg {
+  flex-shrink: 0;
+  color: var(--teal-dark);
+}
+
+.terms-section-heading h2,
+.terms-back-box h2 {
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(22px, 2.6vw, 34px);
+  line-height: 1.1;
+}
+
+.terms-panel p,
+.terms-back-box p {
+  margin: 0 0 14px;
+  color: var(--navy);
+  font-weight: 800;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.terms-panel p:last-child,
+.terms-back-box p:last-child {
+  margin-bottom: 0;
+}
+
+.terms-panel a {
+  color: var(--coral);
+  font-weight: 1000;
+}
+
+/* ==========================================================================
+   BOXES / TABLES
+   ========================================================================== */
+
+.terms-info-box {
+  display: grid;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 18px;
+  border-radius: 20px;
+  background: #eefafd;
+}
+
+.terms-info-box p {
+  margin: 0;
+}
+
+.terms-card-grid,
+.terms-table {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.terms-card-grid div,
+.terms-table div {
+  padding: 18px;
+  border-radius: 20px;
+  background: #eefafd;
+}
+
+.terms-card-grid div:nth-child(even),
+.terms-table div:nth-child(even) {
+  background: #fff3d9;
+}
+
+.terms-card-grid strong,
+.terms-table strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--teal-dark);
+  font-size: 13px;
+}
+
+.terms-card-grid p,
+.terms-table p {
+  margin: 0;
+  font-size: 12px;
+}
+
+/* ==========================================================================
+   LISTS
+   ========================================================================== */
+
+.terms-list {
+  display: grid;
+  gap: 10px;
+  margin: 18px 0 0;
+  padding: 18px 18px 18px 34px;
+  color: var(--navy);
+  font-weight: 850;
+  border-radius: 20px;
+  background: #eefafd;
+}
+
+.terms-list li {
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+/* ==========================================================================
+   BACK BOX
+   ========================================================================== */
+
+.terms-back-box {
+  display: grid;
+  justify-items: start;
+  background:
+    radial-gradient(circle at 92% 20%, rgba(39, 185, 189, 0.12), transparent 26%),
+    rgba(255, 255, 255, 0.78);
+}
+
+.terms-back-box .btn {
+  margin-top: 6px;
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+  .terms-hero {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .terms-page {
+    padding-top: 16px;
+  }
+
+  .terms-hero h1 {
+    font-size: clamp(36px, 11vw, 60px);
+  }
+
+  .terms-card-grid,
+  .terms-table {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .terms-panel,
+  .terms-back-box,
+  .terms-hero-card {
+    padding: 20px 16px;
+    border-radius: 20px;
+  }
+
+  .terms-section-heading {
+    align-items: flex-start;
+  }
+
+  .terms-info-box,
+  .terms-card-grid div,
+  .terms-table div,
+  .terms-list {
+    border-radius: 16px;
+  }
+}

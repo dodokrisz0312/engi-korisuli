@@ -137,6 +137,8 @@ export function CTA() {
           <div className="footer-legal">
             <Link href="/adatvedelmi-tajekoztato">Adatvédelmi tájékoztató</Link>
             <span aria-hidden="true">•</span>
+            <Link href="/suti-tajekoztato">Süti tájékoztató</Link>
+            <span aria-hidden="true">•</span>
             <Link href="/aszf">Általános szerződési feltételek</Link>
           </div>
         </div>
