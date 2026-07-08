@@ -22,14 +22,14 @@
   Zap,
 } from "lucide-react";
 import type { StaticImageData } from "next/image";
-import galleryImage1 from "@/assets/gallery/korisuli/Polusjeg.jpg";
-import galleryImage2 from "@/assets/gallery/korisuli/Polusjeg-4.jpg";
-import galleryImage3 from "@/assets/gallery/korisuli/Polusjeg-7.jpg";
-import galleryImage4 from "@/assets/gallery/korisuli/Polusjeg-10.jpg";
-import galleryImage5 from "@/assets/gallery/korisuli/Polusjeg-14.jpg";
-import galleryImage6 from "@/assets/gallery/korisuli/Polusjeg-20.jpg";
-import galleryImage7 from "@/assets/gallery/korisuli/oktatasaink_1.jpg";
-import galleryImage8 from "@/assets/gallery/korisuli/oktatasaink_6.jpg";
+import galleryImage1 from "@/assets/gallery/korisuli/korisuli_1.jpg";
+import galleryImage2 from "@/assets/gallery/korisuli/korisuli_8.jpg";
+import galleryImage3 from "@/assets/gallery/korisuli/korisuli_14.jpg";
+import galleryImage4 from "@/assets/gallery/korisuli/korisuli_20.jpg";
+import galleryImage5 from "@/assets/gallery/korisuli/korisuli_28.jpg";
+import galleryImage6 from "@/assets/gallery/korisuli/korisuli_36.jpg";
+import galleryImage7 from "@/assets/gallery/korisuli/korisuli_2.jpg";
+import galleryImage8 from "@/assets/gallery/korisuli/korisuli_11.jpg";
 import teacherViktorImage from "@/assets/teachers/devenyi_viktor.jpg";
 import teacherKlariImage from "@/assets/teachers/engi_klari_1.jpg";
 import teacherHaszonitsZitaImage from "@/assets/teachers/haszonits_kálmán_zita.jpg";

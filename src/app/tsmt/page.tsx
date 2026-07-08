@@ -8,7 +8,7 @@ import { tsmtPage } from "@/data/constants";
 import { createSeoMetadata, pageSeo } from "@/data/seo";
 import tsmtHeroImage from "@/assets/tsmt.jpg";
 import tsmtTeamImage from "@/assets/tsmt.png";
-import tsmtJoinImage from "@/assets/gallery/korisuli/oktatasaink_8.jpg";
+import tsmtJoinImage from "@/assets/gallery/korisuli/korisuli_15.jpg";
 
 export const metadata: Metadata = createSeoMetadata(pageSeo.tsmt);
 

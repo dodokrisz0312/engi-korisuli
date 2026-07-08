@@ -6,7 +6,7 @@ import { JoinSection } from "@/components/JoinSection";
 import { CTA } from "@/components/Sections";
 import { hokisuliPage } from "@/data/constants";
 import { createSeoMetadata, pageSeo } from "@/data/seo";
-import galleryImage7 from "@/assets/gallery/korisuli/oktatasaink_1.jpg";
+import galleryImage7 from "@/assets/gallery/korisuli/korisuli_2.jpg";
 
 export const metadata: Metadata = createSeoMetadata(pageSeo.hokisuli);
 
