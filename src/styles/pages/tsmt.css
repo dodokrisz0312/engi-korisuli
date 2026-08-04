@@ -61,12 +61,12 @@
 }
 
 .tsmt-hero h1 {
-  max-width: 392px;
+  max-width: 440px;
   margin: 0;
   color: var(--navy);
-  font-size: clamp(40px, 6vw, 80px);
+  font-size: clamp(40px, 5vw, 72px);
   line-height: 0.95;
-  letter-spacing: -0.06em;
+  letter-spacing: 0;
 }
 
 .tsmt-hero h1 span {
@@ -538,6 +538,31 @@
    RESPONSIVE: 900px-
    ========================================================================== */
 
+@media (max-width: 1700px) {
+  .tsmt-hero h1 {
+    font-size: clamp(40px, 4.2vw, 64px);
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1580px) {
+  .tsmt-hero {
+    gap: 28px;
+  }
+
+  .tsmt-hero-copy {
+    flex-basis: 34%;
+  }
+
+  .tsmt-hero h1 {
+    max-width: 360px;
+    font-size: clamp(38px, 3.7vw, 56px);
+  }
+
+  .tsmt-hero-visual {
+    max-width: 650px;
+  }
+}
+
 @media (max-width: 1200px) {
   .tsmt-hero {
     flex-direction: column;
@@ -547,11 +572,13 @@
   }
 
   .tsmt-hero-copy {
+    width: 100%;
     text-align: center;
   }
 
   .tsmt-hero h1,
   .tsmt-hero-copy > p {
+    max-width: 640px;
     margin-right: auto;
     margin-left: auto;
   }

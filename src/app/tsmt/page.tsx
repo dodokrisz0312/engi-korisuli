@@ -24,10 +24,7 @@ export default function TsmtPage() {
               TSMT és <span>mozgásfejlesztés</span>
             </h1>
 
-            <p>
-              Játékos, szakmailag támogatott foglalkozások 3-5 éves gyerekeknek, szárazon és jégen,
-              a harmonikus mozgásfejlődésért.
-            </p>
+            <p>Játékos, szakmailag támogatott csoportos foglalkozások 3 éves kortól.</p>
           </div>
 
           <div className="tsmt-hero-visual">
@@ -41,11 +38,10 @@ export default function TsmtPage() {
 
             <div className="tsmt-floating-card">
               <Brain size={42} aria-hidden="true" />
-              <strong>3-5 év</strong>
-              <span>a leghatékonyabb időszak</span>
+              <strong>3-10 év</strong>
               <p>
-                Ebben az életkorban különösen jól fejleszthető az egyensúly, a testtudat és a
-                koordináció.
+                Ebben az életkorban különösen jól fejleszthető az egyensúly, a testtudat, a figyelem
+                és a koordináció.
               </p>
             </div>
           </div>
@@ -69,11 +65,12 @@ export default function TsmtPage() {
             </article>
 
             <article className="why-card">
-              <h3>A korcsolyázás komplexen fejleszt</h3>
+              <h3>A korcsolya és a TSMT kapcsolata</h3>
               <p>
-                A korcsolyázás nagyon jól fejleszti a koordinációt, az egyensúlyt és a térlátást.
-                Nem egyoldalú sport, mert mindkét oldalt megmozgatja, és komoly testtudatot ad a
-                gyermekeknek a lábfejtől a fejbúbig.
+                A TSMT szárazföldön alapozza meg azokat a mozgásos képességeket, amelyek a jégen is
+                fontosak: az egyensúlyt, a ritmust, a mozgásérzékelést és a feladatkövetést. A
+                biztosabb mozgásalapok segítik, hogy a gyerekek magabiztosabban kapcsolódjanak a
+                korcsolyázáshoz is.
               </p>
             </article>
 
@@ -85,29 +82,6 @@ export default function TsmtPage() {
                 kialakulásában.
               </p>
             </article>
-          </div>
-        </section>
-
-        <section className="tsmt-section section-shell">
-          <div className="tsmt-section-title">
-            <span />
-            <h2>Foglalkozásaink</h2>
-            <span />
-          </div>
-
-          <div className="classes-grid">
-            {tsmtPage.classes.map((item) => {
-              const Icon = item.icon;
-              return (
-                <article className="class-card" key={item.title}>
-                  <div className="class-icon">
-                    <Icon size={34} />
-                  </div>
-                  <h3>{item.title}</h3>
-                  <p>{item.text}</p>
-                </article>
-              );
-            })}
           </div>
         </section>
 
@@ -160,11 +134,12 @@ export default function TsmtPage() {
           <div className="target-card">
             <div>
               <p className="tsmt-eyebrow">Kinek ajánljuk?</p>
-              <h2>Elsősorban 3-5 éves kor közötti gyerekeknek</h2>
+              <h2>Elsősorban 3-10 éves kor közötti gyerekeknek</h2>
               <p>
-                A mozgásfejlesztésre, az esetleges problémák kiszűrésére ez az időszak a
-                leghatékonyabb. A foglalkozások játékosak, támogatóak, és a gyerekek életkorához,
-                fejlettségéhez igazodnak.
+                A TSMT minden gyermek számára hasznos mozgásfejlesztő foglalkozás lehet, mert
+                támogatja az egyensúlyt, a koordinációt, a figyelmet, a ritmust és a
+                feladatkövetést. A foglalkozások szárazföldön zajlanak, játékosak, támogatóak, és a
+                gyerekek életkorához, fejlettségéhez igazodnak.
               </p>
             </div>
 
@@ -185,8 +160,9 @@ export default function TsmtPage() {
             <h2>Aktuális foglalkozások</h2>
 
             <p className="location-notice">
-              Jelenleg a korábbi tájékoztatás szerint a vírushelyzet alatt az oktatás szünetelt. Az
-              aktuális indulásról és szabad helyekről kérjük, érdeklődjetek elérhetőségeinken.
+              A csoportos foglalkozásokra folyamatosan várjuk az érdeklődőket. Az aktuális
+              időpontokról, induló csoportokról és szabad helyekről kérjük, érdeklődjetek
+              elérhetőségeinken.
             </p>
           </div>
 

@@ -1,5 +1,4 @@
 ﻿import {
-  Activity,
   Award,
   Brain,
   CalendarDays,
@@ -237,7 +236,7 @@ export const tsmtPage = {
     {
       icon: ShieldCheck,
       title: "Egyensúly és stabilitás",
-      text: "A jégen és szárazon végzett mozgásformák kiemelten fejlesztik az egyensúlyérzéket.",
+      text: "A szárazföldön végzett mozgásformák kiemelten fejlesztik az egyensúlyérzéket.",
     },
     {
       icon: Eye,
@@ -252,7 +251,7 @@ export const tsmtPage = {
     {
       icon: Target,
       title: "Figyelem és koncentráció",
-      text: "A feladatok követése, sorrendisége és ismétlése támogatja a figyelmi működéseket.",
+      text: "A feladatok követése, sorrendisége és ismétlése támogatja a figyelmet.",
     },
     {
       icon: HeartPulse,
@@ -260,38 +259,15 @@ export const tsmtPage = {
       text: "Célunk a helyes testtartás, az izomzat harmonikus fejlődése és a későbbi problémák megelőzése.",
     },
   ],
-  classes: [
-    {
-      icon: Sparkles,
-      title: "Korcsolyaoktatás",
-      text: "A korcsolyázás fejleszti a koordinációt, az egyensúlyt, a térlátást és komoly testtudatot ad a gyermekeknek.",
-    },
-    {
-      icon: Activity,
-      title: "Mozgásjavító torna / TSMT",
-      text: "Játékos, célzott gyakorlatokon keresztül támogatjuk a mozgáskoordináció és az idegrendszeri érettség fejlődését.",
-    },
-    {
-      icon: Music2,
-      title: "Balett alapok",
-      text: "A balett segíti a testtartást, a ritmusérzéket, a kontrollált mozgást és a finom koordinációt.",
-    },
-    {
-      icon: ShieldCheck,
-      title: "Önvédelmi formagyakorlatok",
-      text: "A gyerekek játékos keretek között tanulnak testkontrollt, figyelmet, reakciót és magabiztos mozgást.",
-    },
-  ],
   expertTeam: [
     "Korcsolyaoktató",
     "TSMT torna szakember",
-    "Balettoktató",
     "Mozgásfejlesztésben jártas oktatói csapat",
   ],
   keyFacts: [
     "Kis csoportos foglalkozások, jellemzően 10-15 fővel.",
-    "Elsősorban 3-5 éves kor közötti gyerekek számára ajánlott.",
-    "A fejlesztés szárazon és jégen is történik.",
+    "Elsősorban 3-10 éves kor közötti gyerekek számára ajánlott.",
+    "A TSMT foglalkozások szárazföldön történnek.",
     "A cél nem versenyhelyzet, hanem játékos, biztonságos fejlődés.",
   ],
   locationCards: [

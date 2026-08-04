@@ -79,7 +79,7 @@ export const pageSeo: Record<string, SeoRoute> = {
     path: "/tsmt",
     title: "TSMT és mozgásfejlesztés | Engi Korisuli",
     description:
-      "Játékos TSMT és mozgáskoordinációs foglalkozások 3-5 éves gyerekeknek, szárazon és jégen.",
+      "Játékos, szakmailag támogatott csoportos TSMT foglalkozások 3 éves kortól, elsősorban 3-10 éves gyerekeknek.",
   },
   hokisuli: {
     path: "/hokisuli",
@@ -96,8 +96,7 @@ export const pageSeo: Record<string, SeoRoute> = {
   galeria: {
     path: "/galeria",
     title: "Galéria | Pillanatok az Engi Korisuli életéből",
-    description:
-      "Képek korcsolyaórákról, hokis edzésekről, táborokról és ünnepi programokról.",
+    description: "Képek korcsolyaórákról, hokis edzésekről, táborokról és ünnepi programokról.",
   },
   elerhetosegek: {
     path: "/elerhetosegek",
@@ -149,10 +148,7 @@ export const organizationJsonLd = {
     addressLocality: "Budapest",
     addressCountry: "HU",
   },
-  sameAs: [
-    "https://www.facebook.com/engikorisuli/",
-    "https://www.instagram.com/engikorisuli/",
-  ],
+  sameAs: ["https://www.facebook.com/engikorisuli/", "https://www.instagram.com/engikorisuli/"],
   areaServed: {
     "@type": "City",
     name: "Budapest",
