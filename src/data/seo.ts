@@ -78,8 +78,7 @@ export const pageSeo: Record<string, SeoRoute> = {
   tsmt: {
     path: "/tsmt",
     title: "TSMT és mozgásfejlesztés | Engi Korisuli",
-    description:
-      "Játékos, szakmailag támogatott csoportos TSMT foglalkozások 3 éves kortól, elsősorban 3-10 éves gyerekeknek.",
+    description: "Játékos, szakmailag támogatott csoportos TSMT foglalkozások 4 éves kortól.",
   },
   hokisuli: {
     path: "/hokisuli",

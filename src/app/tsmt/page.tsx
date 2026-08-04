@@ -24,7 +24,7 @@ export default function TsmtPage() {
               TSMT és <span>mozgásfejlesztés</span>
             </h1>
 
-            <p>Játékos, szakmailag támogatott csoportos foglalkozások 3 éves kortól.</p>
+            <p>Játékos, szakmailag támogatott csoportos foglalkozások 4 éves kortól.</p>
           </div>
 
           <div className="tsmt-hero-visual">
@@ -38,7 +38,7 @@ export default function TsmtPage() {
 
             <div className="tsmt-floating-card">
               <Brain size={42} aria-hidden="true" />
-              <strong>3-10 év</strong>
+              <strong>4 éves kortól</strong>
               <p>
                 Ebben az életkorban különösen jól fejleszthető az egyensúly, a testtudat, a figyelem
                 és a koordináció.
@@ -134,7 +134,7 @@ export default function TsmtPage() {
           <div className="target-card">
             <div>
               <p className="tsmt-eyebrow">Kinek ajánljuk?</p>
-              <h2>Elsősorban 3-10 éves kor közötti gyerekeknek</h2>
+              <h2>4 éves kortól javasolt gyerekeknek</h2>
               <p>
                 A TSMT minden gyermek számára hasznos mozgásfejlesztő foglalkozás lehet, mert
                 támogatja az egyensúlyt, a koordinációt, a figyelmet, a ritmust és a

@@ -266,7 +266,7 @@ export const tsmtPage = {
   ],
   keyFacts: [
     "Kis csoportos foglalkozások, jellemzően 10-15 fővel.",
-    "Elsősorban 3-10 éves kor közötti gyerekek számára ajánlott.",
+    "A TSMT foglalkozásokat 4 éves kortól javasoljuk.",
     "A TSMT foglalkozások szárazföldön történnek.",
     "A cél nem versenyhelyzet, hanem játékos, biztonságos fejlődés.",
   ],
@@ -428,8 +428,8 @@ export const hokisuliPage = {
     },
     {
       icon: Clock,
-      title: "Edzésrend",
-      text: "Heti 2 edzés",
+      title: "Órarend",
+      text: "Kedd délután és szombat délelőtt",
       note: "szezonban",
     },
     {
