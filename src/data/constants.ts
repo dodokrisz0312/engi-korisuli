@@ -320,7 +320,7 @@ export const hokisuliPage = {
       year: "Most",
       icon: Sparkles,
       title: "Folyamatos fejlődés",
-      text: "Jelenleg 13 igazolt játékosunk van, és folyamatos az új gyerekek bevonása, felvétele.",
+      text: "Jelenleg 30+ versenyzőnk van U8 és U10 korosztályban. Folyamatos az új gyerekek felvétele és bevonása a sportba.",
     },
   ],
 
@@ -338,31 +338,21 @@ export const hokisuliPage = {
     {
       icon: Trophy,
       title: "Tornák és meccshelyzetek",
-      text: "Célunk az U8 és U10 korosztályos tornákon való részvétel, barátságos mérkőzésekkel és versenyhelyzetekkel.",
+      text: "Célunk az U8 és U10 korosztályos bajnokságokon való részvétel. Ezentúl barátságos mérkőzéseket szervezünk. Az edzések végén jutalom a játék.",
     },
     {
       icon: Zap,
       title: "Továbblépési lehetőség",
-      text: "A gyerekek számára lehetőséget biztosítunk nagyobb egyesületekbe való bekerüléshez is.",
+      text: "A gyerekek számára lehetőséget biztosítunk nagyobb egyesületekbe való bekerüléshez is. Szerződésben állunk a Vasas Jégkorong szakosztállyal, így U10 után ott folytathatják a hozzánk járó gyerekek.",
     },
   ],
   coaches: [
     {
-      name: "Haszonits-Kálmán Zita",
+      name: "Jambrik Csaba",
       title: "Vezetőedző",
-      image: teacherKlariImage,
-      badges: [
-        "A történelmi első magyar női hokiválogatott tagja",
-        "Divízió II. női Világbajnokság bronzérem",
-        "Jégkorong B licensz edző",
-      ],
-      tasks: [
-        "jégkorong megismertetése",
-        "hokitechnikai feladatok vezénylése",
-        "szabályok ismertetése és betanítása",
-        "versenyeztetés",
-        "száraz edzések lebonyolítása",
-      ],
+      image: null,
+      badges: ["Szakmai bemutatkozó feltöltés alatt.", "Edzői tapasztalat feltöltés alatt."],
+      tasks: ["Feladatkör leírása feltöltés alatt.", "Edzések vezetése és szakmai koordináció."],
     },
     {
       name: "Engi Klára",
@@ -387,12 +377,12 @@ export const hokisuliPage = {
     {
       icon: CalendarDays,
       title: "Szezon",
-      text: "Szeptembertől június közepéig tartunk edzéseket. A felkészülést korábban augusztus végi intenzív edzőtáborral kezdtük.",
+      text: "Szeptembertől június közepéig tartunk edzéseket, szünidőben pedig táborokat szervezünk.",
     },
     {
       icon: Sparkles,
-      title: "Heti 3 jégedzés",
-      text: "A program 2 korcsolya- és hokitechnikai edzést, valamint 1 kifejezett hoki szituációs és meccshelyzetes edzést tartalmaz.",
+      title: "Heti edzésrend",
+      text: "Hetente 2 jeges edzést tartunk, amelyet száraz edzés egészít ki.",
     },
     {
       icon: Trophy,
@@ -402,7 +392,7 @@ export const hokisuliPage = {
     {
       icon: Dumbbell,
       title: "Száraz edzés",
-      text: "A száraz edzés bevezetés alatt van, elsősorban táborok alkalmával kerül be az edzésprogramba.",
+      text: "Száraz edzés évközben is van, hogy a gyerekek jégen kívül is fejlődjenek.",
     },
   ],
 
@@ -439,13 +429,13 @@ export const hokisuliPage = {
     {
       icon: Clock,
       title: "Edzésrend",
-      text: "Heti 3 jégedzés",
+      text: "Heti 2 edzés",
       note: "szezonban",
     },
     {
       icon: Users,
       title: "Játékosok",
-      text: "13 igazolt játékos",
+      text: "30+ igazolt játékos",
       note: "folyamatos felvétel",
     },
   ],

@@ -403,6 +403,10 @@
   object-fit: cover;
 }
 
+.hoki-coach-image-placeholder {
+  background: #ffffff;
+}
+
 .hoki-coach-title {
   margin: 0 0 8px;
   color: var(--teal-dark);

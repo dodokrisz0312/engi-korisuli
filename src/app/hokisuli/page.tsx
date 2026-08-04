@@ -30,7 +30,6 @@ export default function HokisuliPage() {
             <div className="hoki-hero-badges" aria-label="Hokisuli kiemelések">
               <span>U8</span>
               <span>U10</span>
-              <span>RTK</span>
             </div>
           </div>
 
@@ -45,9 +44,9 @@ export default function HokisuliPage() {
 
             <div className="hoki-floating-card">
               <Trophy size={42} aria-hidden="true" />
-              <strong>13 fő</strong>
+              <strong>30+ fő</strong>
               <span>igazolt játékos</span>
-              <p>Folyamatos az új gyerekek bevonása és a felvétel.</p>
+              <p>Folyamatos az új gyerekek felvétele és bevonása a sportba.</p>
             </div>
           </div>
         </section>
@@ -122,13 +121,17 @@ export default function HokisuliPage() {
             {hokisuliPage.coaches.map((coach) => (
               <article className="hoki-coach-card" key={coach.name}>
                 <div className="hoki-coach-image-wrap">
-                  <Image
-                    src={coach.image}
-                    alt={coach.name}
-                    width={220}
-                    height={220}
-                    className="hoki-coach-image"
-                  />
+                  {coach.image ? (
+                    <Image
+                      src={coach.image}
+                      alt={coach.name}
+                      width={220}
+                      height={220}
+                      className="hoki-coach-image"
+                    />
+                  ) : (
+                    <div className="hoki-coach-image hoki-coach-image-placeholder" />
+                  )}
                 </div>
 
                 <div className="hoki-coach-content">
@@ -212,9 +215,8 @@ export default function HokisuliPage() {
             <p className="hoki-eyebrow">Jégpálya</p>
             <h2>A Vasas Jégcentrum pályája az otthonunk</h2>
             <p>
-              Igyekszünk szülő- és gyerekbarát edzésprogramot összeállítani, hogy mindig teljes
-              létszámmal tudjunk részt venni rajta. A száraz edzés bevezetés alatt van, elsősorban
-              táborok alkalmával kerül be az edzésprogramba.
+              Szezonban hetente 2 jeges és száraz edzést tartunk. Szünidőben táborokat szervezünk.
+              Jelenleg 30+ igazolt játékosunk van, és folyamatosan várjuk az új gyerekeket.
             </p>
           </div>
 
