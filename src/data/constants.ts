@@ -279,14 +279,14 @@ export const tsmtPage = {
     {
       icon: CalendarDays,
       title: "Időpont",
-      text: "Csütörtök",
-      note: "17:15-18:00",
+      text: "Szerda",
+      note: "17:00-17:50 kicsik\n18:00-18:50 nagyok",
     },
     {
       icon: Users,
       title: "Csoportlétszám",
       text: "Kis csoportos foglalkozások",
-      note: "10-15 fő",
+      note: "8-10 fő",
     },
   ],
 };

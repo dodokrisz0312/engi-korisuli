@@ -532,6 +532,7 @@
 .location-card span {
   color: var(--teal-dark);
   font-weight: 1000;
+  white-space: pre-line;
 }
 
 /* ==========================================================================
