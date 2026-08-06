@@ -177,6 +177,7 @@
    ========================================================================== */
 
 .featured-instructor-card {
+  position: relative;
   display: grid;
   grid-template-columns: 320px minmax(0, 1fr);
   gap: 24px;
@@ -188,6 +189,16 @@
     radial-gradient(circle at 96% 8%, rgba(255, 174, 57, 0.16), transparent 24%),
     rgba(255, 255, 255, 0.78);
   box-shadow: 0 12px 32px rgba(33, 94, 140, 0.08);
+}
+
+.featured-instructor-number {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  color: rgba(39, 185, 189, 0.2);
+  font-weight: 1000;
+  font-size: 56px;
+  line-height: 1;
 }
 
 .featured-image-wrap {
@@ -203,6 +214,23 @@
   min-height: 360px;
   object-fit: cover;
   object-position: center 18%;
+}
+
+.featured-image-placeholder,
+.instructor-image-placeholder {
+  display: grid;
+  place-items: center;
+  color: var(--teal-dark);
+  font-weight: 1000;
+  letter-spacing: -0.04em;
+  background:
+    radial-gradient(circle at 24% 20%, rgba(255, 174, 57, 0.3), transparent 28%),
+    radial-gradient(circle at 82% 78%, rgba(39, 185, 189, 0.24), transparent 30%),
+    #eaf7fb;
+}
+
+.featured-image-placeholder {
+  font-size: clamp(56px, 8vw, 96px);
 }
 
 .featured-content {
@@ -322,6 +350,10 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.instructor-image-placeholder {
+  font-size: 34px;
 }
 
 .instructor-number {
@@ -566,11 +598,15 @@
   }
 
   .featured-instructor-card {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(180px, 260px) 1fr;
+  }
+
+  .featured-image-wrap {
+    align-self: flex-start;
   }
 
   .featured-image {
-    height: 320px;
+    height: 300px;
     min-height: 0;
   }
 
@@ -607,8 +643,16 @@
     border-radius: 20px;
   }
 
+  .featured-instructor-card {
+    grid-template-columns: 132px 1fr;
+  }
+
+  .featured-content {
+    grid-column: 1 / -1;
+  }
+
   .featured-image {
-    height: 260px;
+    height: 150px;
   }
 
   .featured-content blockquote {

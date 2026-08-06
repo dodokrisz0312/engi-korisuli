@@ -31,11 +31,10 @@ import galleryImage7 from "@/assets/gallery/halloween_2021/halloween_2021_1.jpg"
 import galleryImage8 from "@/assets/gallery/mikulas/mikulas_1.jpg";
 import teacherViktorImage from "@/assets/teachers/devenyi_viktor.jpg";
 import teacherKlariImage from "@/assets/teachers/engi_klari_1.jpg";
-import teacherHaszonitsZitaImage from "@/assets/teachers/haszonits_kálmán_zita.jpg";
 import teacherKerekesKrisztaImage from "@/assets/teachers/kerekes_kriszta.jpg";
-import teacherMadarLiliImage from "@/assets/teachers/madar_lili.jpg";
+import teacherKosztaMonikaImage from "@/assets/teachers/koszta_monika.jpg";
 import teacherNemethSzilviaImage from "@/assets/teachers/nemeth_szilvia.jpg";
-import teacherSzakalKatalinImage from "@/assets/teachers/szakal_katalin.jpg";
+import teacherTothCsengeImage from "@/assets/teachers/toth_csenge.jpg";
 import teacherDominikaImage from "@/assets/teachers/toth_dominika.jpg";
 
 /* ==========================================================================
@@ -125,16 +124,16 @@ export const teachers: Teacher[] = [
     image: teacherKlariImage,
   },
   {
+    name: "Kriszta",
+    role: "Szakedző, gyógypedagógus",
+    text: "A jégiskola kezdeteitől van a csapattal. TSMT pedagógusként sokat tanulunk tőle mindannyian.",
+    image: teacherKerekesKrisztaImage,
+  },
+  {
     name: "Viktor",
     role: "Edző",
     text: "Egyetlen férfi kollégánk, aki hosszú évek óta támogatja munkánkat Középső és nagy csoportokkal foglalkozik.",
     image: teacherViktorImage,
-  },
-  {
-    name: "Dominika",
-    role: "Adminisztrátor, segédedző",
-    text: "Gyerekkora óta velünk van, eleinte résztvevőként, ma már oktatóként és adminisztrátorként is segít.",
-    image: teacherDominikaImage,
   },
 ];
 
@@ -454,8 +453,8 @@ export const oktatokPage = {
     },
     {
       icon: Users,
-      value: "8",
-      label: "oktató és segítő",
+      value: "7",
+      label: "oktató",
     },
     {
       icon: Heart,
@@ -478,7 +477,7 @@ export const oktatokPage = {
     {
       icon: Sparkles,
       title: "Játékos tanulás",
-      text: "A technikai alapokat sok játékkal, sikerélménnyel és motiváló feladatokkal tanítjuk.",
+      text: "A technikai alapokat sok játékkal, fejlesztő eszközökkel, sikerélménnyel és motiváló feladatokkal tanítjuk.",
     },
     {
       icon: Brain,
@@ -519,14 +518,6 @@ export const oktatokPage = {
       highlights: ["Középső csoportok", "Nagy csoportok", "Sokéves oktatói háttér"],
     },
     {
-      name: "Szakál Katalin",
-      role: "Szakedző",
-      focus:
-        "Kati 28 éve foglalkozik műkorcsolyával. Célja a technikai korcsolyázás tanítása mellett a sport iránti szeretet népszerűsítése.",
-      image: teacherSzakalKatalinImage,
-      highlights: ["28 év tapasztalat", "Válogatott versenyzői múlt", "Revütáncos háttér"],
-    },
-    {
       name: "Dr. Németh Szilvia",
       role: "Edző",
       focus:
@@ -535,20 +526,25 @@ export const oktatokPage = {
       highlights: ["Műkorcsolya háttér", "Jégtánc", "Szinkronkorcsolya", "10 év a korisuliban"],
     },
     {
-      name: "Haszonits-Kálmán Zita",
-      role: "Jégkorong sportedző",
+      name: "Koszta Mónika",
+      role: "Edző",
       focus:
-        "Hokis múltja miatt jó átmenetet biztosít a műkorcsolya és hoki között. Főként a középső csoportokkal foglalkozik.",
-      image: teacherHaszonitsZitaImage,
-      highlights: ["Jégkorong háttér", "Középső csoportok", "Műkori és hoki közötti átmenet"],
+        "Műkorcsolya és jégkorongos háttérrel segíti a gyerekeket. Jégkorong bíróként is sok tapasztalatot hoz a jégre, a tinédzser tanítványok egyik kedvence.",
+      image: teacherKosztaMonikaImage,
+      highlights: [
+        "Műkorcsolya háttér",
+        "Jégkorongos háttér",
+        "Jégkorong bíró",
+        "Tinédzser tanítványok kedvence",
+      ],
     },
     {
-      name: "Madár Lili",
+      name: "Tóth Csenge Ineke",
       role: "Segédedző",
       focus:
-        "Gyerekkora óta velünk van, eleinte résztvevőként, ma már oktatóként. Jó érzéke van a gyerekekhez, melyben pszichológiai tanulmányai is segítik.",
-      image: teacherMadarLiliImage,
-      highlights: ["Kis csoportok", "Középső csoportok", "Pszichológiai tanulmányok"],
+        "Gyerekkora óta velünk van, eleinte résztvevőként, ma már oktatóként. Jó érzéke van a gyerekekhez, életmód tanácsadói diplomája is segíti a különböző korosztályok munkájában.",
+      image: teacherTothCsengeImage,
+      highlights: ["6 év szinkronkorcsolya versenyző", "Legfiatalabb oktatónk"],
     },
     {
       name: "Tóth Dominika",

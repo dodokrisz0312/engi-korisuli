@@ -8,6 +8,15 @@ import { createSeoMetadata, pageSeo } from "@/data/seo";
 
 export const metadata: Metadata = createSeoMetadata(pageSeo.oktatok);
 
+const getInstructorInitials = (name: string) =>
+  name
+    .split(" ")
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part.charAt(0))
+    .join("")
+    .toUpperCase();
+
 export default function OktatokPage() {
   const featuredInstructor = oktatokPage.instructors.find((instructor) => instructor.featured);
   const otherInstructors = oktatokPage.instructors.filter((instructor) => !instructor.featured);
@@ -59,14 +68,24 @@ export default function OktatokPage() {
             </div>
 
             <article className="featured-instructor-card">
+              <div className="featured-instructor-number" aria-hidden="true">
+                01
+              </div>
+
               <div className="featured-image-wrap">
-                <Image
-                  src={featuredInstructor.image}
-                  alt={featuredInstructor.name}
-                  width={420}
-                  height={460}
-                  className="featured-image"
-                />
+                {featuredInstructor.image ? (
+                  <Image
+                    src={featuredInstructor.image}
+                    alt={featuredInstructor.name}
+                    width={420}
+                    height={460}
+                    className="featured-image"
+                  />
+                ) : (
+                  <div className="featured-image featured-image-placeholder" aria-hidden="true">
+                    {getInstructorInitials(featuredInstructor.name)}
+                  </div>
+                )}
               </div>
 
               <div className="featured-content">
@@ -106,17 +125,23 @@ export default function OktatokPage() {
               <article className="instructor-card" key={instructor.name}>
                 <div className="instructor-top">
                   <div className="instructor-image-wrap">
-                    <Image
-                      src={instructor.image}
-                      alt={instructor.name}
-                      width={132}
-                      height={132}
-                      className="instructor-image"
-                    />
+                    {instructor.image ? (
+                      <Image
+                        src={instructor.image}
+                        alt={instructor.name}
+                        width={132}
+                        height={132}
+                        className="instructor-image"
+                      />
+                    ) : (
+                      <div className="instructor-image instructor-image-placeholder" aria-hidden="true">
+                        {getInstructorInitials(instructor.name)}
+                      </div>
+                    )}
                   </div>
 
                   <div className="instructor-number" aria-hidden="true">
-                    {String(index + 1).padStart(2, "0")}
+                    {String(index + 2).padStart(2, "0")}
                   </div>
                 </div>
 
