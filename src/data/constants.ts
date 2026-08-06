@@ -182,9 +182,9 @@ export const korisuliPage = {
       text: "Újpesten kezdtük az utánpótlás nevelést, majd a Pólus Centerben lettünk az első korcsolyaiskola.",
     },
     {
-      year: "Napjaink",
+      year: "Most",
       icon: Star,
-      text: "Korábbi versenyzők és edzőtársak segítségével, ösztönnel és szakmai tudással fejlődünk.",
+      text: "A Vasas Jégcentrumban folynak a foglalkozásaink. Korábbi versenyzők és edzőtársak segítségével, szakmai tudással és tapasztalattal fejlődünk és tanítunk.",
     },
   ],
   goals: [
@@ -204,7 +204,7 @@ export const korisuliPage = {
     },
     {
       icon: Sparkles,
-      text: "Nyári programunk a jégkorcsolya tábor, melyre mindenkit szeretettel várunk. Célunk, hogy a gyerekek hasznosan és jó társaságban töltsék az időt.",
+      text: "Nyári programunk a jégkorcsolya és/vagy TSMT tábor, melyre mindenkit szeretettel várunk. Célunk, hogy a gyerekek hasznosan és jó társaságban töltsék az időt.",
     },
     {
       icon: ShieldCheck,
